@@ -88,15 +88,19 @@
             android:textSize="15sp"/>
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/sign_up"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="회원가입"
-        android:textStyle="bold"
-        android:textColor="#595959"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_marginTop="13dp"
-        android:layout_gravity="center"/>
-
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="회원가입"
+            android:textStyle="bold"
+            android:textColor="#595959"
+            android:layout_gravity="center"/>
+    </LinearLayout>
 
 </LinearLayout>
