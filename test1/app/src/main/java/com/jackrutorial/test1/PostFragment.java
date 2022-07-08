@@ -7,58 +7,69 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ListView;
+import android.widget.Toast;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link PostFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.jackrutorial.test1.Adapter.ListViewAdapter;
+import com.jackrutorial.test1.Data.Preview;
+
+import java.util.List;
+
 public class PostFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    /////////// 객체 내 변수와 내부 객체들
+    private String resultId, nickname;
+    private String localhost = "https://e805-192-249-19-234.jp.ngrok.io";
+    private View view;
+    ListViewAdapter previewAdapter;
+    public static List<Preview> previewList;
+    public ListView listView;
+    ///////// recylcer view ??
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public PostFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment PostFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static PostFragment newInstance(String param1, String param2) {
-        PostFragment fragment = new PostFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+
+        //setHasOptionsMenu(true);
+    }
+
+    public PostFragment(String resultId, String nickname){
+        this.resultId = resultId;
+        this.nickname = nickname;
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_post, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
+        view = inflater.inflate(R.layout.fragment_post, container, false);
+        listView = (ListView) view.findViewById(R.id.post_listview);
+
+
+        /////////////////// DB connection
+
+        // 게시글 클릭 리스너 -> detail fragment 로 이동 /////////////////// 하는 거 구현하기 (지금은 toast만)
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id){
+                // 토스트 메세지
+                Toast.makeText(getActivity(), adapterView.getItemAtPosition(position) + " 클릭", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        ///////// 게시글 longClick 삭제 : call back 함수로 adapter listener 필요
+        //listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener(){});
+
+        // 글 작성 버튼 : 글 작성 fragment로 넘어가도록
+        view.findViewById(R.id.fab_write).setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                ((BoardActivity) getActivity()).setFrag(3);
+            }
+        });
+
+
+
+        return view;
+
     }
 }

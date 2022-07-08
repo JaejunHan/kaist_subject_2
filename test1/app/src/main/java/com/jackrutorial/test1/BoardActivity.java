@@ -27,6 +27,7 @@ public class BoardActivity extends AppCompatActivity {
     private ProfileFragment profileFragment;
     private PostFragment postFragment;
     private TmpFragment tmpFragment;
+    private WritingPostFragment writingPostFragment;
 
 
     @Override
@@ -62,8 +63,9 @@ public class BoardActivity extends AppCompatActivity {
         });
         //////////////////// 불러올 fragment 들에 값 넣어주기!!!
         profileFragment = new ProfileFragment();
-        postFragment = new PostFragment(); // resultId, nickname
+        postFragment = new PostFragment(resultId, nickname); // resultId, nickname
         tmpFragment = new TmpFragment();
+        writingPostFragment = new WritingPostFragment(nickname);
 
         // defualt fragment = Post
         setFrag(1);
@@ -88,6 +90,11 @@ public class BoardActivity extends AppCompatActivity {
 
             case 2 :    ///////////////////////// 미정 !
                 fragmentTransaction.replace(R.id.main_frame, tmpFragment);
+                fragmentTransaction.commit();
+                break;
+
+            case 3 :    ///////////////////////// 글 등록 구현하기~~~!
+                fragmentTransaction.replace(R.id.main_frame, writingPostFragment);
                 fragmentTransaction.commit();
                 break;
         }
