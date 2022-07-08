@@ -32,7 +32,10 @@ public class MainActivity extends AppCompatActivity {
     String result;
     TextView login_id;
     TextView login_password;
+    TextView sign_up;
     Button submit;
+    private String localhost = "https://e09f-192-249-19-234.jp.ngrok.io";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         login_id = findViewById(R.id.login_id);
         login_password = findViewById(R.id.login_password);
         submit = findViewById(R.id.login_submit);
+        sign_up = findViewById(R.id.sign_up);
 
         //로그인 버튼
         submit.setOnClickListener(new View.OnClickListener() {
@@ -50,6 +54,20 @@ public class MainActivity extends AppCompatActivity {
                 String password = login_password.getText().toString();
                 // db서버와 연결해서 request
                 request(id, password);
+
+            }
+        });
+
+        //회원가입 버튼
+        sign_up.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String id = login_id.getText().toString();
+                String password = login_password.getText().toString();
+                // db서버와 연결해서 request
+                request(id, password);
+                Intent intent = new Intent(getApplicationContext(), Signup.class);
+                startActivity(intent);
 
             }
         });
@@ -115,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void request(String id, String password){
         //url 요청주소 넣는 editText를 받아 url만들기
-        String url = "https://e09f-192-249-19-234.jp.ngrok.io/users";;
+        String url = localhost + "/users";;
 
         //JSON형식으로 데이터 통신을 진행합니다!
         JSONObject testjson = new JSONObject();
