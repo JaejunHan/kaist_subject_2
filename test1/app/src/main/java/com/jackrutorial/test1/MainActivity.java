@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     TextView login_password;
     TextView sign_up;
     Button submit;
-    private String localhost = "https://c8b3-192-249-19-234.jp.ngrok.io";
+    private String localhost = "https://e805-192-249-19-234.jp.ngrok.io";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -177,6 +177,8 @@ public class MainActivity extends AppCompatActivity {
                             toast = Toast.makeText(getApplicationContext(), text, duration);
                             toast.show();
                             Intent intent = new Intent(getApplicationContext(), Example.class);
+                            intent.putExtra("resultId", resultId);
+                            intent.putExtra("nickname", nickname);
                             startActivity(intent);
                         }
                         /*
