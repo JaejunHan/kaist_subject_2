@@ -61,6 +61,7 @@ public class PostFragment extends Fragment {
 
         // 글 작성 버튼 : 글 작성 fragment로 넘어가도록
         view.findViewById(R.id.fab_write).setOnClickListener(new View.OnClickListener(){
+            ////////// 작성글 DB로 넘기는 기능 여기  구현하기 //////////
             @Override
             public void onClick(View v) {
                 ((BoardActivity) getActivity()).setFrag(3);

@@ -30,7 +30,7 @@ public class WritingPostFragment extends Fragment {
         new_title = view.findViewById(R.id.new_title);
         new_content = view.findViewById(R.id.new_content);
 
-        ///////////////// DB
+        ///////////////// DB 연동하기
 
         // 작성 버튼 클릭 리스너
         view.findViewById(R.id.posting_btn).setOnClickListener(new View.OnClickListener() {
@@ -51,7 +51,7 @@ public class WritingPostFragment extends Fragment {
         return view;
     }
 
-    public void postRequest(String id, String password){
+    public void postRequest(String title, String content){
 
     }
 }
