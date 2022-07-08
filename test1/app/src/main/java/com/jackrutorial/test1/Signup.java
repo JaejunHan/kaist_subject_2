@@ -5,9 +5,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.IdRes;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.DefaultRetryPolicy;
@@ -25,7 +27,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Signup  extends AppCompatActivity {
-    private RadioButton r_btn1, r_btn2, r_btn3;
+    private RadioGroup radioGroup;
+
     private char sex = ' ';
     private boolean is_id_valid = false;
     private boolean is_password_valid = false;
@@ -39,7 +42,7 @@ public class Signup  extends AppCompatActivity {
     TextView id_input;
     TextView password_input;
     TextView nickname_input;
-    private String localhost = "https://e09f-192-249-19-234.jp.ngrok.io";
+    private String localhost = "https://c8b3-192-249-19-234.jp.ngrok.io";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,27 +57,61 @@ public class Signup  extends AppCompatActivity {
 
         // radio button
         // https://yoo-hyeok.tistory.com/55
-        r_btn1 = (RadioButton) findViewById(R.id.r_btn1);
-        r_btn2 = (RadioButton) findViewById(R.id.r_btn2);
-        r_btn3 = (RadioButton) findViewById(R.id.r_btn3);
+        //라디오 그룹 설정
+        radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
 
 
+        //라디오 그룹 클릭 리스너
+        RadioGroup.OnCheckedChangeListener radioGroupButtonChangeListener = new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, @IdRes int i) {
+                if(i == R.id.r_btn1){ //남자
+                    sex = 'm';
+                    is_sex_valid = true;
+                    System.out.println("111여기요여기요여기요여기요여기요");
+                    System.out.println(is_sex_valid);
+                }
+                else if(i == R.id.r_btn2){
+                    sex = 'f';
+                    is_sex_valid = true;
+                    System.out.println(is_sex_valid);
+                    System.out.println("222여기요여기요여기요여기요여기요");
+                }else if(i == R.id.r_btn3){
+                    sex = 'e';
+                    System.out.println("여기요여기요여기요여기요여기요");
+                    is_sex_valid = true;
+                    System.out.println(is_sex_valid);
+                }
+            }
+        };
+
+        radioGroup.setOnCheckedChangeListener(radioGroupButtonChangeListener);
+
+        /*
         //라디오 버튼 클릭 리스너
         RadioButton.OnClickListener radioButtonClickListener = new RadioButton.OnClickListener(){
             @Override
             public void onClick(View view) {
+                System.out.println("눌렸어요");
                 if (r_btn1.isChecked()){    // 남자
                     sex = 'm';
                     is_sex_valid = true;
-                } else if (r_btn1.isChecked()){     //여자
+                    System.out.println("111여기요여기요여기요여기요여기요");
+                    System.out.println(is_sex_valid);
+                } else if (r_btn2.isChecked()){     //여자
                     sex = 'f';
                     is_sex_valid = true;
-                } else{     //기타
+                    System.out.println(is_sex_valid);
+                    System.out.println("222여기요여기요여기요여기요여기요");
+                } else if (r_btn3.isChecked()){     //기타
                     sex = 'e';
+                    System.out.println("여기요여기요여기요여기요여기요");
                     is_sex_valid = true;
+                    System.out.println(is_sex_valid);
                 }
             }
         };
+        */
 
         //id 확인 버튼
         id_confirm.setOnClickListener(new View.OnClickListener() {
@@ -83,8 +120,6 @@ public class Signup  extends AppCompatActivity {
                 System.out.println("id check button");
                 String id = id_input.getText().toString();
                 System.out.println(id);
-                System.out.println(id.length() >= 6);
-                System.out.println(check_alpha_or_digit(id));
                 if (id.length() >= 6 && check_alpha_or_digit(id)) { //주어진 조건을 만족하면
                     //id가 db에서 중복이 되었는지 확인
                     System.out.println("ㅋㅌㅊㅋㅌㅊㅋㅊㅋㅊㅋㅌㅊㅋㅊ");
@@ -118,7 +153,7 @@ public class Signup  extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String nickname = nickname_input.getText().toString();
-                if (nickname.length() >= 9 && check_alpha_or_digit(nickname)) { //주어진 조건을 만족하면
+                if (check_alpha_or_digit(nickname)) { //주어진 조건을 만족하면
                     //id가 db에서 중복이 되었는지 확인
                     request_nickname_valid(nickname);
                 } else {
@@ -139,6 +174,9 @@ public class Signup  extends AppCompatActivity {
                                 String password = password_input.getText().toString();
                                 String nickname = nickname_input.getText().toString();
                                 add_user_row_to_db(id, password, nickname, sex);
+                                toast_text("회원가입 성공!");
+                                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                startActivity(intent);
                             } else{
                                 toast_text("성별을 선택해주세요.");
                             }
@@ -150,13 +188,6 @@ public class Signup  extends AppCompatActivity {
                     }
                 }else {
                     toast_text("아이디를 올바르게 입력해주세요.");
-                }
-                String nickname = nickname_input.getText().toString();
-                if (nickname.length() >= 9 && check_alpha_or_digit(nickname)) { //주어진 조건을 만족하면
-                    //id가 db에서 중복이 되었는지 확인
-                    request_nickname_valid(nickname);
-                } else {
-                    toast_text("주어진 조건에 맞게 입력해주세요.");
                 }
             }
         });
@@ -173,7 +204,7 @@ public class Signup  extends AppCompatActivity {
         for (int i = 0; i < s.length(); i++)
         {
             char c = s.charAt(i);
-            if (!(c >= 'A' && c <= 'Z') && !(c >= 'a' && c <= 'z') && (c >= '0' && c <= '9')) {
+            if (!(c >= 'A' && c <= 'Z') && !(c >= 'a' && c <= 'z') && !(c >= '0' && c <= '9')) {
                 return false;
             }
         }
@@ -284,7 +315,7 @@ public class Signup  extends AppCompatActivity {
                         //key값에 따라 value값을 쪼개 받아옵니다.
                         boolean is_valid = jsonObject.getBoolean("id_valid");
 
-                        if (is_valid){  // 가능한 아이디
+                        if (!is_valid){  // 가능한 아이디
                             String text = "가능한 아이디입니다.";
                             is_id_valid = true;
                             toast_text(text);
@@ -342,10 +373,11 @@ public class Signup  extends AppCompatActivity {
                         JSONObject jsonObject = new JSONObject(response.toString());
 
                         //key값에 따라 value값을 쪼개 받아옵니다.
-                        boolean is_valid = jsonObject.getBoolean("nickname");
+                        boolean is_valid = jsonObject.getBoolean("nickname_valid");
 
-                        if (is_valid){  // 가능한 닉네임
+                        if (!is_valid){  // 가능한 닉네임
                             String text = "가능한 닉네임입니다.";
+                            is_nickname_valid = true;
                             toast_text(text);
                         } else {    //불가능한 닉네임
                             String text = "중복된 닉네임입니다. 다른 닉네임를 입력해주세요.";
@@ -375,7 +407,8 @@ public class Signup  extends AppCompatActivity {
     public void add_user_row_to_db(String id, String password, String nickname, char sex){
         //url 요청주소 넣는 editText를 받아 url만들기
         String url = localhost + "/sign_up";;
-
+        String sex_to_send = "";
+        sex_to_send += sex;
         //JSON형식으로 데이터 통신을 진행합니다!
         JSONObject testjson = new JSONObject();
         try {
@@ -383,7 +416,7 @@ public class Signup  extends AppCompatActivity {
             testjson.put("id", id);
             testjson.put("password", password);
             testjson.put("nickname", nickname);
-            testjson.put("sex", sex);
+            testjson.put("sex", sex_to_send);
             String jsonString = testjson.toString(); //완성된 json 포맷
 
             //이제 전송해볼까요?
