@@ -484,6 +484,7 @@ public class Signup  extends AppCompatActivity {
                         e.printStackTrace();
                     }
                 }
+
                 //서버로 데이터 전달 및 응답 받기에 실패한 경우 아래 코드가 실행됩니다.
             }, new Response.ErrorListener() {
                 @Override

@@ -47,8 +47,6 @@ public class WritingPostFragment extends Fragment {
         new_subtitle = view.findViewById(R.id.new_subtitle);
         new_content = view.findViewById(R.id.new_content);
 
-        ///////////////// DB 연동하기
-
         // 작성 버튼 클릭 리스너
         view.findViewById(R.id.posting_btn).setOnClickListener(new View.OnClickListener() {
             @Override

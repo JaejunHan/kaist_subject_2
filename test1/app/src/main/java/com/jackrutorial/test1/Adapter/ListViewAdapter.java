@@ -46,7 +46,7 @@ public class ListViewAdapter extends BaseAdapter{
         View view = mLayoutInflater.inflate(R.layout.listview_preview, null);
 
         TextView previewTitle = (TextView)view.findViewById(R.id.preview_title);
-        TextView previewContent = (TextView)view.findViewById(R.id.preview_content);
+        TextView previewContent = (TextView)view.findViewById(R.id.preview_subtitle);
 
         previewTitle.setText(previewList.get(position).getTitle());
         previewContent.setText(previewList.get(position).getContent());
