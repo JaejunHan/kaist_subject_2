@@ -20,7 +20,7 @@
             android:textSize="20sp"
             android:textColor="#000000"
             android:layout_gravity="center"
-            android:layout_marginTop="118dp"
+            android:layout_marginTop="60dp"
             android:text="회원가입"/>
         <TextView
             android:layout_width="wrap_content"
@@ -35,25 +35,27 @@
         <LinearLayout
             android:layout_width="374dp"
             android:layout_height="46dp"
-            android:background="#a4f2c2"
+            android:background="@drawable/green_background_square"
             android:gravity="center"
             android:layout_gravity="center">
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_weight="3"
                 android:layout_height="match_parent"
-                android:layout_margin="3dp"
-                android:background="#ffffff">
+                android:layout_margin="2dp"
+                android:background="@drawable/white_background_square">
                 <EditText
-                    android:background="@color/white"
+                    android:background="@null"
                     android:id="@+id/sign_up_id"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="영문, 숫자 조합 6자리 이상"/>
+                    android:layout_marginLeft="5dp"
+                    android:hint="영문, 숫자 조합 6자리 이상"
+                    android:textSize="15sp"/>
             </LinearLayout>
             <Button
                 android:id="@+id/id_confirm"
-                android:background="#a4f2c2"
+                android:background="@drawable/green_background_square"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:text="중복확인"
@@ -73,25 +75,27 @@
         <LinearLayout
             android:layout_width="374dp"
             android:layout_height="46dp"
-            android:background="#a4f2c2"
+            android:background="@drawable/green_background_square"
             android:gravity="center"
             android:layout_gravity="center">
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_weight="3"
                 android:layout_height="match_parent"
-                android:layout_margin="3dp"
-                android:background="#ffffff">
+                android:layout_margin="2dp"
+                android:background="@drawable/white_background_square">
                 <EditText
-                    android:background="@color/white"
+                    android:background="@null"
                     android:id="@+id/sign_up_password"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="영어,숫자,특수문자 조합 8자리 이상"/>
+                    android:layout_marginLeft="5dp"
+                    android:hint="영어,숫자,특수문자 조합 8자리 이상"
+                    android:textSize="15sp"/>
             </LinearLayout>
             <Button
                 android:id="@+id/password_confirm"
-                android:background="#a4f2c2"
+                android:background="@drawable/green_background_square"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:text="비밀번호 확인"
@@ -112,25 +116,27 @@
         <LinearLayout
             android:layout_width="374dp"
             android:layout_height="46dp"
-            android:background="#a4f2c2"
+            android:background="@drawable/green_background_square"
             android:gravity="center"
             android:layout_gravity="center">
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_weight="3"
                 android:layout_height="match_parent"
-                android:layout_margin="3dp"
-                android:background="#ffffff">
+                android:layout_margin="2dp"
+                android:background="@drawable/white_background_square">
                 <EditText
-                    android:background="@color/white"
+                    android:background="@null"
                     android:id="@+id/sign_up_nickname"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="닉네임 입력후 중복확인 해주세요!"/>
+                    android:layout_marginLeft="5dp"
+                    android:hint="닉네임 입력후 중복확인 해주세요!"
+                    android:textSize="15sp"/>
             </LinearLayout>
             <Button
                 android:id="@+id/nickname_confirm"
-                android:background="#a4f2c2"
+                android:background="@drawable/green_background_square"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:text="중복확인"
@@ -158,26 +164,58 @@
                 android:id="@+id/radioGroup"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content">
                 <RadioButton
                     android:id="@+id/r_btn1"
                     android:text="남자"
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#a4f2c2"/>
                 <RadioButton
                     android:id="@+id/r_btn2"
                     android:text="여자"
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#a4f2c2"/>
                 <RadioButton
                     android:id="@+id/r_btn3"
                     android:text="기타"
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#a4f2c2"/>
             </RadioGroup>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="normal"
+            android:textSize="15sp"
+            android:textColor="#000000"
+            android:layout_marginLeft="19dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="12dp"
+            android:text="생년월일"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:background="@drawable/green_background_square"
+            android:gravity="center"
+            android:layout_marginLeft="22dp">
+            <Button
+                android:id="@+id/birthday"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/white_background_square"
+                android:layout_margin="2dp"
+                android:onClick="onBirthdayClicked"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -185,9 +223,10 @@
             android:layout_height="46dp"
             android:gravity="center"
             android:layout_gravity="center"
-            android:layout_marginTop="68dp">
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="30dp">
             <Button
-                android:background="#a4f2c2"
+                android:background="@drawable/green_background_square"
                 android:id="@+id/sign_up_submit"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
