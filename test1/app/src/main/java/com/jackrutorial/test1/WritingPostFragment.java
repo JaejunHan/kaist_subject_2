@@ -83,6 +83,7 @@ public class WritingPostFragment extends Fragment {
             writejson.put("sub_title", subtitle);
             writejson.put("contents", content);
             writejson.put("imgCnt", imgCnt);
+            writejson.put("score", score);
             String jsonString = writejson.toString(); //완성된 json 포맷
 
             // Volley로 전송 ~~~~!
@@ -103,7 +104,7 @@ public class WritingPostFragment extends Fragment {
 
                         // 받아온 응답을 key 에 따라 value 로 받아옴
                         //////////////// Response TRUE/FALSE
-                        Boolean insert_ok = jsonObject.getBoolean("false");
+                        Boolean insert_ok = jsonObject.getBoolean("insert_ok");
                         if (insert_ok){  // Post 됨
                             String text = "글이 작성되었습니다.";
                             Toast toast;
