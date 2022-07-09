@@ -23,6 +23,7 @@ public class EditMyInfo extends AppCompatActivity {
     Button techStack;
     Button gosuTalk;
     Button addCareer;
+    Button showLocation; //등수보기
 
     TextView myName;
     TextView myNumber;
@@ -87,6 +88,14 @@ public class EditMyInfo extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(view.getContext(), dialogMake.class);
                 startActivityForResult(intent, 4);
+            }
+        });
+        showLocation = (Button) findViewById(R.id.showLocation);
+        showLocation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), LeaderBoard.class);
+                startActivity(intent);
             }
         });
 

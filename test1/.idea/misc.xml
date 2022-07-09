@@ -11,6 +11,7 @@
         <entry key="..\:/Users/hanjj/AndroidStudioProjects/test1/app/src/main/res/layout/activity_main.xml" value="0.14" />
         <entry key="..\:/Users/hanjj/AndroidStudioProjects/test1/app/src/main/res/layout/first_page.xml" value="0.2755208333333333" />
         <entry key="..\:/Users/hanjj/AndroidStudioProjects/test1/app/src/main/res/layout/sign_up.xml" value="0.33" />
+        <entry key="app/src/main/res/drawable/gobackimage.xml" value="0.2385" />
         <entry key="app/src/main/res/drawable/gray_background_square_bottom_left.xml" value="0.255" />
         <entry key="app/src/main/res/drawable/green_background_square.xml" value="0.224" />
         <entry key="app/src/main/res/drawable/green_background_square_bottom.xml" value="0.2525" />
@@ -37,6 +38,8 @@
         <entry key="app/src/main/res/layout/fragment_data_picker.xml" value="0.18414387031408308" />
         <entry key="app/src/main/res/layout/fragment_post.xml" value="0.23505434782608695" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_tmp.xml" value="0.23229166666666667" />
+        <entry key="app/src/main/res/layout/fragment_writing_post.xml" value="0.23229166666666667" />
         <entry key="app/src/main/res/layout/leaderboard.xml" value="0.23505434782608695" />
         <entry key="app/src/main/res/layout/mypage.xml" value="0.304936353078329" />
         <entry key="app/src/main/res/layout/profile.xml" value="0.2341485507246377" />
