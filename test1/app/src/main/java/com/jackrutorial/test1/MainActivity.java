@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     TextView login_password;
     TextView sign_up;
     Button submit;
-    private String localhost = "https://e805-192-249-19-234.jp.ngrok.io";
+    private String localhost = "https://bf4a-192-249-18-214.jp.ngrok.io";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void request(String id, String password){
         //url 요청주소 넣는 editText를 받아 url만들기
-        String url = localhost + "/users";;
+        String url = localhost + "/users";
 
         //JSON형식으로 데이터 통신을 진행합니다!
         JSONObject testjson = new JSONObject();
@@ -175,6 +175,8 @@ public class MainActivity extends AppCompatActivity {
                             toast = Toast.makeText(getApplicationContext(), text, duration);
                             toast.show();
                             Intent intent = new Intent(getApplicationContext(), Example.class);
+                            intent.putExtra("resultId", resultId);
+                            intent.putExtra("nickname", nickname);
                             startActivity(intent);
                         }
                         /*
