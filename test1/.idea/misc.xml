@@ -10,11 +10,18 @@
         <entry key="..\:/Users/hanjj/AndroidStudioProjects/test1/app/src/main/res/layout/activity_main.xml" value="0.14" />
         <entry key="..\:/Users/hanjj/AndroidStudioProjects/test1/app/src/main/res/layout/first_page.xml" value="0.2755208333333333" />
         <entry key="..\:/Users/hanjj/AndroidStudioProjects/test1/app/src/main/res/layout/sign_up.xml" value="0.33" />
+        <entry key="app/src/main/res/drawable/gray_background_square_bottom_left.xml" value="0.255" />
         <entry key="app/src/main/res/drawable/green_background_square.xml" value="0.224" />
         <entry key="app/src/main/res/drawable/green_background_square_bottom.xml" value="0.2525" />
+        <entry key="app/src/main/res/drawable/green_background_square_bottom_right.xml" value="0.255" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/white_background_square.xml" value="0.224" />
         <entry key="app/src/main/res/drawable/white_background_square_bottom.xml" value="0.2525" />
+        <entry key="app/src/main/res/drawable/whitegray_background_square.xml" value="0.255" />
+        <entry key="app/src/main/res/layout/activity_dialog_make.xml" value="0.23167572021484378" />
+        <entry key="app/src/main/res/layout/activity_edit_my_info.xml" value="0.31536688065456403" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2242218713267596" />
+        <entry key="app/src/main/res/layout/custom_dialog.xml" value="0.1" />
         <entry key="app/src/main/res/layout/first_page.xml" value="0.11930091185410334" />
         <entry key="app/src/main/res/layout/fragment_data_picker.xml" value="0.18414387031408308" />
         <entry key="app/src/main/res/layout/mypage.xml" value="0.304936353078329" />

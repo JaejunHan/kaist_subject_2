@@ -60,6 +60,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center">
                     <TextView
+                        android:id="@+id/myName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="병장"
@@ -86,6 +87,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center">
                     <TextView
+                        android:id="@+id/myNum"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="010-0000-0000"
@@ -112,6 +114,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center">
                     <TextView
+                        android:id="@+id/myEmail"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="koreaArmy@postech.ac.kr"
@@ -238,6 +241,7 @@
                 android:background="@drawable/white_background_square_bottom"
                 android:orientation="vertical">
                 <TextView
+                    android:id="@+id/gosuTalkWrite"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="22dp"
@@ -247,6 +251,7 @@
                     android:text="배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파"/>
 
                 <Button
+                    android:id="@+id/gosuTalk"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:background="@drawable/green_background_square"
