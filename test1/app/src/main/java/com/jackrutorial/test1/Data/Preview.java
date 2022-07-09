@@ -1,23 +1,43 @@
 package com.jackrutorial.test1.Data;
 
 public class Preview {
-    String title;
+    private String id;
+    private String name;
+    private String title;
+    private String subtitle;
+    private String content;
 
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
+    public Preview(String name, String title, String content){
+        this.id = id;
+        this.name = name;
         this.title = title;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
+        this.subtitle = subtitle;
         this.content = content;
     }
 
-    String content;
+    public String getId()
+    {
+        return id;
+    }
+
+    public String getName()
+    {
+        return name;
+    }
+
+    public String getTitle()
+    {
+        return title;
+    }
+
+    public String getSubtitle()
+    {
+        return subtitle;
+    }
+
+    public String getContent()
+    {
+        return content;
+    }
+
 }

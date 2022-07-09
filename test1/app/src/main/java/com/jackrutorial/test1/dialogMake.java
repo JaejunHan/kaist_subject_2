@@ -23,15 +23,14 @@ public class dialogMake extends Activity {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_dialog_make);
-        Intent intent = getIntent();
 
         info = (EditText) findViewById(R.id.editTextGetInput);
-        info.setText(intent.getStringExtra("originalText"));
 
         change = (Button) findViewById(R.id.changeInput);
         change.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent = new Intent();
                 intent.putExtra("changeThing",info.getText().toString());
                 setResult(RESULT_OK, intent);
                 finish();
