@@ -26,7 +26,36 @@
             android:name=".EditMyInfo"
             android:exported="false" />
         <activity
+            android:name=".ThirdBulletinBoard"
+            android:exported="false" />
+        <activity
+            android:name=".SecondBulletinBoard"
+            android:exported="false" />
+        <activity
+            android:name=".FirstBulletinBoard"
+            android:exported="false" />
+        <activity
+            android:name=".BulletinBoard"
+            android:exported="false" />
+        <activity
+            android:name=".LeaderBoard"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".gosuTalkEdit"
+            android:exported="false"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity
             android:name=".BoardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".dialogMake"
+            android:exported="false"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity
+            android:name=".EditMyInfo"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

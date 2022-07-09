@@ -9,7 +9,7 @@
     android:orientation="vertical"
     android:fillViewport="true"
     android:id="@+id/scrollView">
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#f5f5f5"
@@ -60,7 +60,6 @@
                     android:layout_height="wrap_content"
                     android:gravity="center">
                     <TextView
-                        android:id="@+id/myName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="병장"
@@ -75,7 +74,6 @@
                         android:layout_weight="1"
                         />
                     <Button
-                        android:id="@+id/editName"
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
                         android:layout_marginRight="22dp"
@@ -87,7 +85,6 @@
                     android:layout_height="wrap_content"
                     android:gravity="center">
                     <TextView
-                        android:id="@+id/myNum"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="010-0000-0000"
@@ -102,7 +99,6 @@
                         android:layout_weight="1"
                         />
                     <Button
-                        android:id="@+id/editNum"
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
                         android:layout_marginRight="22dp"
@@ -114,7 +110,6 @@
                     android:layout_height="wrap_content"
                     android:gravity="center">
                     <TextView
-                        android:id="@+id/myEmail"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="koreaArmy@postech.ac.kr"
@@ -129,14 +124,37 @@
                         android:layout_weight="1"
                         />
                     <Button
-                        android:id="@+id/editMail"
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
                         android:layout_marginRight="22dp"
                         android:background="@drawable/green_background_square"
                         android:text="수정"/>
                 </LinearLayout>
-
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="010-0000-0000"
+                        android:textSize="17sp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="22dp"
+                        android:layout_marginBottom="10dp"
+                        android:textColor="#000000"/>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="22dp"
+                        android:background="@drawable/green_background_square"
+                        android:text="수정"/>
+                </LinearLayout>
             </LinearLayout>
 
         </LinearLayout>
@@ -241,7 +259,6 @@
                 android:background="@drawable/white_background_square_bottom"
                 android:orientation="vertical">
                 <TextView
-                    android:id="@+id/gosuTalkWrite"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="22dp"
@@ -251,7 +268,6 @@
                     android:text="배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파"/>
 
                 <Button
-                    android:id="@+id/gosuTalk"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:background="@drawable/green_background_square"
@@ -286,7 +302,7 @@
                 android:orientation="vertical">
                 <ListView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="match_parent"/>
             </LinearLayout>
 
         </LinearLayout>

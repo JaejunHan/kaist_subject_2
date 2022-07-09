@@ -1,6 +1,5 @@
 package com.jackrutorial.test1;
 
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -11,7 +10,7 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class dialogMake extends Activity {
+public class gosuTalkEdit extends Activity {
 
     Button change;
     Button cancel;
@@ -22,23 +21,24 @@ public class dialogMake extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.activity_dialog_make);
+        setContentView(R.layout.activity_gosu_talk_edit);
         Intent intent = getIntent();
 
-        info = (EditText) findViewById(R.id.editTextGetInput);
+        info = (EditText) findViewById(R.id.gosueditTextGetInput);
         info.setText(intent.getStringExtra("originalText"));
 
-        change = (Button) findViewById(R.id.changeInput);
+
+        change = (Button) findViewById(R.id.gosuchangeInput);
         change.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent.putExtra("changeThing",info.getText().toString());
+                intent.putExtra("gosuchangeThing",info.getText().toString());
                 setResult(RESULT_OK, intent);
                 finish();
             }
         });
 
-        cancel = (Button) findViewById(R.id.cancelInput);
+        cancel = (Button) findViewById(R.id.gosucancelInput);
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

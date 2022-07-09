@@ -1,7 +1,9 @@
 package com.jackrutorial.test1.Data;
 
-public class Preview {
+public class BulletenBoardData {
+
     String title;
+    String mainText;
 
     public String getTitle() {
         return title;
@@ -11,13 +13,11 @@ public class Preview {
         this.title = title;
     }
 
-    public String getContent() {
-        return content;
+    public String getMainText() {
+        return mainText;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public void setMainText(String mainText) {
+        this.mainText = mainText;
     }
-
-    String content;
 }
