@@ -23,6 +23,8 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -43,6 +45,12 @@ public class Signup  extends AppCompatActivity {
     TextView password_input;
     TextView nickname_input;
     private String localhost = "https://e805-192-249-19-234.jp.ngrok.io";
+
+    Button birthdayText;
+    String year;
+    String month;
+    String day;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -192,7 +200,12 @@ public class Signup  extends AppCompatActivity {
             }
         });
 
+        Date today = new Date();      // birthday 버튼의 초기화를 위해 date 객체와 SimpleDataFormat 사용
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy년 MM월 dd일");
+        String result = dateFormat.format(today);
 
+        birthdayText = ((Button) findViewById(R.id.birthday));
+        birthdayText.setText(result);       // 오늘 날짜로 birthday 버튼 텍스트 초기화
     }
     public void toast_text(String text){
         Toast toast;
@@ -488,4 +501,21 @@ public class Signup  extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+
+    ///////////////
+
+    public void onBirthdayClicked (View v) {
+        DataPickerFragment newFragment = new DataPickerFragment();
+        newFragment.show(getSupportFragmentManager(), "datePicker");                //프래그먼트 매니저를 이용하여 프래그먼트 보여주기
+    }
+
+    public  void getBirthday (int year, int month, int day){
+        this.year = String.valueOf(year);
+        this.month = String.valueOf(month);
+        this.day = String.valueOf(day);
+        System.out.println("year" + year);
+        System.out.println("month" + month);
+        System.out.println("day" + day);
+    }
+    ///////////////
 }

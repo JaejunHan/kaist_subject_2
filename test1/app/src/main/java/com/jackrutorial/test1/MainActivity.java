@@ -27,6 +27,8 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
     String result;
@@ -34,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     TextView login_password;
     TextView sign_up;
     Button submit;
-    private String localhost = "https://bf4a-192-249-18-214.jp.ngrok.io";
+    private String localhost = "https://e805-192-249-19-234.jp.ngrok.io";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
         login_id = findViewById(R.id.login_id);
         login_password = findViewById(R.id.login_password);
-        submit = findViewById(R.id.login_submit);
+        submit = (Button) findViewById(R.id.login_submit);
         sign_up = findViewById(R.id.sign_up);
 
         //로그인 버튼
@@ -62,10 +64,6 @@ public class MainActivity extends AppCompatActivity {
         sign_up.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String id = login_id.getText().toString();
-                String password = login_password.getText().toString();
-                // db서버와 연결해서 request
-                request(id, password);
                 Intent intent = new Intent(getApplicationContext(), Signup.class);
                 startActivity(intent);
 
@@ -214,4 +212,5 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+
 }
