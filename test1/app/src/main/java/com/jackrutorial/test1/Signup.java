@@ -44,7 +44,7 @@ public class Signup  extends AppCompatActivity {
     TextView id_input;
     TextView password_input;
     TextView nickname_input;
-    private String localhost = "https://e805-192-249-19-234.jp.ngrok.io";
+    private String localhost = "http://192.249.18.214";
 
     Button birthdayText;
     String year;
@@ -484,6 +484,7 @@ public class Signup  extends AppCompatActivity {
                         e.printStackTrace();
                     }
                 }
+
                 //서버로 데이터 전달 및 응답 받기에 실패한 경우 아래 코드가 실행됩니다.
             }, new Response.ErrorListener() {
                 @Override

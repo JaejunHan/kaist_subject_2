@@ -29,7 +29,7 @@ public class WritingPostFragment extends Fragment {
     EditText new_title, new_subtitle, new_content;
     private Context context;
 
-    private String localhost = "https://bf4a-192-249-18-214.jp.ngrok.io";
+    private String localhost = "http://192.249.18.214";
 
     public WritingPostFragment(String name){
         this.nickname = nickname;
@@ -46,8 +46,6 @@ public class WritingPostFragment extends Fragment {
         new_title = view.findViewById(R.id.new_title);
         new_subtitle = view.findViewById(R.id.new_subtitle);
         new_content = view.findViewById(R.id.new_content);
-
-        ///////////////// DB 연동하기
 
         // 작성 버튼 클릭 리스너
         view.findViewById(R.id.posting_btn).setOnClickListener(new View.OnClickListener() {
@@ -83,6 +81,7 @@ public class WritingPostFragment extends Fragment {
             writejson.put("sub_title", subtitle);
             writejson.put("contents", content);
             writejson.put("imgCnt", imgCnt);
+            writejson.put("score", score);
             String jsonString = writejson.toString(); //완성된 json 포맷
 
             // Volley로 전송 ~~~~!
@@ -103,7 +102,7 @@ public class WritingPostFragment extends Fragment {
 
                         // 받아온 응답을 key 에 따라 value 로 받아옴
                         //////////////// Response TRUE/FALSE
-                        Boolean insert_ok = jsonObject.getBoolean("false");
+                        Boolean insert_ok = jsonObject.getBoolean("insert_ok");
                         if (insert_ok){  // Post 됨
                             String text = "글이 작성되었습니다.";
                             Toast toast;

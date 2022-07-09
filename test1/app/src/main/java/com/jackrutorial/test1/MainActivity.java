@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     TextView login_password;
     TextView sign_up;
     Button submit;
-    private String localhost = "https://e805-192-249-19-234.jp.ngrok.io";
+    private String localhost = "http://192.249.18.214";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         sign_up.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Signup.class);
+                Intent intent = new Intent(getApplicationContext(), EditMyInfo.class);
                 startActivity(intent);
 
             }
@@ -201,6 +201,9 @@ public class MainActivity extends AppCompatActivity {
                 public void onErrorResponse(VolleyError error) {
                     System.out.println("뭔가 이상해요");
                     error.printStackTrace();
+                    System.out.println(error);
+                    System.out.println("오아아ㅘ아ㅏ아아ㅏㅏㅇㅇㅇㅇㅇㅇㅇㅇ앙");
+
                     //Toast.makeText(MainActivity.this, error.toString(), Toast.LENGTH_SHORT).show();
                 }
             });
