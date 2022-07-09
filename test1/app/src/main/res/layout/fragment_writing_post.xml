@@ -51,16 +51,21 @@
         android:hint="부제를 입력하세요."
         android:textSize="14sp"
         android:layout_margin="7dp"/>
-
-    <EditText
-        android:id="@+id/new_content"
-        android:padding="16dp"
-        android:gravity="top"
-        android:background="@null"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:ems="10"
-        android:layout_weight="1"
-        android:hint="내용을 입력하세요." />
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/new_content"
+            android:padding="16dp"
+            android:gravity="top"
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:layout_weight="1"
+            android:hint="내용을 입력하세요." />
+
+    </ScrollView>
 
 </LinearLayout>

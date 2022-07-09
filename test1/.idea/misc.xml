@@ -15,11 +15,16 @@
         <entry key="app/src/main/res/drawable/green_background_square_bottom.xml" value="0.2525" />
         <entry key="app/src/main/res/drawable/white_background_square.xml" value="0.224" />
         <entry key="app/src/main/res/drawable/white_background_square_bottom.xml" value="0.2525" />
+        <entry key="app/src/main/res/layout/activity_board.xml" value="0.28229166666666666" />
+        <entry key="app/src/main/res/layout/activity_dialog_make.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/activity_edit_my_info.xml" value="0.15677083333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2242218713267596" />
         <entry key="app/src/main/res/layout/first_page.xml" value="0.11930091185410334" />
         <entry key="app/src/main/res/layout/fragment_data_picker.xml" value="0.18414387031408308" />
-        <entry key="app/src/main/res/layout/listview_preview.xml" value="0.28229166666666666" />
+        <entry key="app/src/main/res/layout/fragment_detail_post.xml" value="0.24791666666666667" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.28229166666666666" />
+        <entry key="app/src/main/res/layout/fragment_tmp.xml" value="0.24791666666666667" />
+        <entry key="app/src/main/res/layout/fragment_writing_post.xml" value="0.24791666666666667" />
         <entry key="app/src/main/res/layout/listview_preview.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/mypage.xml" value="0.304936353078329" />
         <entry key="app/src/main/res/layout/profile.xml" value="0.2341485507246377" />

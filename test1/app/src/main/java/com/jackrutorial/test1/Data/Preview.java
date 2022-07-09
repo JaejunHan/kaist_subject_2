@@ -9,7 +9,7 @@ public class Preview {
 
     public Preview(String name, String title, String content){
         this.id = id;
-        this.name = name;
+        this.name = name; //nickname
         this.title = title;
         this.subtitle = subtitle;
         this.content = content;

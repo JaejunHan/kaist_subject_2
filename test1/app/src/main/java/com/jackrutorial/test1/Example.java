@@ -7,6 +7,8 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.jackrutorial.test1.Post.BoardActivity;
+
 public class Example extends AppCompatActivity {
 
     // Main 에서 받아오는 data 목록

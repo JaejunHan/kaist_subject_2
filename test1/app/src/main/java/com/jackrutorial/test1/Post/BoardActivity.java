@@ -1,4 +1,4 @@
-package com.jackrutorial.test1;
+package com.jackrutorial.test1.Post;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,12 +7,12 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.Settings;
-import android.util.Log;
 import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.navigation.NavigationBarView;
+import com.jackrutorial.test1.Profile.ProfileFragment;
+import com.jackrutorial.test1.R;
+import com.jackrutorial.test1.TmpFragment;
 
 public class BoardActivity extends AppCompatActivity {
 
@@ -28,6 +28,7 @@ public class BoardActivity extends AppCompatActivity {
     private PostFragment postFragment;
     private TmpFragment tmpFragment;
     private WritingPostFragment writingPostFragment;
+    private DetailPostFragment detailPostFragment;
 
 
     @Override
@@ -66,6 +67,7 @@ public class BoardActivity extends AppCompatActivity {
         postFragment = new PostFragment(resultId, nickname); // resultId, nickname
         tmpFragment = new TmpFragment();
         writingPostFragment = new WritingPostFragment(nickname);
+        detailPostFragment = new DetailPostFragment();
 
         // defualt fragment = Post
         setFrag(1);
@@ -93,10 +95,16 @@ public class BoardActivity extends AppCompatActivity {
                 fragmentTransaction.commit();
                 break;
 
-            case 3 :    ///////////////////////// 글 등록 구현하기~~~!
+            case 3 :    // 글 등록 구현하기~~~!
                 fragmentTransaction.replace(R.id.main_frame, writingPostFragment);
                 fragmentTransaction.commit();
                 break;
+
+            case 4 :    // 글 세부 정보 보여주는 fragment
+                fragmentTransaction.replace(R.id.main_frame, detailPostFragment);
+                fragmentTransaction.commit();
+                break;
+
         }
     }
 }
