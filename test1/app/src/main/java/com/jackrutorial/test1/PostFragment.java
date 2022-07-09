@@ -21,7 +21,7 @@ public class PostFragment extends Fragment {
 
     /////////// 객체 내 변수와 내부 객체들
     private String resultId, nickname;
-    private String localhost = "https://e805-192-249-19-234.jp.ngrok.io";
+    private String localhost = "https://bf4a-192-249-18-214.jp.ngrok.io";
     private View view;
     ListViewAdapter previewAdapter;
     public static List<Preview> previewList;
@@ -62,6 +62,9 @@ public class PostFragment extends Fragment {
         // 글 작성 버튼 : 글 작성 fragment로 넘어가도록
         view.findViewById(R.id.fab_write).setOnClickListener(new View.OnClickListener(){
             ////////// 작성글 DB로 넘기는 기능 여기  구현하기 //////////
+
+
+
             @Override
             public void onClick(View v) {
                 ((BoardActivity) getActivity()).setFrag(3);
