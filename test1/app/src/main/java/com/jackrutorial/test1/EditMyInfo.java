@@ -7,21 +7,33 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class EditMyInfo extends AppCompatActivity {
 
     Button editName;
     Button editNum;
     Button editMail;
+    Button techStack;
     Button gosuTalk;
+    Button addCareer;
+    Button showLocation; //등수보기
 
     TextView myName;
     TextView myNumber;
     TextView myEmail;
     TextView gosuTalkWrite;
+    TextView techStackText;
 
+    ListView career;
+
+    ArrayAdapter<String> adpater;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,12 +63,39 @@ public class EditMyInfo extends AppCompatActivity {
                 startActivityForResult(intent, 2);
             }
         });
+        techStack = (Button) findViewById(R.id.techStack);
+        techStack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), dialogMake.class);
+                intent.putExtra("originalText", techStackText.getText().toString());
+                startActivityForResult(intent, 5);
+            }
+        });
         gosuTalk = (Button) findViewById(R.id.gosuTalk);
         gosuTalk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), dialogMake.class);
+                Intent intent = new Intent(view.getContext(), gosuTalkEdit.class);
+                intent.putExtra("originalText", gosuTalkWrite.getText().toString());
                 startActivityForResult(intent, 3);
+                ;
+            }
+        });
+        addCareer = (Button) findViewById(R.id.addCareer);
+        addCareer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), dialogMake.class);
+                startActivityForResult(intent, 4);
+            }
+        });
+        showLocation = (Button) findViewById(R.id.showLocation);
+        showLocation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), LeaderBoard.class);
+                startActivity(intent);
             }
         });
 
@@ -65,6 +104,15 @@ public class EditMyInfo extends AppCompatActivity {
         myNumber = (TextView) findViewById(R.id.myNum);
         myEmail = (TextView) findViewById(R.id.myEmail);
         gosuTalkWrite = (TextView) findViewById(R.id.gosuTalkWrite);
+        techStackText = (TextView) findViewById(R.id.techStackText);
+        career = (ListView) findViewById(R.id.career);
+
+        List<String> list = new ArrayList<>();
+//        list.add("카이스트");
+//        list.add("고려대");
+//        list.add("포스텍");
+        adpater = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list);
+        career.setAdapter(adpater);
     }
 
     @Override
@@ -78,7 +126,11 @@ public class EditMyInfo extends AppCompatActivity {
             } else if(requestCode == 2){
                 myEmail.setText(data.getStringExtra("changeThing"));
             }else if(requestCode == 3){
-                gosuTalkWrite.setText(data.getStringExtra("changeThing"));
+                gosuTalkWrite.setText(data.getStringExtra("gosuchangeThing"));
+            }else if(requestCode == 4){
+                adpater.add(data.getStringExtra("changeThing")); //경력에 추가
+            }else if(requestCode == 5){
+                techStackText.setText(data.getStringExtra("changeThing"));
             }
         }
     }
