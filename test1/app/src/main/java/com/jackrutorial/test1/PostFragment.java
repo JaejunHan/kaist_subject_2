@@ -21,22 +21,22 @@ public class PostFragment extends Fragment {
 
     /////////// 객체 내 변수와 내부 객체들
     private String resultId, nickname;
-    private String localhost = "https://bf4a-192-249-18-214.jp.ngrok.io";
+    private String localhost = "https://192.249.18.214";
     private View view;
     ListViewAdapter previewAdapter;
     public static List<Preview> previewList;
     public ListView listView;
-    ///////// recylcer view ??
+    ///////// recycler view ??
+
+    public PostFragment(String resultId, String nickname){
+        this.resultId = resultId;
+        this.nickname = nickname;
+    }
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         //setHasOptionsMenu(true);
-    }
-
-    public PostFragment(String resultId, String nickname){
-        this.resultId = resultId;
-        this.nickname = nickname;
     }
 
     @Override
