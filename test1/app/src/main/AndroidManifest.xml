@@ -20,6 +20,13 @@
             android:name=".BoardActivity"
             android:exported="false" />
         <activity
+            android:name=".dialogMake"
+            android:exported="false"
+            android:theme="@android:style/Theme.Dialog"/>
+        <activity
+            android:name=".EditMyInfo"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -28,8 +35,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Signup" />
-        <activity android:name=".Example" />
+        <activity android:name=".Signup"/>
+        <activity android:name=".Example"/>
     </application>
 
 </manifest>
