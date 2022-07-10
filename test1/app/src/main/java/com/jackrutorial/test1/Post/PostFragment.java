@@ -38,7 +38,7 @@ public class PostFragment extends Fragment {
 
     /////////// 객체 내 변수와 내부 객체들
     private String resultId, nickname;
-    private String localhost = "https://ae25-192-249-18-214.jp.ngrok.io";
+    private String localhost = "https://8cd5-192-249-18-214.jp.ngrok.io";
     private View view;
     PreviewAdapter previewAdapter;
     Preview new_prev;

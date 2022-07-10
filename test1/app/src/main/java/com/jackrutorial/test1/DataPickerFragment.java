@@ -3,14 +3,11 @@ package com.jackrutorial.test1;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.os.Bundle;
+import android.widget.DatePicker;
 
 import androidx.fragment.app.DialogFragment;
-import androidx.fragment.app.Fragment;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.DatePicker;
+import com.jackrutorial.test1.Signup;
 
 import java.util.Calendar;
 

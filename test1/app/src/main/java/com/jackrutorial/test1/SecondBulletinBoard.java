@@ -1,9 +1,9 @@
 package com.jackrutorial.test1;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.widget.ListView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.jackrutorial.test1.Adapter.BulletinBoardAdapter;
 import com.jackrutorial.test1.Data.BulletenBoardData;

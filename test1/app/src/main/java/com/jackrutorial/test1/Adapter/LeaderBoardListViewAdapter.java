@@ -8,7 +8,6 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.jackrutorial.test1.Data.LeaderBoardData;
-import com.jackrutorial.test1.LeaderBoard;
 import com.jackrutorial.test1.R;
 
 import java.util.ArrayList;

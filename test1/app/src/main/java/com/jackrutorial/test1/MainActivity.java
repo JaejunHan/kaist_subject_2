@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     TextView login_password;
     TextView sign_up;
     Button submit;
-    private String localhost = "https://ae25-192-249-18-214.jp.ngrok.io";
+    private String localhost = "https://8cd5-192-249-18-214.jp.ngrok.io";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -18,7 +18,7 @@ import com.jackrutorial.test1.R;
 
 public class DetailPostFragment extends Fragment {
 
-    private String localhost = "https://ae25-192-249-18-214.jp.ngrok.io";
+    private String localhost = "https://8cd5-192-249-18-214.jp.ngrok.io";
     View view;
     TextView title_tv, content_tv, date_tv, name_tv;
     EditText comment_et;
