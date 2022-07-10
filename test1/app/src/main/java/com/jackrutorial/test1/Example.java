@@ -7,6 +7,8 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.jackrutorial.test1.Post.BoardActivity;
+
 public class Example extends AppCompatActivity {
 
     // Main 에서 받아오는 data 목록
@@ -25,13 +27,13 @@ public class Example extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 // 이전 activity 에서 데이터 받아오기
-                resultId = getIntent().getStringExtra("user_id_in");
-                nickname = getIntent().getStringExtra("name_in");
+                resultId = getIntent().getStringExtra("resultId");
+                nickname = getIntent().getStringExtra("nickname");
 
                 // 게시판 Activity로 이동 맟 data 전달
                 Intent board_intent = new Intent(getApplicationContext(), BoardActivity.class);
                 board_intent.putExtra("user_id", resultId);
-                board_intent.putExtra("name", nickname);
+                board_intent.putExtra("nickname", nickname);
                 //////////////pic_uri ? 등 여기에 다른 정보 추가 가능
 
                 startActivity(board_intent);

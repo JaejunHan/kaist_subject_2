@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     TextView login_password;
     TextView sign_up;
     Button submit;
-    private String localhost = "http://192.249.18.214";
+    private String localhost = "https://ae25-192-249-18-214.jp.ngrok.io";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,7 +76,6 @@ public class MainActivity extends AppCompatActivity {
         try {
             testjson.put("id", "test_id");
             testjson.put("password", "test_password");
-            String jsonString = testjson.toString(); //완성된 json 포맷
 
 
         } catch (JSONException e) {
@@ -160,6 +159,8 @@ public class MainActivity extends AppCompatActivity {
                         String resultId = jsonObject.getString("id");
                         String resultPassword = jsonObject.getString("password");
                         String nickname = jsonObject.getString("nickname");
+                        System.out.println("main nickname nickname nickname nickname nickname");
+                        System.out.println(nickname);
                         String sex = jsonObject.getString("sex");
                         String Api_Token = jsonObject.getString("Api_Token");
                         if (Api_Token.equals("")){  // 로그인 실패
