@@ -35,7 +35,7 @@ public class PostFragment extends Fragment {
 
     /////////// 객체 내 변수와 내부 객체들
     private String resultId, nickname;
-    private String localhost = "https://192.249.18.214";
+    private String localhost = "https://ae25-192-249-18-214.jp.ngrok.io";
     private View view;
     ListViewAdapter previewAdapter;
     public static List<Preview> previewList;
@@ -107,6 +107,7 @@ public class PostFragment extends Fragment {
     public void getResponse(){
         // url 지정
         String url = localhost + "/read_post";
+        System.out.println("게시판전체조회게시판전체조회게시판전체조회게시판전체조회게시판전체조회");
 
         // 사용할 json obj 선언
         JSONObject readjson = new JSONObject();
@@ -116,20 +117,20 @@ public class PostFragment extends Fragment {
 
 
         // Volley 로 전송할 req !
-        System.out.println("---------여기서 request 수행---------");
+        System.out.println("---------여기서 request 수행 PostFragment---------");
         final JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, readjson, new Response.Listener<JSONObject>(){
 
             // response 를 받아오는 listener !
             @Override
             public void onResponse(JSONObject response){
                 try{
-                    System.out.println("데이터전송 성공");
+                    System.out.println("데이터전송 성공 PostFragment");
 
                     //받은 json형식의 응답을 받아
                     JSONObject jsonObject = new JSONObject(response.toString());
 
                     //key값에 따라 value값을 쪼개 받아옵니다.
-                    String nickname = jsonObject.getString("nickname");
+                    String nickname = jsonObject.getString("jsonArray");
                     String title = jsonObject.getString("title");
                     String sub_title = jsonObject.getString("sub_title");
                     String content = jsonObject.getString("content");
@@ -140,7 +141,7 @@ public class PostFragment extends Fragment {
                     ////////////// image 도 추가해주기 //////////////
                 }
                 catch (Exception e) {
-                    System.out.println("@@@@@@@@@@@@@@ RSP ERROR @@@@@@@@@@@@@@");
+                    System.out.println("@@@@@@@@@@@@@@ RSP ERROR PostFragment @@@@@@@@@@@@@@");
                     e.printStackTrace();
                 }
             }
@@ -148,7 +149,7 @@ public class PostFragment extends Fragment {
             }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                System.out.println("Volley Error 발생ㅠ");
+                System.out.println("Volley Error 발생ㅠ PostFragment");
                 error.printStackTrace();
                 //Toast.makeText(MainActivity.this, error.toString(), Toast.LENGTH_SHORT).show();
             }

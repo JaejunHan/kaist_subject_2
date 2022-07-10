@@ -44,7 +44,7 @@ public class Signup  extends AppCompatActivity {
     TextView id_input;
     TextView password_input;
     TextView nickname_input;
-    private String localhost = "http://192.249.18.214";
+    private String localhost = "https://ae25-192-249-18-214.jp.ngrok.io";
 
     Button birthdayText;
     String year;

@@ -30,7 +30,7 @@ public class WritingPostFragment extends Fragment {
     EditText new_title, new_subtitle, new_content;
     private Context context;
 
-    private String localhost = "http://192.249.18.214";
+    private String localhost = "https://ae25-192-249-18-214.jp.ngrok.io";
 
     public WritingPostFragment(String name){
         this.nickname = nickname;
@@ -122,9 +122,6 @@ public class WritingPostFragment extends Fragment {
                             toast = Toast.makeText(context, text, duration);
                             toast.show();
                         }
-
-
-
                     }
                     catch(Exception e){
                         System.out.println("@@@@@@@@@@@@@@ RSP ERROR @@@@@@@@@@@@@@");
