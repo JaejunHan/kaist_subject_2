@@ -33,6 +33,7 @@
         <activity android:name=".Signup" />
         <activity android:name=".Example" />
         <activity android:name=".Chatting.Chatting_list" />
+        <activity android:name=".Chatting.ChatActivity" />
 
     </application>
 
