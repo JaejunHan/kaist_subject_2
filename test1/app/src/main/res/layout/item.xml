@@ -14,30 +14,35 @@
         android:layout_marginBottom="10dp"
         android:background="@drawable/contactsimage"/>
     <LinearLayout
-        android:layout_width="303dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/nameItem"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/numItem"
-            android:layout_alignLeft="@+id/numItem"
-            android:layout_marginTop="7dp"
-            android:layout_marginBottom="7dp"
-            android:textColor="#0000ff"
-            android:textSize="20dp" />
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/nickname"
+                android:layout_width="0dp"
+                android:layout_weight="2.5"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/last_message"
+                android:layout_alignLeft="@+id/last_message"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="7dp"
+                android:textColor="#0000ff"
+                android:textSize="20dp" />
 
+            <TextView
+                android:id="@+id/reg_date"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7dp"
+                android:textSize="15dp" />
+        </LinearLayout>
         <TextView
-            android:id="@+id/numItem"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/emailItem"
-            android:layout_alignLeft="@+id/emailItem"
-            android:textSize="15dp" />
-        <TextView
-            android:id="@+id/emailItem"
+            android:id="@+id/last_message"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="7dp"

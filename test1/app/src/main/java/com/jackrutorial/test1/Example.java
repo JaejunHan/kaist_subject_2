@@ -7,7 +7,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.jackrutorial.test1.Post.BoardActivity;
+import com.jackrutorial.test1.Chatting.Chatting_list;
 
 public class Example extends AppCompatActivity {
 
@@ -30,11 +30,21 @@ public class Example extends AppCompatActivity {
                 resultId = getIntent().getStringExtra("resultId");
                 nickname = getIntent().getStringExtra("nickname");
 
+                /*
                 // 게시판 Activity로 이동 맟 data 전달
                 Intent board_intent = new Intent(getApplicationContext(), BoardActivity.class);
                 board_intent.putExtra("user_id", resultId);
                 board_intent.putExtra("nickname", nickname);
                 //////////////pic_uri ? 등 여기에 다른 정보 추가 가능
+*/
+
+                // 게시판 Activity로 이동 맟 data 전달
+                Intent board_intent = new Intent(getApplicationContext(), Chatting_list.class);
+                board_intent.putExtra("user_id", resultId);
+                board_intent.putExtra("nickname", nickname);
+
+                //////////////pic_uri ? 등 여기에 다른 정보 추가 가능
+
 
                 startActivity(board_intent);
 
