@@ -6,9 +6,11 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -76,17 +78,6 @@ public class DetailPostFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_detail_post, container, false);
         context = container.getContext();
 
-        // --------------------------------
-//        Preview preview = previewList.get(position);
-
-//                Bundle bundle = new Bundle();
-//                bundle.putInt("position", position);
-//                bundle.putString("posting_title", preview.getTitle());
-//                bundle.putString("posting_subtitle", preview.getSubtitle());
-//                bundle.putString("posting_content", preview.getContent());
-//                bundle.putString("posting_date", preview.getDate());
-//                bundle.putString("posting_userName", preview.getName()); // 글의 작성자
-//                bundle.putString("curr_userName", nickname); // 현재 사용 유저 name
 
         // Post Fragment에서 게시글 정보 받아오기
         Bundle bundle = getArguments(); // 다른 곳에서 넘겨준 bundle 받아옴~~~
@@ -134,6 +125,38 @@ public class DetailPostFragment extends Fragment {
                 loadComment();
             }
         });
+
+
+        // 댓글 클릭시 해당 user 프로필로 연동가능하도록 ---------
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l){
+                System.out.println("프로필로 이동");
+
+                Comment comment = commentList.get(position);
+                Bundle bundle = new Bundle();
+                bundle.putString("nickname", comment.getCommNickname());
+
+                ((BoardActivity)getActivity()).profileFragment.setArguments(bundle);
+                ((BoardActivity)getActivity()).setFrag(0);
+            }
+        });
+
+
+        // 수정 하기 클릭시 ----------
+        view.findViewById(R.id.edit_btn).setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+
+                // EDIT Post Fragment 에 전달할 변수들
+                Bundle bundle = new Bundle();
+                bundle.putString("posting_title",posting_title );
+                bundle.putString("posting_subtitle", posting_subtitle);
+
+                ((BoardActivity)getActivity()).setFrag(5); // edit fragment 로 이동
+            }
+        });
+
 
 
         return view;

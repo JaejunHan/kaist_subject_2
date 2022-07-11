@@ -1,5 +1,10 @@
 package com.jackrutorial.test1.Data;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Preview {
 //    private String id;
     private String name;
@@ -7,22 +12,8 @@ public class Preview {
     private String subtitle;
     private String content;
     private String score;
-    private String date; //
-
-//    public Preview(){}
-//
-//    public Preview(String id, String name, String title, String subtitle, String content, String score){
-//        this.id = id;
-//        this.name = name; //nickname
-//        this.title = title;
-//        this.subtitle = subtitle;
-//        this.content = content;
-//        this.score = score;
-//    }
-
-//    public void setId(String id){
-//        this.id = id;
-//    }
+    private Date date;
+    private String dateToStr;
 
     public void setName(String name){
         this.name = name;
@@ -44,8 +35,8 @@ public class Preview {
         this.score = score;
     }
 
-    public void setDate(String date){
-        this.date = date;
+    public void setDate(String dateToStr){
+        this.dateToStr = dateToStr;
     }
 
 //    public String getId()
@@ -78,8 +69,7 @@ public class Preview {
         return score;
     }
 
-    public String getDate(){
-        return date;
+    public String getDateToStr() {
+        return dateToStr;
     }
-
 }

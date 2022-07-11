@@ -31,6 +31,10 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -71,12 +75,16 @@ public class PostFragment extends Fragment {
         getResponse();
 
         // ---------------------
-        // 게시글 클릭 리스너 -> detail fragment 로 이동 /////////////////// 하는 거 구현하기 (지금은 toast만)
+        // 게시글 클릭 리스너 -> detail fragment 로 이동
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id){
                 // 토스트 메세지
                 //Toast.makeText(getActivity(), adapterView.getItemAtPosition(position) + " 클릭", Toast.LENGTH_SHORT).show();
+
+                DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+                Date date = new Date();
+                String dateToStr = dateFormat.format(date);
 
                 // Detail Post Fragment 에 전달할 변수들
                 Preview preview = previewList.get(position);
@@ -85,7 +93,7 @@ public class PostFragment extends Fragment {
                 bundle.putString("posting_title", preview.getTitle());
                 bundle.putString("posting_subtitle", preview.getSubtitle());
                 bundle.putString("posting_content", preview.getContent());
-                bundle.putString("posting_date", preview.getDate());
+                bundle.putString("posting_date", dateToStr);
                 bundle.putString("posting_userName", preview.getName()); // 글의 작성자
                 bundle.putString("curr_userName", nickname); // 현재 사용 유저 name
 

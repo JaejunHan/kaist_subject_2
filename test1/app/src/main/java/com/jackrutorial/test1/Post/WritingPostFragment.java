@@ -21,6 +21,11 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.jackrutorial.test1.R;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -29,6 +34,12 @@ public class WritingPostFragment extends Fragment {
     private String nickname;
     EditText new_title, new_subtitle, new_content;
     private Context context;
+
+    public static void main(String[] args) throws ParseException {
+        DateFormat dateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
+        Date date = new Date();
+        String dateToStr = dateFormat.format(date);
+    }
 
     private String localhost = "https://9504-192-249-18-214.jp.ngrok.io";
 
@@ -57,10 +68,14 @@ public class WritingPostFragment extends Fragment {
                 String subtitle = new_subtitle.getText().toString();
                 String content = new_content.getText().toString();
 
-                postRequest("test_nickname", title, subtitle, content, "0", "50");
+                // 날짜
+                DateFormat dateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
+                Date date = new Date();
+                String dateStr = dateFormat.format(date);
 
-                /////////
-                //((BoardActivity) getActivity()).setFrag(3); // 다시 게시글 list 로 돌아감
+                postRequest("test_nickname", title, subtitle, content, "0", "50", dateStr);
+
+                ((BoardActivity) getActivity()).setFrag(3); // 다시 게시글 list 로 돌아감
             }
         });
 
@@ -74,9 +89,11 @@ public class WritingPostFragment extends Fragment {
 
 
 
-    public void postRequest(String nickname, String title ,String subtitle ,String content, String imgCnt, String score){
+    public void postRequest(String nickname, String title ,String subtitle ,String content, String imgCnt, String score, String date){
         //########### url 지정
         String url = localhost + "/write_post";
+
+
 
         // 사용할 json obj 선언
         JSONObject writejson = new JSONObject();
@@ -88,6 +105,7 @@ public class WritingPostFragment extends Fragment {
             writejson.put("sub_title", subtitle);
             writejson.put("contents", content);
             writejson.put("imgCnt", imgCnt);
+            writejson.put("create_date", date);
             writejson.put("score", score);
 
             // Volley로 전송 ~~~~!
