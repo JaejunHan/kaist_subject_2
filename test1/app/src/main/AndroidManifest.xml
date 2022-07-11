@@ -39,6 +39,7 @@
         </activity>
         <activity android:name=".Signup" />
         <activity android:name=".Example" />
+        <activity android:name=".Chatting_list" />
 
     </application>
 
