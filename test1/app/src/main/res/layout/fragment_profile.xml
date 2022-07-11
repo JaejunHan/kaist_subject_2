@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileFragment">
+    tools:context="Profile.ProfileFragment">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
@@ -35,6 +35,7 @@
             android:layout_marginBottom="10dp"
             android:orientation="vertical">
             <TextView
+                android:id="@+id/profile_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="22dp"
@@ -44,6 +45,7 @@
                 android:text="코딩고수"
                 android:textColor="@color/black"/>
             <TextView
+                android:id="@+id/profile_comment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="22dp"
@@ -82,13 +84,15 @@
                     android:textSize="13sp"
                     android:text="고수경력 : "/>
                 <TextView
+                    android:id="@+id/profile_career1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
                     android:textStyle="normal"
                     android:textSize="13sp"
-                    android:text="고수경력"/>
-            </LinearLayout>        <LinearLayout
+                    android:text="고수경력1"/>
+            </LinearLayout>
+            <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp">
@@ -101,18 +105,20 @@
                 android:textSize="13sp"
                 android:text="고수경력 : "/>
             <TextView
+                android:id="@+id/profile_career2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:textStyle="normal"
                 android:textSize="13sp"
-                android:text="고수경력"/>
+                android:text="고수경력2"/>
         </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp">
                 <TextView
+                    android:id="@+id/profile_career3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="22dp"
@@ -126,7 +132,7 @@
                     android:textColor="@color/black"
                     android:textStyle="normal"
                     android:textSize="13sp"
-                    android:text="고수경력"/>
+                    android:text="고수경력3"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -150,6 +156,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp">
                 <TextView
+                    android:id="@id/profile_comment"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="22dp"
@@ -176,6 +183,7 @@
                 android:textStyle="bold"
                 android:textColor="@color/black"/>
             <TextView
+                android:id="@+id/profile_group1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="13sp"
@@ -185,6 +193,7 @@
                 android:textStyle="normal"
                 android:textColor="@color/black"/>
             <TextView
+                android:id="@+id/profile_group2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="13sp"
@@ -194,6 +203,7 @@
                 android:textStyle="normal"
                 android:textColor="@color/black"/>
             <TextView
+                android:id="@+id/profile_group3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="13sp"
