@@ -1,11 +1,20 @@
 package com.jackrutorial.test1;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.AttributeSet;
+import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -16,6 +25,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.jackrutorial.test1.Post.BoardActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -29,6 +39,7 @@ import java.net.ProtocolException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.zip.Inflater;
 
 public class MainActivity extends AppCompatActivity {
     String result;
@@ -37,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
     TextView sign_up;
     Button submit;
     private String localhost = "https://9504-192-249-18-214.jp.ngrok.io";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             testjson.put("id", "test_id");
             testjson.put("password", "test_password");
+            String jsonString = testjson.toString(); //완성된 json 포맷
 
 
         } catch (JSONException e) {
@@ -128,6 +141,8 @@ public class MainActivity extends AppCompatActivity {
         }
         */
     }
+
+
     public void request(String id, String password){
         //url 요청주소 넣는 editText를 받아 url만들기
         String url = localhost + "/users";
