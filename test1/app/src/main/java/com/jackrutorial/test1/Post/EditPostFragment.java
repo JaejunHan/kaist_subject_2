@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.android.volley.DefaultRetryPolicy;
@@ -21,114 +22,101 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.jackrutorial.test1.R;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class WritingPostFragment extends Fragment {
-    private View view;
-    private String nickname;
-    EditText new_title, new_subtitle, new_content;
-    private Context context;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
-    public static void main(String[] args) throws ParseException {
-        DateFormat dateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
-        Date date = new Date();
-        String dateToStr = dateFormat.format(date);
-    }
+public class EditPostFragment extends Fragment {
 
     private String localhost = "https://9504-192-249-18-214.jp.ngrok.io";
-
-    public WritingPostFragment(String name){
-        this.nickname = nickname;
-    }
+    private View view;
+    //private String name, tableId;
+    private ListView listView;
+    private Context context;
+    EditText edit_title, edit_subtitle,edit_content;
+    String berfore_title, berfore_subtitle;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
 
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-        view = inflater.inflate(R.layout.fragment_writing_post, container, false);
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        view = inflater.inflate(R.layout.fragment_edit_post, container, false);
         context = container.getContext();
 
-        new_title = view.findViewById(R.id.new_title);
-        new_subtitle = view.findViewById(R.id.new_subtitle);
-        new_content = view.findViewById(R.id.new_content);
+        // 수정해서 업뎃할 내용할 -------
+        edit_title = view.findViewById(R.id.edit_title);
+        edit_subtitle = view.findViewById(R.id.edit_subtitle);
+        edit_content = view.findViewById(R.id.edit_content);
 
-        // 작성 버튼 클릭 리스너
-        view.findViewById(R.id.posting_btn).setOnClickListener(new View.OnClickListener() {
+        view.findViewById(R.id.post_edit_btn).setOnClickListener(new View.OnClickListener() { // 수정하기를 눌러 db로 전송시
             @Override
-            public void onClick(View view) {
-                //////// data 등록하는거 구현
-                String title = new_title.getText().toString();
-                String subtitle = new_subtitle.getText().toString();
-                String content = new_content.getText().toString();
+            public void onClick(View v) {
+                String after_title = edit_title.getText().toString();
+                String after_subtitle = edit_subtitle.getText().toString();
+                String after_content = edit_content.getText().toString();
 
                 // 날짜
                 DateFormat dateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
                 Date date = new Date();
                 String dateStr = dateFormat.format(date);
 
-                postRequest("test_nickname", title, subtitle, content, "0", "50", dateStr);
 
-                ((BoardActivity) getActivity()).setFrag(3); // 다시 게시글 list 로 돌아감
+                Bundle bundle = getArguments(); // 다른 곳에서 넘겨준 bundle 받아옴
+                berfore_title = bundle.getString("position_title");
+                berfore_subtitle = bundle.getString("posting_subtitle");
+
+                // (berfore_title, berfore_subtitle) 을 수정할 게시물의 pk로 사용하여 조회하기
+                editRequest("test_nickname", berfore_title, berfore_subtitle, after_title, after_subtitle, after_content, "0", "50",  dateStr);
+                ((BoardActivity) getActivity()).setFrag(1);  // 게시판 화면으로 돌아감
             }
         });
-
 
         return view;
     }
 
-
-
-
-
-
-
-    public void postRequest(String nickname, String title ,String subtitle ,String content, String imgCnt, String score, String date){
+    public void editRequest(String nickname, String berfore_title, String berfore_subtitle, String title ,String subtitle ,String content, String imgCnt, String score, String date){
         //########### url 지정
-        String url = localhost + "/write_post";
-
-
+        String url = localhost + "/edit_post";
 
         // 사용할 json obj 선언
-        JSONObject writejson = new JSONObject();
+        JSONObject editjson = new JSONObject();
         try{
-            // writejson 을 통해 데이터 전달
-            //writejson.put("user_id", user_id);
-            writejson.put("nickname", nickname);
-            writejson.put("title", title);
-            writejson.put("sub_title", subtitle);
-            writejson.put("contents", content);
-            writejson.put("imgCnt", imgCnt);
-            writejson.put("create_date", date);
-            writejson.put("score", score);
+            // editjson  을 통해 데이터 전달
+            // (berfore_title, berfore_subtitle) 을 수정할 게시물의 pk로 사용하여 조회하기 -> update 쿼리 수행
+            editjson.put("nickname", nickname);
+            editjson.put("title", title);
+            editjson.put("sub_title", subtitle);
+            editjson.put("contents", content);
+            editjson.put("imgCnt", imgCnt);
+            editjson.put("update_date", date);
+            editjson.put("score", score);
 
             // Volley로 전송 ~~~~!
             final RequestQueue requestQueue = Volley.newRequestQueue(getContext().getApplicationContext());
 
-            System.out.println("---------여기서 request 수행---------");
-            final JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, writejson, new Response.Listener<JSONObject>() {
+            System.out.println("---------여기서 edit request 수행---------");
+            final JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, editjson, new Response.Listener<JSONObject>() {
 
 
                 // rqst 후 rsp 리스너
                 @Override
                 public void onResponse(JSONObject response) { // 서버에서 rsp
                     try{
-                        System.out.println("---------데이터 전송 성공---------");
+                        System.out.println("---------수정 데이터 전송 성공---------");
 
                         //받은 json형식의 응답을 받아
                         JSONObject jsonObject = new JSONObject(response.toString());
 
                         // 받아온 응답을 key 에 따라 value 로 받아옴
                         //////////////// Response TRUE/FALSE
-                        Boolean insert_ok = jsonObject.getBoolean("insert_ok");
-                        if (insert_ok){  // Post 됨
-                            String text = "글이 작성되었습니다.";
+                        Boolean edit_ok = jsonObject.getBoolean("edit_ok");
+                        if (edit_ok){  // Post 됨
+                            String text = "글이 수정되었습니다.";
                             Toast toast;
                             int duration = Toast.LENGTH_SHORT;
                             toast = Toast.makeText(context, text, duration);
@@ -139,7 +127,7 @@ public class WritingPostFragment extends Fragment {
                             startActivity(intent);
                         }
                         else{
-                            String text = "글 작성에 실패하였습니다.";
+                            String text = "글 수정에 실패하였습니다.";
                             Toast toast;
                             int duration = Toast.LENGTH_SHORT;
                             toast = Toast.makeText(context, text, duration);
@@ -172,4 +160,5 @@ public class WritingPostFragment extends Fragment {
 
 
     }
+
 }

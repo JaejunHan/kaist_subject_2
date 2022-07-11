@@ -20,7 +20,7 @@
         android:orientation="horizontal">
 
         <EditText
-            android:id="@+id/new_title"
+            android:id="@+id/edit_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -28,17 +28,17 @@
             android:padding="16dp" />
 
         <Button
-            android:id="@+id/posting_btn"
+            android:id="@+id/post_edit_btn"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/theme_color"
-            android:text="작성" />
+            android:text="수정" />
 
 
     </LinearLayout>
 
     <EditText
-        android:id="@+id/new_subtitle"
+        android:id="@+id/edit_subtitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="7dp"
@@ -50,7 +50,7 @@
         android:layout_height="match_parent">
 
         <EditText
-            android:id="@+id/new_content"
+            android:id="@+id/edit_content"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"

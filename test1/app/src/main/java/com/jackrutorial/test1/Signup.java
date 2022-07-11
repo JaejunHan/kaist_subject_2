@@ -44,7 +44,7 @@ public class Signup  extends AppCompatActivity {
     TextView id_input;
     TextView password_input;
     TextView nickname_input;
-    private String localhost = "https://ae25-192-249-18-214.jp.ngrok.io";
+    private String localhost = "https://9504-192-249-18-214.jp.ngrok.io";
 
     Button birthdayText;
     String year;
@@ -64,7 +64,6 @@ public class Signup  extends AppCompatActivity {
         nickname_input = findViewById(R.id.sign_up_nickname);
 
         // radio button
-        // https://yoo-hyeok.tistory.com/55
         //라디오 그룹 설정
         radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
 
