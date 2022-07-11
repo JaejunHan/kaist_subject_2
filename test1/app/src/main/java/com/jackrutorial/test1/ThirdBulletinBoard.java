@@ -1,8 +1,6 @@
 package com.jackrutorial.test1;
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ImageButton;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,8 +13,6 @@ import java.util.ArrayList;
 public class ThirdBulletinBoard extends AppCompatActivity {
     BulletinBoardAdapter adapter;
     ListView listView;
-
-    ImageButton button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,13 +48,5 @@ public class ThirdBulletinBoard extends AppCompatActivity {
 //////////////////////////////////////////////////////////////////////////////////////////
         adapter = new BulletinBoardAdapter(list);
         listView.setAdapter(adapter);
-
-        button = findViewById(R.id.thirdBulletinButton);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBackPressed();
-            }
-        });
     }
 }

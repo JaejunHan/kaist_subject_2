@@ -8,7 +8,6 @@ import androidx.fragment.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.GridView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.jackrutorial.test1.Profile.ProfileFragment;
@@ -25,15 +24,13 @@ public class BoardActivity extends AppCompatActivity {
 
     /////////////////////////////////
     // BoardActivity 에서 불러올 fragment
-    private ProfileFragment profileFragment;
-    private PostFragment postFragment;
-    private TmpFragment tmpFragment;
-    private WritingPostFragment writingPostFragment;
-    private DetailPostFragment detailPostFragment;
+    ProfileFragment profileFragment;
+    PostFragment postFragment;
+    TmpFragment tmpFragment;
+    WritingPostFragment writingPostFragment;
+    DetailPostFragment detailPostFragment;
+    EditPostFragment editPostFragment;
 
-    ////////////////////////////////////
-    //gridView
-    GridView gridView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,12 +69,10 @@ public class BoardActivity extends AppCompatActivity {
         tmpFragment = new TmpFragment();
         writingPostFragment = new WritingPostFragment(nickname);
         detailPostFragment = new DetailPostFragment();
+        editPostFragment = new EditPostFragment();
 
         // defualt fragment = Post
         setFrag(1);
-
-        gridView = (GridView) findViewById(R.id.addPhoto);
-
     }
 
     /////////////////////////////// 분기 나누기!!!
@@ -102,7 +97,7 @@ public class BoardActivity extends AppCompatActivity {
                 fragmentTransaction.commit();
                 break;
 
-            case 3 :    // 글 등록 구현하기~~~!
+            case 3 :   // 글 등록
                 fragmentTransaction.replace(R.id.main_frame, writingPostFragment);
                 fragmentTransaction.commit();
                 break;
@@ -112,6 +107,11 @@ public class BoardActivity extends AppCompatActivity {
                 fragmentTransaction.commit();
                 break;
 
+
+            case 5 :    // 글 수정 fragment
+                fragmentTransaction.replace(R.id.main_frame, editPostFragment);
+                fragmentTransaction.commit();
+                break;
         }
     }
 }

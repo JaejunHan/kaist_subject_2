@@ -88,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             testjson.put("id", "test_id");
             testjson.put("password", "test_password");
+            String jsonString = testjson.toString(); //완성된 json 포맷
 
 
         } catch (JSONException e) {

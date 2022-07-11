@@ -1,19 +1,9 @@
 package com.jackrutorial.test1;
 
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.AttributeSet;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ListView;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import com.jackrutorial.test1.Adapter.BulletinBoardAdapter;
 import com.jackrutorial.test1.Data.BulletenBoardData;
@@ -23,13 +13,11 @@ import java.util.ArrayList;
 public class FirstBulletinBoard extends AppCompatActivity {
     BulletinBoardAdapter adapter;
     ListView listView;
-    ImageButton button;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first_bulletin_board);
-        button = (ImageButton) findViewById(R.id.firstBulletinButton);
+
         listView = (ListView) findViewById(R.id.BulletinFirstListView);
 //////////////////////////////////////////////////////////////////////////////////////////
         ArrayList<BulletenBoardData> list = new ArrayList<>();
@@ -60,14 +48,5 @@ public class FirstBulletinBoard extends AppCompatActivity {
 //////////////////////////////////////////////////////////////////////////////////////////
         adapter = new BulletinBoardAdapter(list);
         listView.setAdapter(adapter);
-
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBackPressed();
-            }
-        });
-
-
     }
 }

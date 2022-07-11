@@ -1,79 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ThirdBulletinBoard">
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/gobackimage"
-        android:id="@+id/thirdBulletinButton"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        app:tint="@color/theme_color"/>
-
-    <LinearLayout
+    <ListView
+        android:id="@+id/BulletinThirdListView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="20dp"
-                android:id="@+id/post_top_text"
-                android:text="검색하기"
-                android:textStyle="bold"
-                android:gravity="center"/>
-
-            <LinearLayout
-                android:layout_width="374dp"
-                android:layout_height="46dp"
-                android:background="#a4f2c2"
-                android:gravity="center"
-                android:layout_gravity="center"
-                android:layout_marginBottom="10dp">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="3dp"
-                    android:background="#ffffff">
-                    <EditText
-                        android:background="@color/white"
-                        android:id="@+id/login_password"
-                        android:hint="검색어를 입력하세요"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"/>
-                </LinearLayout>
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <ListView
-            android:id="@+id/BulletinThirdListView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="16dp"/>
-    </LinearLayout>>
-
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_write"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center|bottom"
-        android:src = "@drawable/ic_baseline_add_24"
-        app:tint="@color/white"
-        android:clickable="true"
-        app:fabSize="auto"
-        android:layout_margin="16dp"
-        app:iconPadding="3dp"
-        android:backgroundTint="@color/theme_color"/>
-</FrameLayout>
+</LinearLayout>

@@ -31,24 +31,30 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class PostFragment extends Fragment {
 
     /////////// 객체 내 변수와 내부 객체들
-    private String resultId, nickname;
-    private String localhost = "https://8cd5-192-249-18-214.jp.ngrok.io";
+    private String nickname;
+    private String localhost = "https://9504-192-249-18-214.jp.ngrok.io";
     private View view;
     PreviewAdapter previewAdapter;
     Preview new_prev;
     ArrayList<Preview> previewList = new ArrayList<>();
     public ListView listView;
     private Context context;
+
+    Bundle bundle;
     ///////// recycler view ??
 
     public PostFragment(String resultId, String nickname){
-        this.resultId = resultId;
+        //this.resultId = resultId;
         System.out.println("여기엥ㅅㅇ여려녈ㄹ");
         System.out.println(nickname);
         this.nickname = nickname;
@@ -69,12 +75,30 @@ public class PostFragment extends Fragment {
         getResponse();
 
         // ---------------------
-        // 게시글 클릭 리스너 -> detail fragment 로 이동 /////////////////// 하는 거 구현하기 (지금은 toast만)
+        // 게시글 클릭 리스너 -> detail fragment 로 이동
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id){
                 // 토스트 메세지
-                Toast.makeText(getActivity(), adapterView.getItemAtPosition(position) + " 클릭", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getActivity(), adapterView.getItemAtPosition(position) + " 클릭", Toast.LENGTH_SHORT).show();
+
+                DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+                Date date = new Date();
+                String dateToStr = dateFormat.format(date);
+
+                // Detail Post Fragment 에 전달할 변수들
+                Preview preview = previewList.get(position);
+                Bundle bundle = new Bundle();
+                bundle.putInt("position", position);
+                bundle.putString("posting_title", preview.getTitle());
+                bundle.putString("posting_subtitle", preview.getSubtitle());
+                bundle.putString("posting_content", preview.getContent());
+                bundle.putString("posting_date", dateToStr);
+                bundle.putString("posting_userName", preview.getName()); // 글의 작성자
+                bundle.putString("curr_userName", nickname); // 현재 사용 유저 name
+
+                ((BoardActivity)getActivity()).detailPostFragment.setArguments(bundle); // detail Frag 로 bundle 을 넘겨줍니당
+                ((BoardActivity)getActivity()).setFrag(4); // detail Post 로 이동
             }
         });
 
@@ -186,6 +210,7 @@ public class PostFragment extends Fragment {
                     {
                         System.out.println("예예예예예예예예예예예예예예예");
                         deleteRequest(preview);
+                        getResponse();
                         ((BoardActivity) getActivity()).setFrag(1); // 다시 Board list 로 돌아가기
                     }
                 })
@@ -194,7 +219,7 @@ public class PostFragment extends Fragment {
     }
 
     public void deleteRequest(Preview preview){
-        previewList.remove(preview);
+        //previewList.remove(preview);
 
         // url 지정
         String url = localhost + "/delete_post";
@@ -230,6 +255,7 @@ public class PostFragment extends Fragment {
                         Boolean is_deleted = jsonObject.getBoolean("is_delete");
                         System.out.println("is_deleted: " + is_deleted);
                         if (is_deleted){ // 삭제 됨
+                            previewList.remove(preview);
                             Toast.makeText(context, "삭제되었습니다", Toast.LENGTH_SHORT).show();
                         }
                         else{ // 삭제 안됨
@@ -265,13 +291,14 @@ public class PostFragment extends Fragment {
     private void jsonParsing(String jsonStrData){  // 입력으로 string 형태olp의 json을 받아 온 후 array 로 변환 후 jsonObj로 파싱해주기
         try{
             JSONArray jsonArr = new JSONArray(jsonStrData);
+            previewList = new ArrayList<>();
 
             for (int i = 0; i < jsonArr.length(); i++){
                 JSONObject jsonObj = jsonArr.getJSONObject(i);
 //                System.out.println("jsonObj를 출력");
 //                System.out.println(jsonObj);
 
-                String user_id = (String)jsonObj.get("user_id");
+                //String user_id = (String)jsonObj.get("user_id");
                 String nickname = (String)jsonObj.get("nickname");
                 String title = (String)jsonObj.get("title");
 
@@ -287,7 +314,7 @@ public class PostFragment extends Fragment {
 
                 new_prev = new Preview();
 
-                new_prev.setId(user_id);
+                //new_prev.setId(user_id);
                 new_prev.setName(nickname);
                 new_prev.setTitle(title);
                 new_prev.setSubtitle(sub_title);

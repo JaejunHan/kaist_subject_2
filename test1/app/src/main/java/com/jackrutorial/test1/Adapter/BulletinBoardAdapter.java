@@ -41,11 +41,12 @@ public class BulletinBoardAdapter extends BaseAdapter {
 
         if(convertView == null){
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inflater.inflate(R.layout.listview_preview, parent, false);
+            convertView = inflater.inflate(R.layout.bulletinboardlayout, parent, false);
         }
 
-        TextView boardTitle = (TextView)convertView.findViewById(R.id.preview_title);
-        TextView boardMainText = (TextView)convertView.findViewById(R.id.preview_subtitle);
+
+        TextView boardTitle = (TextView)convertView.findViewById(R.id.bulletinTitle);
+        TextView boardMainText = (TextView)convertView.findViewById(R.id.bulletinText);
 
         boardTitle.setText(bulletenBoardData.get(position).getTitle());
         boardMainText.setText(bulletenBoardData.get(position).getMainText());
