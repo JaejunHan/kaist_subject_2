@@ -30,7 +30,7 @@ public class WritingPostFragment extends Fragment {
     EditText new_title, new_subtitle, new_content;
     private Context context;
 
-    private String localhost = "https://ae25-192-249-18-214.jp.ngrok.io";
+    private String localhost = "https://8cd5-192-249-18-214.jp.ngrok.io";
 
     public WritingPostFragment(String name){
         this.nickname = nickname;
@@ -68,6 +68,12 @@ public class WritingPostFragment extends Fragment {
         return view;
     }
 
+
+
+
+
+
+
     public void postRequest(String user_id, String nickname, String title ,String subtitle ,String content, String imgCnt, String score){
         //########### url 지정
         String url = localhost + "/write_post";
@@ -83,7 +89,6 @@ public class WritingPostFragment extends Fragment {
             writejson.put("contents", content);
             writejson.put("imgCnt", imgCnt);
             writejson.put("score", score);
-            String jsonString = writejson.toString(); //완성된 json 포맷
 
             // Volley로 전송 ~~~~!
             final RequestQueue requestQueue = Volley.newRequestQueue(getContext().getApplicationContext());
@@ -122,6 +127,9 @@ public class WritingPostFragment extends Fragment {
                             toast = Toast.makeText(context, text, duration);
                             toast.show();
                         }
+
+
+
                     }
                     catch(Exception e){
                         System.out.println("@@@@@@@@@@@@@@ RSP ERROR @@@@@@@@@@@@@@");
@@ -136,7 +144,7 @@ public class WritingPostFragment extends Fragment {
                     //Toast.makeText(MainActivity.this, error.toString(), Toast.LENGTH_SHORT).show();
                 }
             });
-            jsonObjectRequest.setRetryPolicy(new DefaultRetryPolicy(DefaultRetryPolicy.DEFAULT_TIMEOUT_MS, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+            jsonObjectRequest.setRetryPolicy(new DefaultRetryPolicy(200000, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
             requestQueue.add(jsonObjectRequest);
 
         } catch (JSONException e) {
