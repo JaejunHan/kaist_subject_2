@@ -1,12 +1,13 @@
 package com.jackrutorial.test1.Data;
 
 public class Preview {
-    private String id;
+//    private String id;
     private String name;
     private String title;
     private String subtitle;
     private String content;
     private String score;
+    private String date; //
 
 //    public Preview(){}
 //
@@ -19,9 +20,9 @@ public class Preview {
 //        this.score = score;
 //    }
 
-    public void setId(String id){
-        this.id = id;
-    }
+//    public void setId(String id){
+//        this.id = id;
+//    }
 
     public void setName(String name){
         this.name = name;
@@ -43,10 +44,14 @@ public class Preview {
         this.score = score;
     }
 
-    public String getId()
-    {
-        return id;
+    public void setDate(String date){
+        this.date = date;
     }
+
+//    public String getId()
+//    {
+//        return id;
+//    }
 
     public String getName()
     {
@@ -71,6 +76,10 @@ public class Preview {
     public String getScore()
     {
         return score;
+    }
+
+    public String getDate(){
+        return date;
     }
 
 }

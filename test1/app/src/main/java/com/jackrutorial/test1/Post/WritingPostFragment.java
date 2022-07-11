@@ -30,7 +30,7 @@ public class WritingPostFragment extends Fragment {
     EditText new_title, new_subtitle, new_content;
     private Context context;
 
-    private String localhost = "https://8cd5-192-249-18-214.jp.ngrok.io";
+    private String localhost = "https://9504-192-249-18-214.jp.ngrok.io";
 
     public WritingPostFragment(String name){
         this.nickname = nickname;
@@ -57,7 +57,7 @@ public class WritingPostFragment extends Fragment {
                 String subtitle = new_subtitle.getText().toString();
                 String content = new_content.getText().toString();
 
-                postRequest("test_id", "test_nickname", title, subtitle, content, "0", "50");
+                postRequest("test_nickname", title, subtitle, content, "0", "50");
 
                 /////////
                 //((BoardActivity) getActivity()).setFrag(3); // 다시 게시글 list 로 돌아감
@@ -74,7 +74,7 @@ public class WritingPostFragment extends Fragment {
 
 
 
-    public void postRequest(String user_id, String nickname, String title ,String subtitle ,String content, String imgCnt, String score){
+    public void postRequest(String nickname, String title ,String subtitle ,String content, String imgCnt, String score){
         //########### url 지정
         String url = localhost + "/write_post";
 
@@ -82,7 +82,7 @@ public class WritingPostFragment extends Fragment {
         JSONObject writejson = new JSONObject();
         try{
             // writejson 을 통해 데이터 전달
-            writejson.put("user_id", user_id);
+            //writejson.put("user_id", user_id);
             writejson.put("nickname", nickname);
             writejson.put("title", title);
             writejson.put("sub_title", subtitle);
@@ -116,7 +116,7 @@ public class WritingPostFragment extends Fragment {
                             toast = Toast.makeText(context, text, duration);
                             toast.show();
                             Intent intent = new Intent(context, BoardActivity.class); // 글이 작성되면
-                            intent.putExtra("resultId", user_id);
+                            //intent.putExtra("resultId", user_id);
                             intent.putExtra("nickname", nickname);
                             startActivity(intent);
                         }

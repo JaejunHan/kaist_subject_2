@@ -11,21 +11,37 @@
         <entry key="..\:/Users/hanjj/AndroidStudioProjects/test1/app/src/main/res/layout/activity_main.xml" value="0.14" />
         <entry key="..\:/Users/hanjj/AndroidStudioProjects/test1/app/src/main/res/layout/first_page.xml" value="0.2755208333333333" />
         <entry key="..\:/Users/hanjj/AndroidStudioProjects/test1/app/src/main/res/layout/sign_up.xml" value="0.33" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.141" />
+        <entry key="app/src/main/res/drawable/gobackimage.xml" value="0.141" />
+        <entry key="app/src/main/res/drawable/gray_background_square_bottom_left.xml" value="0.141" />
         <entry key="app/src/main/res/drawable/green_background_square.xml" value="0.224" />
         <entry key="app/src/main/res/drawable/green_background_square_bottom.xml" value="0.2525" />
+        <entry key="app/src/main/res/drawable/green_background_square_bottom_right.xml" value="0.141" />
+        <entry key="app/src/main/res/drawable/green_background_square_top.xml" value="0.1835" />
+        <entry key="app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.141" />
+        <entry key="app/src/main/res/drawable/ic_baseline_adjust_24.xml" value="0.141" />
+        <entry key="app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.141" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.141" />
         <entry key="app/src/main/res/drawable/white_background_square.xml" value="0.224" />
         <entry key="app/src/main/res/drawable/white_background_square_bottom.xml" value="0.2525" />
         <entry key="app/src/main/res/layout/activity_board.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/activity_bulletin_board.xml" value="0.25104166666666666" />
         <entry key="app/src/main/res/layout/activity_dialog_make.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/activity_edit_my_info.xml" value="0.15677083333333333" />
+        <entry key="app/src/main/res/layout/activity_first_bulletin_board.xml" value="0.18645833333333334" />
+        <entry key="app/src/main/res/layout/activity_gosu_talk_edit.xml" value="0.18645833333333334" />
+        <entry key="app/src/main/res/layout/activity_leader_board.xml" value="0.18645833333333334" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2242218713267596" />
         <entry key="app/src/main/res/layout/activity_second_bulletin_board.xml" value="0.25104166666666666" />
+        <entry key="app/src/main/res/layout/activity_third_bulletin_board.xml" value="0.18645833333333334" />
+        <entry key="app/src/main/res/layout/bulletinboardlayout.xml" value="0.18645833333333334" />
+        <entry key="app/src/main/res/layout/chatting.xml" value="0.18645833333333334" />
+        <entry key="app/src/main/res/layout/comment_list_item.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/first_page.xml" value="0.11930091185410334" />
         <entry key="app/src/main/res/layout/fragment_data_picker.xml" value="0.18414387031408308" />
-        <entry key="app/src/main/res/layout/fragment_detail_post.xml" value="0.24791666666666667" />
+        <entry key="app/src/main/res/layout/fragment_detail_post.xml" value="0.251531982421875" />
         <entry key="app/src/main/res/layout/fragment_edit_post.xml" value="0.17447916666666666" />
-        <entry key="app/src/main/res/layout/fragment_post.xml" value="0.25104166666666666" />
+        <entry key="app/src/main/res/layout/fragment_post.xml" value="0.2572219848632813" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/fragment_tmp.xml" value="0.24791666666666667" />
         <entry key="app/src/main/res/layout/fragment_writing_post.xml" value="0.24791666666666667" />

@@ -27,8 +27,8 @@ public class BoardActivity extends AppCompatActivity {
     private ProfileFragment profileFragment;
     private PostFragment postFragment;
     private TmpFragment tmpFragment;
-    private WritingPostFragment writingPostFragment;
-    private DetailPostFragment detailPostFragment;
+    WritingPostFragment writingPostFragment;
+    DetailPostFragment detailPostFragment;
 
 
     @Override
