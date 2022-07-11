@@ -1,33 +1,36 @@
 package com.jackrutorial.test1.Adapter;
 
 import android.content.Context;
+import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.jackrutorial.test1.Data.BulletenBoardData;
 import com.jackrutorial.test1.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class BulletinBoardAdapter extends BaseAdapter {
+public class PhotoAddAdapter extends BaseAdapter {
 
-    List<BulletenBoardData> bulletenBoardData;
+    List<Integer> imageList;
 
-    public BulletinBoardAdapter(ArrayList<BulletenBoardData> data){
-        bulletenBoardData = data;
+    public PhotoAddAdapter(ArrayList<Integer> data){
+        imageList = data;
     }
+
     @Override
     public int getCount() {
-        return bulletenBoardData.size();
+        return imageList.size();
     }
 
     @Override
     public Object getItem(int i) {
-        return bulletenBoardData.get(i);
+        return imageList.get(i);
     }
 
     @Override
@@ -41,15 +44,12 @@ public class BulletinBoardAdapter extends BaseAdapter {
 
         if(convertView == null){
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inflater.inflate(R.layout.listview_preview, parent, false);
+            convertView = inflater.inflate(R.layout.show_photo, parent, false);
         }
 
-        TextView boardTitle = (TextView)convertView.findViewById(R.id.preview_title);
-        TextView boardMainText = (TextView)convertView.findViewById(R.id.preview_subtitle);
+        ImageView imageView = (ImageView) convertView.findViewById(R.id.gridImageView);
 
-        boardTitle.setText(bulletenBoardData.get(position).getTitle());
-        boardMainText.setText(bulletenBoardData.get(position).getMainText());
-
+        imageView.setImageResource(imageList.get(position));
         return convertView;
     }
 }

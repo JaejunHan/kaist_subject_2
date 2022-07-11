@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.GridView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.jackrutorial.test1.Profile.ProfileFragment;
@@ -30,6 +31,9 @@ public class BoardActivity extends AppCompatActivity {
     private WritingPostFragment writingPostFragment;
     private DetailPostFragment detailPostFragment;
 
+    ////////////////////////////////////
+    //gridView
+    GridView gridView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,6 +75,9 @@ public class BoardActivity extends AppCompatActivity {
 
         // defualt fragment = Post
         setFrag(1);
+
+        gridView = (GridView) findViewById(R.id.addPhoto);
+
     }
 
     /////////////////////////////// 분기 나누기!!!

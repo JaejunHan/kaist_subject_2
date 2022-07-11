@@ -186,7 +186,6 @@ public class PostFragment extends Fragment {
                     {
                         System.out.println("예예예예예예예예예예예예예예예");
                         deleteRequest(preview);
-                        getResponse();
                         ((BoardActivity) getActivity()).setFrag(1); // 다시 Board list 로 돌아가기
                     }
                 })
@@ -195,7 +194,8 @@ public class PostFragment extends Fragment {
     }
 
     public void deleteRequest(Preview preview){
-        //previewList.remove(preview); // 어플에서도 삭제
+        previewList.remove(preview);
+
         // url 지정
         String url = localhost + "/delete_post";
         System.out.println("---------여기에요여가얼나라널--ㅣㅑ----");
@@ -230,8 +230,6 @@ public class PostFragment extends Fragment {
                         Boolean is_deleted = jsonObject.getBoolean("is_delete");
                         System.out.println("is_deleted: " + is_deleted);
                         if (is_deleted){ // 삭제 됨
-
-                            previewList.remove(preview); // 어플에서도 삭제
                             Toast.makeText(context, "삭제되었습니다", Toast.LENGTH_SHORT).show();
                         }
                         else{ // 삭제 안됨
@@ -267,7 +265,7 @@ public class PostFragment extends Fragment {
     private void jsonParsing(String jsonStrData){  // 입력으로 string 형태olp의 json을 받아 온 후 array 로 변환 후 jsonObj로 파싱해주기
         try{
             JSONArray jsonArr = new JSONArray(jsonStrData);
-            previewList = new ArrayList<>();
+
             for (int i = 0; i < jsonArr.length(); i++){
                 JSONObject jsonObj = jsonArr.getJSONObject(i);
 //                System.out.println("jsonObj를 출력");
