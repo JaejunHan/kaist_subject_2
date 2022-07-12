@@ -14,14 +14,20 @@ import android.content.pm.ResolveInfo;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+
+import androidx.annotation.Nullable;
+import androidx.core.app.ActivityCompat;
+import androidx.fragment.app.Fragment;
+
 import android.os.Parcelable;
 import android.provider.MediaStore;
+import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -29,9 +35,6 @@ import android.widget.ListView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
@@ -41,7 +44,6 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.bumptech.glide.Glide;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.jackrutorial.test1.R;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -64,10 +66,11 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 
-public class EditMyInfo extends AppCompatActivity {
+
+public class MyProfileFragment extends Fragment {
 
     private String localhost = "https://7db1-192-249-18-214.jp.ngrok.io";
-    //todo 
+    //todo
     // nickname을 ""로 수정하기
     private String nickname = "hello123";
     Button editImage;
@@ -103,10 +106,22 @@ public class EditMyInfo extends AppCompatActivity {
 
 
     ArrayAdapter<String> adpater;
+
+    public MyProfileFragment() {
+        // Required empty public constructor
+    }
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_edit_my_info);
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater,
+                             ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View rootview =  inflater.inflate(R.layout.fragment_profile, container, false);
 
         // todo
         // 이거를 fragment로 바꿔야함.
@@ -116,23 +131,23 @@ public class EditMyInfo extends AppCompatActivity {
         // todo
         // nickname을 받아와서 request 해줌.
         // db서버와 연결해서 프로필 사진을 불러옴.
-        request(nickname);
-        
+        request(nickname);///////////////////////////////////
 
-        askPermissions();
-        initRetrofitClient();
 
-        profile = (ImageView) findViewById(R.id.my_profile);
+        askPermissions();///////////////////////////////////
+        initRetrofitClient();///////////////////////////////////
 
-        editImage = (Button) findViewById(R.id.EditProfileImage);
+        profile = (ImageView) rootview.findViewById(R.id.my_profile);
+
+        editImage = (Button) rootview.findViewById(R.id.EditProfileImage);
         editImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivityForResult(getPickImageChooserIntent(), IMAGE_RESULT);
+                //startActivityForResult(getPickImageChooserIntent(), IMAGE_RESULT);///////////////////////////////////
             }
         });
 
-        editName = (Button) findViewById(R.id.editName);
+        editName = (Button) rootview.findViewById(R.id.editName);
         editName.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -140,7 +155,7 @@ public class EditMyInfo extends AppCompatActivity {
                 startActivityForResult(intent, 0);
             }
         });
-        editNum = (Button) findViewById(R.id.editNum);
+        editNum = (Button) rootview.findViewById(R.id.editNum);
         editNum.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -148,7 +163,7 @@ public class EditMyInfo extends AppCompatActivity {
                 startActivityForResult(intent, 1);
             }
         });
-        editMail = (Button) findViewById(R.id.editMail);
+        editMail = (Button) rootview.findViewById(R.id.editMail);
         editMail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -156,7 +171,7 @@ public class EditMyInfo extends AppCompatActivity {
                 startActivityForResult(intent, 2);
             }
         });
-        techStack = (Button) findViewById(R.id.techStack);
+        techStack = (Button) rootview.findViewById(R.id.techStack);
         techStack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -165,7 +180,7 @@ public class EditMyInfo extends AppCompatActivity {
                 startActivityForResult(intent, 5);
             }
         });
-        gosuTalk = (Button) findViewById(R.id.gosuTalk);
+        gosuTalk = (Button) rootview.findViewById(R.id.gosuTalk);
         gosuTalk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -175,7 +190,7 @@ public class EditMyInfo extends AppCompatActivity {
                 ;
             }
         });
-        addCareer = (Button) findViewById(R.id.addCareer);
+        addCareer = (Button) rootview.findViewById(R.id.addCareer);
         addCareer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -183,7 +198,7 @@ public class EditMyInfo extends AppCompatActivity {
                 startActivityForResult(intent, 4);
             }
         });
-        showLocation = (Button) findViewById(R.id.showLocation);
+        showLocation = (Button) rootview.findViewById(R.id.showLocation);
         showLocation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -193,21 +208,21 @@ public class EditMyInfo extends AppCompatActivity {
         });
 
 
-        myName = (TextView) findViewById(R.id.myName);
-        myNumber = (TextView) findViewById(R.id.myNum);
-        myEmail = (TextView) findViewById(R.id.myEmail);
-        gosuTalkWrite = (TextView) findViewById(R.id.gosuTalkWrite);
-        techStackText = (TextView) findViewById(R.id.techStackText);
-        career = (ListView) findViewById(R.id.career);
+        myName = (TextView) rootview.findViewById(R.id.myName);
+        myNumber = (TextView) rootview.findViewById(R.id.myNum);
+        myEmail = (TextView) rootview.findViewById(R.id.myEmail);
+        gosuTalkWrite = (TextView) rootview.findViewById(R.id.gosuTalkWrite);
+        techStackText = (TextView) rootview.findViewById(R.id.techStackText);
+        career = (ListView) rootview.findViewById(R.id.career);
 
         List<String> list = new ArrayList<>();
 //        list.add("카이스트");
 //        list.add("고려대");
 //        list.add("포스텍");
-        adpater = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list);
+        adpater = new ArrayAdapter<String>(getContext(), android.R.layout.simple_list_item_1, list);
         career.setAdapter(adpater);
 
-        scrollView = (ScrollView) findViewById(R.id.scrollView);
+        scrollView = (ScrollView) rootview.findViewById(R.id.scrollView);
         career.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
@@ -215,7 +230,10 @@ public class EditMyInfo extends AppCompatActivity {
                 return false;
             }
         });
+
+        return rootview;
     }
+
 
     private void askPermissions() {
         permissions.add(CAMERA);
@@ -243,7 +261,7 @@ public class EditMyInfo extends AppCompatActivity {
         Uri outputFileUri = getCaptureImageOutputUri();
 
         List<Intent> allIntents = new ArrayList<>();
-        PackageManager packageManager = getPackageManager();
+        PackageManager packageManager = getActivity().getPackageManager();/////////////////////////////////////
 
         Intent captureIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
         List<ResolveInfo> listCam = packageManager.queryIntentActivities(captureIntent, 0);
@@ -284,7 +302,7 @@ public class EditMyInfo extends AppCompatActivity {
 
     private Uri getCaptureImageOutputUri() {
         Uri outputFileUri = null;
-        File getImage = getExternalFilesDir("");
+        File getImage = getActivity().getExternalFilesDir("");
         if (getImage != null) {
             outputFileUri = Uri.fromFile(new File(getImage.getPath(), "profile.png"));
         }
@@ -298,17 +316,17 @@ public class EditMyInfo extends AppCompatActivity {
 
     }
     @Override
-    protected void onSaveInstanceState(Bundle outState) {
+    public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
 
         outState.putParcelable("pic_uri", picUri);
     }
-    @Override
-    protected void onRestoreInstanceState(Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-
-        picUri = savedInstanceState.getParcelable("pic_uri");
-    }
+//    @Override
+//    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+//        super.onRestoreInstanceState(savedInstanceState);
+//
+//        picUri = savedInstanceState.getParcelable("pic_uri");
+//    }
 
     private ArrayList<String> findUnAskedPermissions(ArrayList<String> wanted) {
         ArrayList<String> result = new ArrayList<String>();
@@ -325,14 +343,14 @@ public class EditMyInfo extends AppCompatActivity {
     private boolean hasPermission(String permission) {
         if (canMakeSmores()) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                return (checkSelfPermission(permission) == PackageManager.PERMISSION_GRANTED);
+                return (ActivityCompat.checkSelfPermission(getActivity() ,permission) == PackageManager.PERMISSION_GRANTED);
             }
         }
         return true;
     }
 
     private void showMessageOKCancel(String message, DialogInterface.OnClickListener okListener) {
-        new AlertDialog.Builder(this)
+        new AlertDialog.Builder(getContext())
                 .setMessage(message)
                 .setPositiveButton("OK", okListener)
                 .setNegativeButton("Cancel", null)
@@ -346,7 +364,7 @@ public class EditMyInfo extends AppCompatActivity {
 
     private void multipartImageUpload() {
         try {
-            File filesDir = getApplicationContext().getFilesDir();
+            File filesDir = getActivity().getApplicationContext().getFilesDir();
             File file = new File(filesDir, "image" + ".png");
             System.out.println(filesDir);
             System.out.println(file);
@@ -383,13 +401,13 @@ public class EditMyInfo extends AppCompatActivity {
                         System.out.println("프로필 업로드 성공");
                     }
 
-                    Toast.makeText(getApplicationContext(), response.code() + " ", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity().getApplicationContext(), response.code() + " ", Toast.LENGTH_SHORT).show();
                 }
 
                 @Override
                 public void onFailure(Call<ResponseBody> call, Throwable t) {
                     System.out.println("프로필 업로드 실패");
-                    Toast.makeText(getApplicationContext(), "Request failed", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext().getApplicationContext(), "Request failed", Toast.LENGTH_SHORT).show();
                     t.printStackTrace();
                 }
             });
@@ -447,7 +465,7 @@ public class EditMyInfo extends AppCompatActivity {
 
     private String getPathFromURI(Uri contentUri) {
         String[] proj = {MediaStore.Audio.Media.DATA};
-        Cursor cursor = getContentResolver().query(contentUri, proj, null, null, null);
+        Cursor cursor = getActivity().getContentResolver().query(contentUri, proj, null, null, null);
         int column_index = cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.DATA);
         cursor.moveToFirst();
         return cursor.getString(column_index);
@@ -457,9 +475,9 @@ public class EditMyInfo extends AppCompatActivity {
 
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if(resultCode==RESULT_OK){
+        if(resultCode==getActivity().RESULT_OK){
             if(requestCode == 0){
                 myName.setText(data.getStringExtra("changeThing"));
             } else if(requestCode == 1){
@@ -480,7 +498,7 @@ public class EditMyInfo extends AppCompatActivity {
                     if (mBitmap != null)
                         multipartImageUpload();
                     else {
-                        Toast.makeText(getApplicationContext(), "Bitmap is null. Try again", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity().getApplicationContext(), "Bitmap is null. Try again", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
@@ -499,12 +517,12 @@ public class EditMyInfo extends AppCompatActivity {
             String jsonString = testjson.toString(); //완성된 json 포맷
 
             //이제 전송해볼까요?
-            final RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
+            final RequestQueue requestQueue = Volley.newRequestQueue(getActivity().getApplicationContext());
             // 이부분 fragment로 바꾸면 오류뜰텐데
             // getApplicationContext() -> getContext().getApplicationContext()으로 바꾸면 됨.
 
             System.out.println("zxcvasfsfasdfsdf");
-                final JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url,testjson, new com.android.volley.Response.Listener<JSONObject>() {
+            final JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url,testjson, new com.android.volley.Response.Listener<JSONObject>() {
 
                 //데이터 전달을 끝내고 이제 그 응답을 받을 차례입니다.
                 @Override
@@ -532,7 +550,7 @@ public class EditMyInfo extends AppCompatActivity {
                         if (!profile_img.equals("")){ // 이미지 url이 존재한다면
                             // todo
                             // url에서 이미지 불러오기
-                            Glide.with(getApplicationContext()).load(profile_img).into(profile);
+                            Glide.with(getActivity().getApplicationContext()).load(profile_img).into(profile);
                         }
                         myName.setText(nickname);
                         myNumber.setText(phone_number);
@@ -590,4 +608,5 @@ public class EditMyInfo extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+
 }

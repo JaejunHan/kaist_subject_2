@@ -48,6 +48,9 @@
             android:name=".BulletinBoard"
             android:exported="false" />
         <activity
+            android:name=".LeaderBoard"
+            android:exported="false" />
+        <activity
             android:name=".Post.BoardActivity"
             android:exported="false" />
         <activity

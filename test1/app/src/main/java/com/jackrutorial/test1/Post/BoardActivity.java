@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.widget.GridView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.jackrutorial.test1.MyProfileFragment;
 import com.jackrutorial.test1.Profile.ProfileFragment;
 import com.jackrutorial.test1.R;
 import com.jackrutorial.test1.TmpFragment;
@@ -25,7 +26,7 @@ public class BoardActivity extends AppCompatActivity {
 
     /////////////////////////////////
     // BoardActivity 에서 불러올 fragmen
-    ProfileFragment profileFragment;
+    MyProfileFragment profileFragment;
     PostFragment postFragment;
     TmpFragment tmpFragment;
     WritingPostFragment writingPostFragment;
@@ -67,11 +68,12 @@ public class BoardActivity extends AppCompatActivity {
             }
         });
         //////////////////// 불러올 fragment 들에 값 넣어주기!!!
-        profileFragment = new ProfileFragment();
+        profileFragment = new MyProfileFragment();
         postFragment = new PostFragment(resultId, nickname); // resultId, nickname
         tmpFragment = new TmpFragment();
         writingPostFragment = new WritingPostFragment(nickname);
         detailPostFragment = new DetailPostFragment();
+
 
         // defualt fragment = Post
         setFrag(1);

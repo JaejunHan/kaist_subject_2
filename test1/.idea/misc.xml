@@ -58,7 +58,7 @@
         <entry key="app/src/main/res/layout/activity_board.xml" value="0.24727272727272728" />
         <entry key="app/src/main/res/layout/activity_bulletin_board.xml" value="0.25104166666666666" />
         <entry key="app/src/main/res/layout/activity_dialog_make.xml" value="0.28229166666666666" />
-        <entry key="app/src/main/res/layout/activity_edit_my_info.xml" value="0.15677083333333333" />
+        <entry key="app/src/main/res/layout/activity_edit_my_info.xml" value="0.3532185872395833" />
         <entry key="app/src/main/res/layout/activity_first_bulletin_board.xml" value="0.41684261890167873" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19434661865234376" />
         <entry key="app/src/main/res/layout/activity_second_bulletin_board.xml" value="0.25104166666666666" />
@@ -68,10 +68,11 @@
         <entry key="app/src/main/res/layout/fragment_data_picker.xml" value="0.18414387031408308" />
         <entry key="app/src/main/res/layout/fragment_detail_post.xml" value="0.11684782608695653" />
         <entry key="app/src/main/res/layout/fragment_edit_post.xml" value="0.11684782608695653" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.4244791666666667" />
         <entry key="app/src/main/res/layout/mypage.xml" value="0.304936353078329" />
         <entry key="app/src/main/res/layout/profile.xml" value="0.2341485507246377" />
         <entry key="app/src/main/res/layout/show_photo.xml" value="0.15806159420289856" />
-        <entry key="app/src/main/res/layout/sign_up.xml" value="0.4870734229576008" />
+        <entry key="app/src/main/res/layout/sign_up.xml" value="0.4013037696372883" />
       </map>
     </option>
   </component>
