@@ -31,7 +31,7 @@ import java.util.Date;
 
 public class EditPostFragment extends Fragment {
 
-    private String localhost = "https://9504-192-249-18-214.jp.ngrok.io";
+    private String localhost = "https://7db1-192-249-18-214.jp.ngrok.io";
     private View view;
     //private String name, tableId;
     private ListView listView;

@@ -45,7 +45,7 @@ import java.util.ArrayList;
 
 public class DetailPostFragment extends Fragment {
 
-    private String localhost = "https://9504-192-249-18-214.jp.ngrok.io";
+    private String localhost = "https://7db1-192-249-18-214.jp.ngrok.io";
     View view;
     private Context context;
     TextView title_tv, subtitle_tv, nickname_tv, date_tv;

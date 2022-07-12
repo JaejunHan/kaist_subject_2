@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
     TextView login_password;
     TextView sign_up;
     Button submit;
-    private String localhost = "https://9504-192-249-18-214.jp.ngrok.io";
+    private String localhost = "https://7db1-192-249-18-214.jp.ngrok.io";
 
 
     @Override
@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // 무시해도 됨
-        String url = "https://093f-192-249-19-234.jp.ngrok.io/users";
+        String url = "https://093f-192-249-19-234.jp.xxngrok.io/users";
         JSONObject testjson = new JSONObject();
         try {
             testjson.put("id", "test_id");
