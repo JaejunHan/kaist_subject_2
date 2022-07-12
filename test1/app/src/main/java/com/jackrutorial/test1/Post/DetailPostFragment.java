@@ -98,8 +98,8 @@ public class DetailPostFragment extends Fragment {
 
         // 해당 user의 nickname이 해당 글의 nickname 과 같을 때만 보이도록
         edit_btn = view.findViewById(R.id.edit_btn);
-        if (!curr_userName.equals(posting_userName)) // 일치하지 않다면 (= 내가 쓴글이 아니라면):
-            edit_btn.setVisibility(View.GONE);
+        if (curr_userName.equals(posting_userName)) // 일치하지 않다면 (= 내가 쓴글이 아니라면):
+            edit_btn.setVisibility(View.VISIBLE);
 
         ////////////////////////////////////
         // post 정보

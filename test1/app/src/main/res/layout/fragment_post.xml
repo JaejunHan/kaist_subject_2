@@ -36,25 +36,43 @@
                 android:gravity="center"/>
 
             <LinearLayout
-                android:layout_width="374dp"
-                android:layout_height="46dp"
-                android:background="#a4f2c2"
-                android:gravity="center"
-                android:layout_gravity="center"
-                android:layout_marginBottom="10dp">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/theme_color"
+                android:layout_margin="20dp">
+
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="fill_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="3dp"
-                    android:background="#ffffff">
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:gravity="right">
+
+
                     <EditText
+                        android:id="@+id/search_bar"
                         android:background="@color/white"
-                        android:id="@+id/login_password"
-                        android:hint="검색어를 입력하세요"
+                        android:padding="16dp"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"/>
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="검색어를 입력하세요." />
+
+                    <Button
+                        android:id="@+id/searching_btn"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/theme_color"
+                        android:layout_marginRight="10dp"
+                        android:text="검색"/>
+
                 </LinearLayout>
+
             </LinearLayout>
+
+
 
         </LinearLayout>
 

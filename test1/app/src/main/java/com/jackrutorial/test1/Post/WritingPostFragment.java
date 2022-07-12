@@ -86,7 +86,13 @@ WritingPostFragment extends Fragment {
                 String subtitle = new_subtitle.getText().toString();
                 String content = new_content.getText().toString();
 
-                postRequest("test_id", "test_nickname", title, subtitle, content, "0", "50");
+                // 날짜
+                DateFormat dateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
+                Date date = new Date();
+                String dateStr = dateFormat.format(date);
+
+
+                postRequest( "test_nickname", title, subtitle, content, "0", "50", dateStr);
 
                 /////////
                 //((BoardActivity) getActivity()).setFrag(3); // 다시 게시글 list 로 돌아감

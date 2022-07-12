@@ -3,6 +3,7 @@ package com.jackrutorial.test1.Post;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -13,6 +14,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -49,6 +52,8 @@ public class PostFragment extends Fragment {
     ArrayList<Preview> previewList = new ArrayList<>();
     public ListView listView;
     private Context context;
+    EditText search_bar;
+    Button searching_btn;
 
     Bundle bundle;
     ///////// recycler view ??
@@ -72,7 +77,21 @@ public class PostFragment extends Fragment {
         listView = (ListView) view.findViewById(R.id.post_listview);
         context = container.getContext();
 
-        getResponse();
+        getResponse(); // db에서 게시글들을 가져옴
+
+        EditText search_bar = view.findViewById(R.id.search_bar);
+        Button searching_btn = view.findViewById(R.id.searching_btn);
+
+        // --------------------
+        // 검색 버튼 클릭 리스너 : 원하는 결과 검색
+        searching_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String search_title = search_bar.getText().toString();
+                searchResponse(search_title);
+            }
+        });
+
 
         // ---------------------
         // 게시글 클릭 리스너 -> detail fragment 로 이동
@@ -128,6 +147,9 @@ public class PostFragment extends Fragment {
         view.findViewById(R.id.fab_write).setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+                Bundle bundle = new Bundle();
+                bundle.putString("nickname", nickname);
+                ((BoardActivity)getActivity()).writingPostFragment.setArguments(bundle); //
                 ((BoardActivity) getActivity()).setFrag(3);
             }
         });
@@ -137,6 +159,63 @@ public class PostFragment extends Fragment {
 
     // ---------------------Volley Request 수행 함수들 ---------------------
     ////////// send req to Volley and get response to read Posting info ////////////
+    public void searchResponse(String title){
+        System.out.println("searchResponse 로 이동 성공");
+
+        // url 지정
+        String url = localhost + "/search_post";
+
+        // 사용할 json obj 선언
+        JSONObject searchjson = new JSONObject();
+        try{
+            searchjson.put("title", title);
+
+            // Volley 로 전송할 req를 담는 requestQueue 선언
+            final RequestQueue requestQueue = Volley.newRequestQueue(getContext().getApplicationContext());
+
+
+            final JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, searchjson, new Response.Listener<JSONObject>() {
+                // rqst 후 rsp 리스너
+                @Override
+                public void onResponse(JSONObject response) { // 서버에서 rsp
+                    try{
+                        System.out.println("---------데이터 전송 성공---------");
+
+                        //받은 json형식의 응답을 받아
+                        JSONObject jsonObject = new JSONObject(response.toString());
+
+                        // string 형태의 json 을 받아와서
+                        String jsonWholeArray = jsonObject.getString("jsonArray");
+                        System.out.println("여기에요~~~~~~~~~");
+                        System.out.println(jsonWholeArray);
+                        jsonParsingforSearching(jsonWholeArray); // parsing 해서 preview 클래스와 Adapter에 적용
+
+
+                    }
+                    catch(Exception e){
+                        System.out.println("@@@@@@@@@@@@@@ RSP ERROR @@@@@@@@@@@@@@");
+                        e.printStackTrace();
+                    }
+                }
+            }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    System.out.println("Volley Error 발생ㅠ");
+                    error.printStackTrace();
+                    //Toast.makeText(MainActivity.this, error.toString(), Toast.LENGTH_SHORT).show();
+                }
+            });
+            jsonObjectRequest.setRetryPolicy(new DefaultRetryPolicy(200000, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+            requestQueue.add(jsonObjectRequest);
+
+        }catch (JSONException e){
+            e.printStackTrace();
+            System.out.println("ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ");
+        }
+
+    }
+
+
     public void getResponse(){
         System.out.println("getResponse 로 이동 성공");
 
@@ -158,7 +237,7 @@ public class PostFragment extends Fragment {
             @Override
             public void onResponse(JSONObject response){
                 try{
-                    System.out.println("데이터전송 성공송123123");
+                    System.out.println("검색 데이터 전송 성공!!!!");
 
                     //받은 json형식의 응답을 받아
                     JSONObject jsonObject = new JSONObject(response.toString());
@@ -166,9 +245,7 @@ public class PostFragment extends Fragment {
                     // string 형태의 json 을 받아와서
                     String jsonWholeArray = jsonObject.getString("jsonArray");
 
-                    System.out.println("전체 array in string type");
                     System.out.println(jsonWholeArray);
-
                     jsonParsing(jsonWholeArray); // parsing 해서 preview 클래스와 Adapter에 적용
 
                 }
@@ -178,17 +255,20 @@ public class PostFragment extends Fragment {
                 }
             }
 
-            }, new Response.ErrorListener() {
-                @Override
-                public void onErrorResponse(VolleyError error) {
-                    System.out.println("Volley Error 발생ㅠ");
-                    error.printStackTrace();
-                    //Toast.makeText(MainActivity.this, error.toString(), Toast.LENGTH_SHORT).show();
-                }
-            });
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                System.out.println("Volley Error 발생ㅠ");
+                error.printStackTrace();
+                //Toast.makeText(MainActivity.this, error.toString(), Toast.LENGTH_SHORT).show();
+            }
+        });
         jsonObjectRequest.setRetryPolicy(new DefaultRetryPolicy(DefaultRetryPolicy.DEFAULT_TIMEOUT_MS, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
         requestQueue.add(jsonObjectRequest);
     }
+
+
+
 
     private void deleteNoticeDialog(Preview preview){
         AlertDialog.Builder del_dialog = new AlertDialog.Builder(getContext(),
@@ -343,4 +423,58 @@ public class PostFragment extends Fragment {
             e.printStackTrace();
         }
     }
+
+    private void jsonParsingforSearching(String jsonStrData){  // 입력으로 string 형태olp의 json을 받아 온 후 array 로 변환 후 jsonObj로 파싱해주기
+        try{
+            JSONArray jsonArr = new JSONArray(jsonStrData);
+            previewList = new ArrayList<>();
+
+            for (int i = 0; i < jsonArr.length(); i++){
+                JSONObject jsonObj = jsonArr.getJSONObject(i);
+//                System.out.println("jsonObj를 출력");
+//                System.out.println(jsonObj);
+
+                String title = (String)jsonObj.get("title");
+                String nickname = "INFP";
+                String contents = "뭐행";
+                String score = "50";
+                String sub_title = (String)jsonObj.get("sub_title");
+
+
+                System.out.println("jsonObj 에서 data를 받아옴");
+
+                ////////////// image 도 추가해주기 //////////////
+
+                new_prev = new Preview();
+
+                //new_prev.setId(user_id);
+                new_prev.setName(nickname);
+                new_prev.setTitle(title);
+                new_prev.setSubtitle(sub_title);
+                new_prev.setContent(contents);
+                new_prev.setScore(score);
+
+                System.out.println("preview 클래스에 값을 넣음");
+                System.out.println(new_prev.getTitle());
+
+                try{
+                    previewList.add(new_prev);
+                    System.out.println(previewList);
+
+                }catch(NullPointerException n){
+                    System.out.println("널 포인터...");
+                    n.printStackTrace();
+                }
+
+                previewAdapter = new PreviewAdapter(getContext(), previewList);
+                listView.setAdapter(previewAdapter);
+            }
+
+
+        }catch (JSONException e) {
+            System.out.println("json parsing 에서 오류");
+            e.printStackTrace();
+        }
+    }
+
 }
