@@ -8,7 +8,9 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Base64;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -52,6 +54,8 @@ public class ChatActivity extends AppCompatActivity implements TextWatcher {
     private int IMAGE_REQUEST_ID = 1;
     private MessageAdapter messageAdapter;
 
+    ImageButton goback;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,6 +64,14 @@ public class ChatActivity extends AppCompatActivity implements TextWatcher {
         name = getIntent().getStringExtra("name");
         room = getIntent().getStringExtra("room");
         initiateSocketConnection();
+
+        goback = findViewById(R.id.gobackchat);
+        goback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
 
     }
 

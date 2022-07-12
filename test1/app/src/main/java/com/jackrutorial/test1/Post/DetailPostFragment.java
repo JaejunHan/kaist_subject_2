@@ -86,7 +86,7 @@ public class DetailPostFragment extends Fragment {
             public void onClick(View view) {
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 fragmentManager.beginTransaction().remove(DetailPostFragment.this).commit();
-                fragmentManager.popBackStack();
+
             }
         });
 

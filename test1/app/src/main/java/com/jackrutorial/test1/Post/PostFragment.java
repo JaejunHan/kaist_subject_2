@@ -53,6 +53,11 @@ public class PostFragment extends Fragment {
     Bundle bundle;
     ///////// recycler view ??
 
+    public PostFragment()
+    {
+
+    }
+
     public PostFragment(String resultId, String nickname){
         //this.resultId = resultId;
         System.out.println("여기엥ㅅㅇ여려녈ㄹ");

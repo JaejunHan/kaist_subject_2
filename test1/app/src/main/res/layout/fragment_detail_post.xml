@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Post.DetailPostFragment">
+    tools:context=".Post.DetailPostFragment"
+    android:id="@+id/DetailPost">
 
     <LinearLayout
         android:layout_width="match_parent"

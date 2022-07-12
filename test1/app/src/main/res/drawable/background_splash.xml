@@ -2,6 +2,9 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android"
     android:oneshot = "true">
     <item android:drawable="@drawable/green_background_square"/>
-    <item android:drawable="@drawable/emergency"
-        android:duration = "10"/>
+    <item android:gravity="center"
+        android:drawable="@drawable/emergency"
+        android:width="300dp"
+        android:height="300dp"
+        />
 </layer-list>
