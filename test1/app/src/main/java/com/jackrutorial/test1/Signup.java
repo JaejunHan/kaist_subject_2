@@ -32,12 +32,10 @@ public class Signup  extends AppCompatActivity {
     private RadioGroup radioGroup;
 
     private char sex = ' ';
-    private String date = "";
     private boolean is_id_valid = false;
     private boolean is_password_valid = false;
     private boolean is_nickname_valid = false;
     private boolean is_sex_valid = false;
-    private boolean is_birth_valid = false;
 
     Button id_confirm;
     Button password_confirm;
@@ -46,7 +44,7 @@ public class Signup  extends AppCompatActivity {
     TextView id_input;
     TextView password_input;
     TextView nickname_input;
-    private String localhost = "https://9504-192-249-18-214.jp.ngrok.io";
+    private String localhost = "https://8cd5-192-249-18-214.jp.ngrok.io";
 
     Button birthdayText;
     String year;
@@ -179,17 +177,13 @@ public class Signup  extends AppCompatActivity {
                     if (is_password_valid){
                         if (is_nickname_valid){
                             if (is_sex_valid){
-                                if (is_birth_valid){
-                                    String id = id_input.getText().toString();
-                                    String password = password_input.getText().toString();
-                                    String nickname = nickname_input.getText().toString();
-                                    add_user_row_to_db(id, password, nickname, sex, date);
-                                    toast_text("회원가입 성공!");
-                                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                                    startActivity(intent);
-                                } else {
-                                    toast_text("생년월일을 입력해주세요.");
-                                }
+                                String id = id_input.getText().toString();
+                                String password = password_input.getText().toString();
+                                String nickname = nickname_input.getText().toString();
+                                add_user_row_to_db(id, password, nickname, sex);
+                                toast_text("회원가입 성공!");
+                                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                startActivity(intent);
                             } else{
                                 toast_text("성별을 선택해주세요.");
                             }
@@ -422,7 +416,7 @@ public class Signup  extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-    public void add_user_row_to_db(String id, String password, String nickname, char sex, String date){
+    public void add_user_row_to_db(String id, String password, String nickname, char sex){
         //url 요청주소 넣는 editText를 받아 url만들기
         String url = localhost + "/sign_up";;
         String sex_to_send = "";
@@ -435,7 +429,6 @@ public class Signup  extends AppCompatActivity {
             testjson.put("password", password);
             testjson.put("nickname", nickname);
             testjson.put("sex", sex_to_send);
-            testjson.put("birth", date);
             String jsonString = testjson.toString(); //완성된 json 포맷
 
             //이제 전송해볼까요?
@@ -520,19 +513,6 @@ public class Signup  extends AppCompatActivity {
         this.year = String.valueOf(year);
         this.month = String.valueOf(month);
         this.day = String.valueOf(day);
-        String year_s = Integer.toString(year);
-        String month_s = Integer.toString(month+1);
-        String day_s = Integer.toString(day);
-
-        if (month_s.length() == 1){
-            month_s = "0" + month_s;
-        }
-        if (day_s.length() == 1){
-            day_s = "0" + day_s;
-        }
-
-        date = year_s+month_s+day_s;
-        is_birth_valid = true;
         System.out.println("year" + year);
         System.out.println("month" + month);
         System.out.println("day" + day);

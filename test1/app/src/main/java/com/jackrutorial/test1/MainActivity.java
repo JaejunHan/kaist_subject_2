@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
     TextView login_password;
     TextView sign_up;
     Button submit;
-    private String localhost = "https://9504-192-249-18-214.jp.ngrok.io";
+    private String localhost = "https://8cd5-192-249-18-214.jp.ngrok.io";
 
 
     @Override
@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         sign_up.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), EditMyInfo.class);
+                Intent intent = new Intent(getApplicationContext(), Signup.class);
                 startActivity(intent);
 
             }
@@ -88,7 +88,6 @@ public class MainActivity extends AppCompatActivity {
         try {
             testjson.put("id", "test_id");
             testjson.put("password", "test_password");
-            String jsonString = testjson.toString(); //완성된 json 포맷
 
 
         } catch (JSONException e) {

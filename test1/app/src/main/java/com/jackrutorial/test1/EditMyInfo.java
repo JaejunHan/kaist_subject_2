@@ -18,6 +18,7 @@ import java.util.List;
 
 public class EditMyInfo extends AppCompatActivity {
 
+    Button editImage;
     Button editName;
     Button editNum;
     Button editMail;
@@ -39,6 +40,14 @@ public class EditMyInfo extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_my_info);
+
+        editImage = (Button) findViewById(R.id.EditProfileImage);
+        editImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
 
         editName = (Button) findViewById(R.id.editName);
         editName.setOnClickListener(new View.OnClickListener() {
