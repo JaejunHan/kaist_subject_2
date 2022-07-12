@@ -137,7 +137,7 @@ public class DetailPostFragment extends Fragment {
         });
 
 
-        // 수정 하기 클릭시 ----------
+        // 수정하기 클릭시 ----------
         view.findViewById(R.id.edit_btn).setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){

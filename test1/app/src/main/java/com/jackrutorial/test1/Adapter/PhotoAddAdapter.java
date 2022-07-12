@@ -1,6 +1,7 @@
 package com.jackrutorial.test1.Adapter;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,9 +18,9 @@ import java.util.List;
 
 public class PhotoAddAdapter extends BaseAdapter {
 
-    List<Integer> imageList;
+    List<Bitmap> imageList;
 
-    public PhotoAddAdapter(ArrayList<Integer> data){
+    public PhotoAddAdapter(ArrayList<Bitmap> data){
         imageList = data;
     }
 
@@ -29,7 +30,7 @@ public class PhotoAddAdapter extends BaseAdapter {
     }
 
     @Override
-    public Object getItem(int i) {
+    public Bitmap getItem(int i) {
         return imageList.get(i);
     }
 
@@ -49,7 +50,7 @@ public class PhotoAddAdapter extends BaseAdapter {
 
         ImageView imageView = (ImageView) convertView.findViewById(R.id.gridImageView);
 
-        imageView.setImageResource(imageList.get(position));
+        imageView.setImageBitmap(imageList.get(position));
         return convertView;
     }
 }

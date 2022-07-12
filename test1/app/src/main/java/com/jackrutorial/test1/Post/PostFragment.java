@@ -74,6 +74,12 @@ public class PostFragment extends Fragment {
 
         getResponse();
 
+        Bundle bundle = new Bundle();
+        bundle.putString("nickname", nickname);
+
+        ((BoardActivity)getActivity()).bullentinBoardFragment.setArguments(bundle); // detail Frag 로 bundle 을 넘겨줍니당
+
+
         // ---------------------
         // 게시글 클릭 리스너 -> detail fragment 로 이동
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){

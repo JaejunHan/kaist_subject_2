@@ -34,7 +34,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 public class Chatting_list extends Activity {
-    private String localhost = "https://9504-192-249-18-214.jp.ngrok.io";
+    private String localhost = "https://7db1-192-249-18-214.jp.ngrok.io";
     private ArrayList<com.jackrutorial.test1.chat_list_shown> chat_room_list = new ArrayList<>();
     private chat_list_shown chat_list_shown;
     private String mynickname = "";
@@ -65,7 +65,6 @@ public class Chatting_list extends Activity {
                 Intent intent = new Intent(getApplicationContext(), ChatActivity.class);
                 intent.putExtra("my_nickname", mynickname);
                 intent.putExtra("other_nickname", other_nickname);
-
                 startActivity(intent);
                 // todo
                 // db에 mynickname, other_nickname, room_name을 이용하여 채팅기록을 불러와서 화면에 띄워주고, 채팅방 소켓을 열음.
@@ -141,6 +140,8 @@ public class Chatting_list extends Activity {
         // 사용할 json obj 선언
         JSONObject readjson = new JSONObject();
         readjson.put("my_nickname", mynickname);
+        System.out.println(mynickname);
+        System.out.println("kdfnmkdfmkdmfk");
         // Volley 로 전송할 req를 담는 requestQueue 선언
         final RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
 

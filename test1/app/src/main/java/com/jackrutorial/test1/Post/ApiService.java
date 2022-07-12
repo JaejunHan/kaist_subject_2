@@ -1,4 +1,4 @@
-package com.jackrutorial.test1.Profile;
+package com.jackrutorial.test1.Post;
 
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;

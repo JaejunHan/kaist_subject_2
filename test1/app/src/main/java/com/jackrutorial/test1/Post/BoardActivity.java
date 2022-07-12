@@ -48,6 +48,7 @@ public class BoardActivity extends AppCompatActivity {
 //        resultId = intent.getStringExtra("resultId");
         nickname = intent.getStringExtra("nickname");
 
+
         // 하단 navigation - 탭 간 이동
         bottomNavigationView = findViewById(R.id.bottom_nav);
         bottomNavigationView.setOnItemSelectedListener(new BottomNavigationView.OnItemSelectedListener(){

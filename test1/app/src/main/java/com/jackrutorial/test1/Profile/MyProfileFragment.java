@@ -147,7 +147,7 @@ public class MyProfileFragment extends Fragment {
         editImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //startActivityForResult(getPickImageChooserIntent(), IMAGE_RESULT);///////////////////////////////////
+                startActivityForResult(getPickImageChooserIntent(), IMAGE_RESULT);///////////////////////////////////
             }
         });
 

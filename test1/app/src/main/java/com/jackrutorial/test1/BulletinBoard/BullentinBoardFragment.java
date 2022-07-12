@@ -12,23 +12,29 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.jackrutorial.test1.Chatting.Chatting_list;
 import com.jackrutorial.test1.R;
 
 public class BullentinBoardFragment extends Fragment {
     View view;
-
+    String nickname;
     Button button1;
     Button button2;
     Button button3;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        Bundle bundle = new Bundle();
+        nickname = bundle.getString("nickname");
+        System.out.println(nickname);
+        System.out.println("sdfkndkfndkfndknfkdnfkdnfknkxmcklm");
         view = inflater.inflate(R.layout.activity_bulletin_board, container, false);
         button1 = view.findViewById(R.id.buttonFirst);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), FirstBulletinBoard.class);
+                Intent intent = new Intent(getActivity(), Chatting_list.class);
+                intent.putExtra("nickname", nickname);
                 startActivity(intent);
             }
         });
