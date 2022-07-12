@@ -74,7 +74,7 @@ public class BoardActivity extends AppCompatActivity {
         otherProfileFragment = new OtherProfileFragment();
         postFragment = new PostFragment(resultId, nickname); // resultId, nickname
         bullentinBoardFragment = new BullentinBoardFragment();
-        writingPostFragment = new WritingPostFragment(nickname);
+        writingPostFragment = new WritingPostFragment();
         detailPostFragment = new DetailPostFragment();
         editPostFragment = new EditPostFragment();
 

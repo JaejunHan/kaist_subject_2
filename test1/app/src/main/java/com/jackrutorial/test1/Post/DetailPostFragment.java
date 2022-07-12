@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -116,8 +117,11 @@ public class DetailPostFragment extends Fragment {
             public void onClick(View view) {
                 createComment(curr_userName,posting_title, posting_subtitle, comment_et.getText().toString(),"0","20220711", "20220711" );
                 loadComment(posting_title, posting_subtitle);
+
             }
         });
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+        ft.detach(this).attach(this).commit();
 
 
         // 댓글 클릭시 해당 user 프로필로 연동가능하도록 ---------

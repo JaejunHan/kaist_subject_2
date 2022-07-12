@@ -56,13 +56,15 @@ WritingPostFragment extends Fragment {
     }
 
     private String localhost = "https://7db1-192-249-18-214.jp.ngrok.io";
-
-    public WritingPostFragment(String name){
-        this.nickname = nickname;
-    }
+//
+//    public WritingPostFragment(String name){
+//        this.nickname = nickname;
+//    }
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Bundle bundle = getArguments(); // detailPostFrag 에서 넘겨준 bundle 받아옴 (user name)
+        nickname = bundle.getString("nickname");
     }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
@@ -92,7 +94,7 @@ WritingPostFragment extends Fragment {
                 String dateStr = dateFormat.format(date);
 
 
-                postRequest( "test_nickname", title, subtitle, content, "0", "50", dateStr);
+                postRequest( nickname, title, subtitle, content, "0", "50", dateStr);
 
                 /////////
                 //((BoardActivity) getActivity()).setFrag(3); // 다시 게시글 list 로 돌아감
