@@ -1,4 +1,4 @@
-package com.jackrutorial.test1;
+package com.jackrutorial.test1.Profile;
 
 import static android.Manifest.permission.CAMERA;
 import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
@@ -44,6 +44,10 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.bumptech.glide.Glide;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.jackrutorial.test1.LeaderBoard;
+import com.jackrutorial.test1.R;
+import com.jackrutorial.test1.dialogMake;
+import com.jackrutorial.test1.gosuTalkEdit;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -121,7 +125,7 @@ public class MyProfileFragment extends Fragment {
                              ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View rootview =  inflater.inflate(R.layout.fragment_profile, container, false);
+        View rootview =  inflater.inflate(R.layout.fragment_my_profile, container, false);
 
         // todo
         // 이거를 fragment로 바꿔야함.

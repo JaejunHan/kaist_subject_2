@@ -11,8 +11,8 @@ import android.view.MenuItem;
 import android.widget.GridView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.jackrutorial.test1.MyProfileFragment;
-import com.jackrutorial.test1.Profile.ProfileFragment;
+import com.jackrutorial.test1.Profile.MyProfileFragment;
+import com.jackrutorial.test1.Profile.OtherProfileFragment;
 import com.jackrutorial.test1.R;
 import com.jackrutorial.test1.TmpFragment;
 
@@ -26,11 +26,13 @@ public class BoardActivity extends AppCompatActivity {
 
     /////////////////////////////////
     // BoardActivity 에서 불러올 fragmen
-    MyProfileFragment profileFragment;
+    MyProfileFragment myProfileFragment;
+    OtherProfileFragment otherProfileFragment;
     PostFragment postFragment;
     TmpFragment tmpFragment;
     WritingPostFragment writingPostFragment;
     DetailPostFragment detailPostFragment;
+    EditPostFragment editPostFragment;
 
     ////////////////////////////////////
     //gridView
@@ -41,9 +43,9 @@ public class BoardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_board);
 
-        // intent 넘겨받기
+        // Example에서 intent 넘겨받기
         Intent intent = getIntent();
-        resultId = intent.getStringExtra("resultId");
+//        resultId = intent.getStringExtra("resultId");
         nickname = intent.getStringExtra("nickname");
 
         // 하단 navigation - 탭 간 이동
@@ -53,7 +55,7 @@ public class BoardActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item){
                 switch(item.getItemId())
                 {
-                    case R.id.Profile: // 하단 nav에서 profile 선택 시
+                    case R.id.MyProfile: // 하단 nav에서 profile 선택 시
                         setFrag(0);
                         break;
                     case R.id.Post:
@@ -68,11 +70,13 @@ public class BoardActivity extends AppCompatActivity {
             }
         });
         //////////////////// 불러올 fragment 들에 값 넣어주기!!!
-        profileFragment = new MyProfileFragment();
+        myProfileFragment = new MyProfileFragment();
+        otherProfileFragment = new OtherProfileFragment();
         postFragment = new PostFragment(resultId, nickname); // resultId, nickname
         tmpFragment = new TmpFragment();
         writingPostFragment = new WritingPostFragment(nickname);
         detailPostFragment = new DetailPostFragment();
+        editPostFragment = new EditPostFragment();
 
 
         // defualt fragment = Post
@@ -90,7 +94,7 @@ public class BoardActivity extends AppCompatActivity {
 
         switch(n){
             case 0 :    // My profile
-                fragmentTransaction.replace(R.id.main_frame, profileFragment); // repalce
+                fragmentTransaction.replace(R.id.main_frame, myProfileFragment); // replace
                 fragmentTransaction.commit();
                 break;
 
@@ -104,13 +108,23 @@ public class BoardActivity extends AppCompatActivity {
                 fragmentTransaction.commit();
                 break;
 
-            case 3 :    // 글 등록 구현하기~~~!
+            case 3 :    // 글 등록 구현
                 fragmentTransaction.replace(R.id.main_frame, writingPostFragment);
                 fragmentTransaction.commit();
                 break;
 
             case 4 :    // 글 세부 정보 보여주는 fragment
                 fragmentTransaction.replace(R.id.main_frame, detailPostFragment);
+                fragmentTransaction.commit();
+                break;
+
+            case 5 :    // Other profile
+                fragmentTransaction.replace(R.id.main_frame, otherProfileFragment); // replace
+                fragmentTransaction.commit();
+                break;
+
+            case 6 :    // Edit post
+                fragmentTransaction.replace(R.id.main_frame, editPostFragment); // replace
                 fragmentTransaction.commit();
                 break;
 

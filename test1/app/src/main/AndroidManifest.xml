@@ -29,7 +29,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".EditMyInfo"
+            android:name=".Profile.EditMyInfo"
             android:exported="false" />
         <activity
             android:name=".gosuTalkEdit"

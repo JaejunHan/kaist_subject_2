@@ -45,6 +45,8 @@
         <entry key="app/src/main/res/layout/fragment_data_picker.xml" value="0.18414387031408308" />
         <entry key="app/src/main/res/layout/fragment_detail_post.xml" value="0.24791666666666667" />
         <entry key="app/src/main/res/layout/fragment_edit_post.xml" value="0.17447916666666666" />
+        <entry key="app/src/main/res/layout/fragment_my_profile.xml" value="0.16802536231884058" />
+        <entry key="app/src/main/res/layout/fragment_other_profile.xml" value="0.17322860938915308" />
         <entry key="app/src/main/res/layout/fragment_post.xml" value="0.25104166666666666" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/fragment_tmp.xml" value="0.24791666666666667" />
@@ -56,6 +58,7 @@
         <entry key="app/src/main/res/layout/profile.xml" value="0.2341485507246377" />
         <entry key="app/src/main/res/layout/show_photo.xml" value="0.15806159420289856" />
         <entry key="app/src/main/res/layout/sign_up.xml" value="0.4870734229576008" />
+        <entry key="app/src/main/res/menu/menu.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/xml/network_security_config.xml" value="0.22604166666666667" />
       </map>
     </option>

@@ -6,7 +6,6 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +13,6 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,18 +25,13 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.jackrutorial.test1.Adapter.CommentAdapter;
-import com.jackrutorial.test1.Adapter.PreviewAdapter;
-import com.jackrutorial.test1.Post.BoardActivity;
-import com.jackrutorial.test1.Post.PostFragment;
 
-import com.jackrutorial.test1.Data.Preview;
 import com.jackrutorial.test1.Data.Comment;
 import com.jackrutorial.test1.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -135,10 +128,11 @@ public class DetailPostFragment extends Fragment {
 
                 Comment comment = commentList.get(position);
                 Bundle bundle = new Bundle();
-                bundle.putString("nickname", comment.getCommNickname());
+                bundle.putString("my_nickname", curr_userName);
+                bundle.putString("other_nickname", comment.getCommNickname());
 
-                ((BoardActivity)getActivity()).profileFragment.setArguments(bundle);
-                ((BoardActivity)getActivity()).setFrag(0);
+                ((BoardActivity)getActivity()).otherProfileFragment.setArguments(bundle);
+                ((BoardActivity)getActivity()).setFrag(5);//
             }
         });
 
@@ -153,7 +147,7 @@ public class DetailPostFragment extends Fragment {
                 bundle.putString("posting_title",posting_title );
                 bundle.putString("posting_subtitle", posting_subtitle);
 
-                ((BoardActivity)getActivity()).setFrag(5); // edit fragment 로 이동
+                ((BoardActivity)getActivity()).setFrag(6); // edit fragment 로 이동
             }
         });
 

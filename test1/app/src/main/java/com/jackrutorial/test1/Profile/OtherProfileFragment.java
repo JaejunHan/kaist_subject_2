@@ -1,6 +1,7 @@
 package com.jackrutorial.test1.Profile;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -8,6 +9,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -20,13 +22,15 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.annotation.GlideModule;
+import com.jackrutorial.test1.Chatting.ChatActivity;
 import com.jackrutorial.test1.R;
+import com.jackrutorial.test1.ThirdBulletinBoard;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 
-public class ProfileFragment extends Fragment {
+public class OtherProfileFragment extends Fragment {
 
     private String localhost = "https://7db1-192-249-18-214.jp.ngrok.io";
     View view;
@@ -39,10 +43,12 @@ public class ProfileFragment extends Fragment {
     TextView profile_career1,profile_career2,profile_career3, profile_career4, profile_career5, profile_group1, profile_group2, profile_group3;
     /////////// textview
 
-    // bundle로 받아올 값들
-     String nickname;
+    ImageView profile_dm_btn;
 
-    public ProfileFragment() {
+    // bundle로 받아올 값들
+     String my_nickname, other_nickname;
+
+    public OtherProfileFragment() {
         // Required empty public constructor
     }
 
@@ -51,7 +57,8 @@ public class ProfileFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         Bundle bundle = getArguments(); // detailPostFrag 에서 넘겨준 bundle 받아옴 (user name)
-        nickname = bundle.getString("nickname");
+        my_nickname = bundle.getString("my_nickname");
+        other_nickname = bundle.getString("other_nickname");
 
     }
 
@@ -69,11 +76,23 @@ public class ProfileFragment extends Fragment {
         profile_email = (TextView) view.findViewById(R.id.profile_email);
         profile_comment = (TextView) view.findViewById(R.id.profile_comment);
         profile_group1 = (TextView) view.findViewById(R.id.profile_group1);
+        profile_dm_btn = (ImageButton) view.findViewById(R.id.profile_dm_btn) ;
+
+        // dm btn
+        profile_dm_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), ChatActivity.class);
+                intent.putExtra("my_nickname", my_nickname);
+                intent.putExtra("other_nickname", other_nickname);
+                startActivity(intent);
+            }
+        });
 
 
         context = container.getContext();
 
-        request(nickname);
+        request(other_nickname);
         return view;
     }
 
