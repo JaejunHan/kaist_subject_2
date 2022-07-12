@@ -1,4 +1,4 @@
-package com.jackrutorial.test1;
+package com.jackrutorial.test1.BulletinBoard;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,7 +12,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-public class TmpFragment extends Fragment {
+import com.jackrutorial.test1.R;
+
+public class BullentinBoardFragment extends Fragment {
     View view;
 
     Button button1;

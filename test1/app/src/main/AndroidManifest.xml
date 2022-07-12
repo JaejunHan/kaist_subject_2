@@ -36,16 +36,13 @@
             android:exported="false"
             android:theme="@android:style/Theme.Dialog" />
         <activity
-            android:name=".ThirdBulletinBoard"
+            android:name=".BulletinBoard.ThirdBulletinBoard"
             android:exported="false" />
         <activity
-            android:name=".SecondBulletinBoard"
+            android:name=".BulletinBoard.SecondBulletinBoard"
             android:exported="false" />
         <activity
-            android:name=".FirstBulletinBoard"
-            android:exported="false" />
-        <activity
-            android:name=".BulletinBoard"
+            android:name=".BulletinBoard.BulletinBoard"
             android:exported="false" />
         <activity
             android:name=".LeaderBoard"

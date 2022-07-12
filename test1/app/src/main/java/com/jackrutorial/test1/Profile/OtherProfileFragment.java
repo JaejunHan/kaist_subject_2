@@ -11,7 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import com.android.volley.DefaultRetryPolicy;
@@ -21,10 +20,8 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.annotation.GlideModule;
 import com.jackrutorial.test1.Chatting.ChatActivity;
 import com.jackrutorial.test1.R;
-import com.jackrutorial.test1.ThirdBulletinBoard;
 
 import org.json.JSONException;
 import org.json.JSONObject;

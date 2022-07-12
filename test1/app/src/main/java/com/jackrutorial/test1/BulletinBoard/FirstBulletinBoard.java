@@ -1,4 +1,4 @@
-package com.jackrutorial.test1;
+package com.jackrutorial.test1.BulletinBoard;
 
 import android.os.Bundle;
 import android.view.View;
@@ -9,10 +9,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.jackrutorial.test1.Adapter.BulletinBoardAdapter;
 import com.jackrutorial.test1.Data.BulletenBoardData;
+import com.jackrutorial.test1.R;
 
 import java.util.ArrayList;
 
-public class ThirdBulletinBoard extends AppCompatActivity {
+public class FirstBulletinBoard extends AppCompatActivity {
     BulletinBoardAdapter adapter;
     ListView listView;
 

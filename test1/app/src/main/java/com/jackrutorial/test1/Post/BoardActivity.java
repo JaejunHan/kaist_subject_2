@@ -14,7 +14,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.jackrutorial.test1.Profile.MyProfileFragment;
 import com.jackrutorial.test1.Profile.OtherProfileFragment;
 import com.jackrutorial.test1.R;
-import com.jackrutorial.test1.TmpFragment;
+import com.jackrutorial.test1.BulletinBoard.BullentinBoardFragment;
 
 public class BoardActivity extends AppCompatActivity {
 
@@ -29,7 +29,7 @@ public class BoardActivity extends AppCompatActivity {
     MyProfileFragment myProfileFragment;
     OtherProfileFragment otherProfileFragment;
     PostFragment postFragment;
-    TmpFragment tmpFragment;
+    BullentinBoardFragment bullentinBoardFragment;
     WritingPostFragment writingPostFragment;
     DetailPostFragment detailPostFragment;
     EditPostFragment editPostFragment;
@@ -73,7 +73,7 @@ public class BoardActivity extends AppCompatActivity {
         myProfileFragment = new MyProfileFragment();
         otherProfileFragment = new OtherProfileFragment();
         postFragment = new PostFragment(resultId, nickname); // resultId, nickname
-        tmpFragment = new TmpFragment();
+        bullentinBoardFragment = new BullentinBoardFragment();
         writingPostFragment = new WritingPostFragment(nickname);
         detailPostFragment = new DetailPostFragment();
         editPostFragment = new EditPostFragment();
@@ -104,7 +104,7 @@ public class BoardActivity extends AppCompatActivity {
                 break;
 
             case 2 :    ///////////////////////// 미정 !
-                fragmentTransaction.replace(R.id.main_frame, tmpFragment);
+                fragmentTransaction.replace(R.id.main_frame, bullentinBoardFragment);
                 fragmentTransaction.commit();
                 break;
 

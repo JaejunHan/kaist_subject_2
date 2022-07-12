@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BulletinBoard"
+    tools:context=".BulletinBoard.BulletinBoard"
     android:background="#f5f5f5">
     <LinearLayout
         android:layout_width="match_parent"

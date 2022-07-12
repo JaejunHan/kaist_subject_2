@@ -25,11 +25,13 @@
         <entry key="..\:/Users/hanjj/android_for_git/dae/test1/app/src/main/res/layout/fragment_other_profile.xml" value="0.1921875" />
         <entry key="..\:/Users/hanjj/android_for_git/dae/test1/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
         <entry key="app/src/main/res/drawable/background_splash.xml" value="0.11" />
+        <entry key="app/src/main/res/drawable/gobackimage.xml" value="0.138" />
         <entry key="app/src/main/res/drawable/gray_background_square_bottom_left.xml" value="0.25" />
         <entry key="app/src/main/res/drawable/green_background_square.xml" value="0.224" />
         <entry key="app/src/main/res/drawable/green_background_square_bottom.xml" value="0.2525" />
         <entry key="app/src/main/res/drawable/green_background_square_bottom_right.xml" value="0.25" />
         <entry key="app/src/main/res/drawable/selector.xml" value="0.25" />
+        <entry key="app/src/main/res/drawable/white_background.xml" value="0.138" />
         <entry key="app/src/main/res/drawable/white_background_square.xml" value="0.224" />
         <entry key="app/src/main/res/drawable/white_background_square_bottom.xml" value="0.2525" />
         <entry key="app/src/main/res/layout/activity_board.xml" value="0.24727272727272728" />
@@ -45,7 +47,7 @@
         <entry key="app/src/main/res/layout/fragment_data_picker.xml" value="0.18414387031408308" />
         <entry key="app/src/main/res/layout/fragment_detail_post.xml" value="0.24791666666666667" />
         <entry key="app/src/main/res/layout/fragment_edit_post.xml" value="0.17447916666666666" />
-        <entry key="app/src/main/res/layout/fragment_my_profile.xml" value="0.16802536231884058" />
+        <entry key="app/src/main/res/layout/fragment_my_profile.xml" value="0.4435946462715105" />
         <entry key="app/src/main/res/layout/fragment_other_profile.xml" value="0.17322860938915308" />
         <entry key="app/src/main/res/layout/fragment_post.xml" value="0.25104166666666666" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.28229166666666666" />

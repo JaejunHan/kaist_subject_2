@@ -41,24 +41,32 @@ import okhttp3.WebSocket;
 import okhttp3.WebSocketListener;
 
 public class ChatActivity extends AppCompatActivity implements TextWatcher {
-    private String localhost = "https://9504-192-249-18-214.jp.ngrok.io";
+    private String localhost = "https://7db1-192-249-18-214.jp.ngrok.io";
     private String name;
     private String room;
     private WebSocket webSocket;
-    private String SERVER_PATH = "https://9504-192-249-18-214.jp.ngrok.io";
+    private String SERVER_PATH = "https://7db1-192-249-18-214.jp.ngrok.io";
     private EditText messageEdit;
     private View sendBtn, pickImgBtn;
     private RecyclerView recyclerView;
     private int IMAGE_REQUEST_ID = 1;
+
+    private String other_nickname = "";
     private MessageAdapter messageAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
+        name = getIntent().getStringExtra("my_nickname");
+        other_nickname = getIntent().getStringExtra("other_nickname");
 
-        name = getIntent().getStringExtra("name");
-        room = getIntent().getStringExtra("room");
+        if (name.compareTo(other_nickname) > 0){
+            room = name + other_nickname;
+        } else {
+            room = other_nickname + name;
+        }
+
         initiateSocketConnection();
 
     }
@@ -66,7 +74,7 @@ public class ChatActivity extends AppCompatActivity implements TextWatcher {
     private void initiateSocketConnection() {
 
         OkHttpClient client = new OkHttpClient();
-        String url = SERVER_PATH + "?user="+ name + "&room=" + room; ;
+        String url = SERVER_PATH + "?user="+ name + "&room=" + room + "&other_user=" + other_nickname;
         Request request = new Request.Builder().url(url).build();
         System.out.println(request);
 

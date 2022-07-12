@@ -1,4 +1,4 @@
-package com.jackrutorial.test1;
+package com.jackrutorial.test1.BulletinBoard;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,7 +7,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.jackrutorial.test1.FirstBulletinBoard;
+import com.jackrutorial.test1.R;
 
 public class BulletinBoard extends AppCompatActivity {
 
