@@ -66,9 +66,9 @@
         <entry key="app/src/main/res/layout/activity_third_bulletin_board.xml" value="0.1276595744680851" />
         <entry key="app/src/main/res/layout/first_page.xml" value="0.11930091185410334" />
         <entry key="app/src/main/res/layout/fragment_data_picker.xml" value="0.18414387031408308" />
-        <entry key="app/src/main/res/layout/fragment_detail_post.xml" value="0.11684782608695653" />
+        <entry key="app/src/main/res/layout/fragment_detail_post.xml" value="0.28370421036430027" />
         <entry key="app/src/main/res/layout/fragment_edit_post.xml" value="0.11684782608695653" />
-        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.4244791666666667" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.36271158854166663" />
         <entry key="app/src/main/res/layout/mypage.xml" value="0.304936353078329" />
         <entry key="app/src/main/res/layout/profile.xml" value="0.2341485507246377" />
         <entry key="app/src/main/res/layout/show_photo.xml" value="0.15806159420289856" />
