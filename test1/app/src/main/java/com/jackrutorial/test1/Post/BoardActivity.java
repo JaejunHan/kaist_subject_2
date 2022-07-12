@@ -24,12 +24,12 @@ public class BoardActivity extends AppCompatActivity {
     private FragmentTransaction fragmentTransaction;
 
     /////////////////////////////////
-    // BoardActivity 에서 불러올 fragment
-    private ProfileFragment profileFragment;
-    private PostFragment postFragment;
-    private TmpFragment tmpFragment;
-    private WritingPostFragment writingPostFragment;
-    private DetailPostFragment detailPostFragment;
+    // BoardActivity 에서 불러올 fragmen
+    ProfileFragment profileFragment;
+    PostFragment postFragment;
+    TmpFragment tmpFragment;
+    WritingPostFragment writingPostFragment;
+    DetailPostFragment detailPostFragment;
 
     ////////////////////////////////////
     //gridView
