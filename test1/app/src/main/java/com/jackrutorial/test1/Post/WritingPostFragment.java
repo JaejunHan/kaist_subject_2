@@ -2,6 +2,7 @@ package com.jackrutorial.test1.Post;
 
 import android.content.Context;
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -9,7 +10,11 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.GridView;
 import android.widget.Toast;
 
 import com.android.volley.DefaultRetryPolicy;
@@ -19,6 +24,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.jackrutorial.test1.Adapter.PhotoAddAdapter;
 import com.jackrutorial.test1.R;
 
 import java.text.DateFormat;
@@ -29,11 +35,19 @@ import java.util.Date;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class WritingPostFragment extends Fragment {
+import java.util.ArrayList;
+
+public class
+WritingPostFragment extends Fragment {
     private View view;
     private String nickname;
     EditText new_title, new_subtitle, new_content;
     private Context context;
+    Button button;
+
+    GridView gridView;
+    PhotoAddAdapter adapter;
+    int numPhoto = 0;
 
     public static void main(String[] args) throws ParseException {
         DateFormat dateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
@@ -58,6 +72,10 @@ public class WritingPostFragment extends Fragment {
         new_title = view.findViewById(R.id.new_title);
         new_subtitle = view.findViewById(R.id.new_subtitle);
         new_content = view.findViewById(R.id.new_content);
+        button = view.findViewById(R.id.addPhotoButton);
+
+        gridView = (GridView) view.findViewById(R.id.addPhoto);
+        ArrayList<Integer> list = new ArrayList<>();
 
         // 작성 버튼 클릭 리스너
         view.findViewById(R.id.posting_btn).setOnClickListener(new View.OnClickListener() {
@@ -68,18 +86,37 @@ public class WritingPostFragment extends Fragment {
                 String subtitle = new_subtitle.getText().toString();
                 String content = new_content.getText().toString();
 
-                // 날짜
-                DateFormat dateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
-                Date date = new Date();
-                String dateStr = dateFormat.format(date);
+                postRequest("test_id", "test_nickname", title, subtitle, content, "0", "50");
 
-                postRequest("test_nickname", title, subtitle, content, "0", "50", dateStr);
-
-                ((BoardActivity) getActivity()).setFrag(3); // 다시 게시글 list 로 돌아감
+                /////////
+                //((BoardActivity) getActivity()).setFrag(3); // 다시 게시글 list 로 돌아감
+            }
+        });
+        //사진추가
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // todo
+                // list 자료형 integer로 되어있음 수정 필요
+                if(numPhoto < 5){
+                    list.add(R.drawable.delicious);
+                    adapter.notifyDataSetChanged();
+                }
+                numPhoto = numPhoto + 1;
             }
         });
 
+        gridView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
+                list.remove(i);
+                return true;
+            }
+        });
+        adapter = new PhotoAddAdapter(list);
+        gridView.setAdapter(adapter);
 
+        ((BoardActivity) getActivity()).setFrag(3); // 다시 게시글 list 로 돌아감
         return view;
     }
 
@@ -92,8 +129,6 @@ public class WritingPostFragment extends Fragment {
     public void postRequest(String nickname, String title ,String subtitle ,String content, String imgCnt, String score, String date){
         //########### url 지정
         String url = localhost + "/write_post";
-
-
 
         // 사용할 json obj 선언
         JSONObject writejson = new JSONObject();

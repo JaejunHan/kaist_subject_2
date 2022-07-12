@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // 무시해도 됨
-        String url = "https://093f-192-249-19-234.jp.xxngrok.io/users";
+        String url = "https://093f-192-249-19-234.jp.ngrok.io/users";
         JSONObject testjson = new JSONObject();
         try {
             testjson.put("id", "test_id");
