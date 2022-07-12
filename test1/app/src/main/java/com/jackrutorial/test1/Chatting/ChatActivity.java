@@ -50,6 +50,7 @@ public class ChatActivity extends AppCompatActivity implements TextWatcher {
     private View sendBtn, pickImgBtn;
     private RecyclerView recyclerView;
     private int IMAGE_REQUEST_ID = 1;
+    private String other_nickname = "";
     private MessageAdapter messageAdapter;
 
     @Override
@@ -57,8 +58,14 @@ public class ChatActivity extends AppCompatActivity implements TextWatcher {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
 
-        name = getIntent().getStringExtra("name");
-        room = getIntent().getStringExtra("room");
+        name = getIntent().getStringExtra("my_nickname");
+        other_nickname = getIntent().getStringExtra("other_nickname");
+
+        if (name.compareTo(other_nickname) > 0){
+            room = name + other_nickname;
+        } else {
+            room = other_nickname + name;
+        }
         initiateSocketConnection();
 
     }
@@ -66,7 +73,7 @@ public class ChatActivity extends AppCompatActivity implements TextWatcher {
     private void initiateSocketConnection() {
 
         OkHttpClient client = new OkHttpClient();
-        String url = SERVER_PATH + "?user="+ name + "&room=" + room; ;
+        String url = SERVER_PATH + "?user="+ name + "&room=" + room + "?other_user=" + other_nickname;
         Request request = new Request.Builder().url(url).build();
         System.out.println(request);
 

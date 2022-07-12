@@ -59,19 +59,13 @@ public class Chatting_list extends Activity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 // 상대방의 닉네임
+
                 String other_nickname = chat_room_list.get(position).getNickname();
                 // 채팅방 이름 (db 및 소켓 접속시 쓰임)
-                String room_name = "";
-                if (mynickname.compareTo(other_nickname) > 0){
-                    room_name = mynickname + other_nickname;
-                } else {
-                    room_name = other_nickname + mynickname;
-                }
                 Intent intent = new Intent(getApplicationContext(), ChatActivity.class);
-                System.out.println(room_name);
-                System.out.println("여깅ㄻ나ㅐㅇ롸니오라ㅣㄴ오린우리ㅏㄴㅇㄹ");
-                intent.putExtra("name", mynickname);
-                intent.putExtra("room", room_name);
+                intent.putExtra("my_nickname", mynickname);
+                intent.putExtra("other_nickname", other_nickname);
+                
                 startActivity(intent);
                 // todo
                 // db에 mynickname, other_nickname, room_name을 이용하여 채팅기록을 불러와서 화면에 띄워주고, 채팅방 소켓을 열음.
