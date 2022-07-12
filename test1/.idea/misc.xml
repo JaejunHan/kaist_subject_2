@@ -24,7 +24,31 @@
         <entry key="..\:/Users/hanjj/android_for_git/dae/test1/app/src/main/res/layout/fragment_detail_post.xml" value="0.12635869565217392" />
         <entry key="..\:/Users/hanjj/android_for_git/dae/test1/app/src/main/res/layout/fragment_other_profile.xml" value="0.1921875" />
         <entry key="..\:/Users/hanjj/android_for_git/dae/test1/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
-        <entry key="..\:/Users/hanjj/android_for_git/retry/test1/app/src/main/res/layout/fragment_detail_post.xml" value="0.22" />
+        <entry key="..\:/Users/hanjj/android_for_git/retry/test1/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1825" />
+        <entry key="..\:/Users/hanjj/android_for_git/retry/test1/app/src/main/res/drawable/background_splash.xml" value="0.1825" />
+        <entry key="..\:/Users/hanjj/android_for_git/retry/test1/app/src/main/res/drawable/green_background_square.xml" value="0.1825" />
+        <entry key="..\:/Users/hanjj/android_for_git/retry/test1/app/src/main/res/drawable/green_background_square_bottom.xml" value="0.1825" />
+        <entry key="..\:/Users/hanjj/android_for_git/retry/test1/app/src/main/res/drawable/green_background_square_bottom_right.xml" value="0.1825" />
+        <entry key="..\:/Users/hanjj/android_for_git/retry/test1/app/src/main/res/drawable/green_background_square_top.xml" value="0.1825" />
+        <entry key="..\:/Users/hanjj/android_for_git/retry/test1/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.1825" />
+        <entry key="..\:/Users/hanjj/android_for_git/retry/test1/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.1825" />
+        <entry key="..\:/Users/hanjj/android_for_git/retry/test1/app/src/main/res/drawable/ic_baseline_arrow_back_ios_new_24.xml" value="0.1825" />
+        <entry key="..\:/Users/hanjj/android_for_git/retry/test1/app/src/main/res/drawable/ic_baseline_sms_24.xml" value="0.1825" />
+        <entry key="..\:/Users/hanjj/android_for_git/retry/test1/app/src/main/res/layout/activity_board.xml" value="0.1875" />
+        <entry key="..\:/Users/hanjj/android_for_git/retry/test1/app/src/main/res/layout/activity_bulletin_board.xml" value="0.1875" />
+        <entry key="..\:/Users/hanjj/android_for_git/retry/test1/app/src/main/res/layout/activity_chat.xml" value="0.21770833333333334" />
+        <entry key="..\:/Users/hanjj/android_for_git/retry/test1/app/src/main/res/layout/activity_edit_my_info.xml" value="0.21770833333333334" />
+        <entry key="..\:/Users/hanjj/android_for_git/retry/test1/app/src/main/res/layout/activity_main.xml" value="0.21770833333333334" />
+        <entry key="..\:/Users/hanjj/android_for_git/retry/test1/app/src/main/res/layout/chat_list.xml" value="0.21770833333333334" />
+        <entry key="..\:/Users/hanjj/android_for_git/retry/test1/app/src/main/res/layout/chatting.xml" value="0.21770833333333334" />
+        <entry key="..\:/Users/hanjj/android_for_git/retry/test1/app/src/main/res/layout/fragment_detail_post.xml" value="0.33" />
+        <entry key="..\:/Users/hanjj/android_for_git/retry/test1/app/src/main/res/layout/fragment_edit_post.xml" value="0.21770833333333334" />
+        <entry key="..\:/Users/hanjj/android_for_git/retry/test1/app/src/main/res/layout/fragment_my_profile.xml" value="0.22" />
+        <entry key="..\:/Users/hanjj/android_for_git/retry/test1/app/src/main/res/layout/fragment_post.xml" value="0.21770833333333334" />
+        <entry key="..\:/Users/hanjj/android_for_git/retry/test1/app/src/main/res/layout/item.xml" value="0.21770833333333334" />
+        <entry key="..\:/Users/hanjj/android_for_git/retry/test1/app/src/main/res/layout/item_received_message.xml" value="0.21770833333333334" />
+        <entry key="..\:/Users/hanjj/android_for_git/retry/test1/app/src/main/res/layout/item_sent_message.xml" value="0.1" />
+        <entry key="..\:/Users/hanjj/android_for_git/retry/test1/app/src/main/res/layout/sign_up.xml" value="0.1875" />
         <entry key="app/src/main/res/drawable/background_splash.xml" value="0.11" />
         <entry key="app/src/main/res/drawable/gobackimage.xml" value="0.138" />
         <entry key="app/src/main/res/drawable/gray_background_square_bottom_left.xml" value="0.25" />

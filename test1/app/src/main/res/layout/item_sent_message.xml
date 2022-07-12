@@ -13,7 +13,8 @@
         android:padding="8dp"
         android:id="@+id/sentTxt"
         android:textSize="16sp"
-        android:background="#cccccc"
-        android:text="Hello this is a sample message" />
+        android:background="@drawable/green_background_square"
+        android:text="Hello this is a sample message"
+        />
 
 </RelativeLayout>

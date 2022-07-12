@@ -26,7 +26,7 @@
                 android:id="@+id/my_profile"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="#a4f2c2"/>
+                android:background="@color/theme_color"/>
             <Button
                 android:id="@+id/EditProfileImage"
                 android:layout_marginTop="10dp"
@@ -175,7 +175,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="스텍"
+                android:text="MBTI"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:layout_marginLeft="22dp"
@@ -195,7 +195,7 @@
                         android:id="@+id/techStackText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Java, C, C++, C#, Dart, python"
+                        android:text="ISTP"
                         android:textSize="17sp"
                         android:layout_marginTop="10dp"
                         android:layout_marginLeft="22dp"
@@ -230,7 +230,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="고수의 한마디"
+                android:text="나의 한마디"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:layout_marginLeft="22dp"
@@ -250,7 +250,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="22dp"
                     android:layout_marginBottom="10dp"
-                    android:text="배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파배고파" />
+                    android:text="사랑을 찾고싶어요" />
                 <Button
                     android:id="@+id/gosuTalk"
                     android:layout_width="wrap_content"
@@ -274,7 +274,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="경력"
+                android:text="스펙"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:layout_marginLeft="22dp"

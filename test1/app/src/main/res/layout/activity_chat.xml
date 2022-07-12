@@ -6,25 +6,44 @@
     android:layout_height="match_parent"
     tools:context=".ChatActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/first">
+        <ImageButton
+            android:id="@+id/goback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gobackimage"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/second"
+        android:layout_below="@id/first"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@drawable/green_background_square"
+        android:orientation="horizontal" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/second"
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/recyclerView"
-        android:layout_above="@id/messageEdit"/>
+        android:layout_above="@id/messageEdit" />
 
     <EditText
+        android:id="@+id/messageEdit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/edittext_design"
-        android:padding="8dp"
-        android:hint="Message..."
-        android:textSize="16sp"
-        android:layout_toStartOf="@id/sendBtn"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="16dp"
-        android:id="@+id/messageEdit" />
+        android:layout_toStartOf="@id/sendBtn"
+        android:background="@drawable/green_background_square"
+        android:hint="Message..."
+        android:padding="8dp"
+        android:textSize="16sp" />
 
     <TextView
         android:layout_width="wrap_content"
