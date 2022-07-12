@@ -23,6 +23,7 @@
             android:layout_marginTop="20dp"
             android:orientation="vertical">
             <ImageView
+                android:id="@+id/my_profile"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:background="#a4f2c2"/>

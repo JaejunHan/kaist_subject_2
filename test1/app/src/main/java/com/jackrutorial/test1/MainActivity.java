@@ -94,52 +94,6 @@ public class MainActivity extends AppCompatActivity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-
-        /*
-        String html = "https://d4e6-192-249-19-234.jp.ngrok.io/users";
-        StringBuilder urlBuilder = new StringBuilder(html); // URL
-        System.out.println("urlBuilder : " + urlBuilder);
-        URL url = null;
-        try {
-            url = new URL(urlBuilder.toString());
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        }
-        HttpURLConnection conn = null;
-        try {
-            conn = (HttpURLConnection) url.openConnection();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        try {
-            conn.setRequestMethod("GET");
-        } catch (ProtocolException e) {
-            e.printStackTrace();
-        }
-        conn.setRequestProperty("Content-type", "application/json");
-
-        HttpURLConnection finalConn = conn;
-        new Thread(() -> {
-            try {
-                BufferedReader bf;
-                if (finalConn.getResponseCode() >= 200 && finalConn.getResponseCode() <= 300) {
-                    bf = new BufferedReader(new InputStreamReader(finalConn.getInputStream()));
-                } else {
-                    bf = new BufferedReader(new InputStreamReader(finalConn.getErrorStream()));
-                }
-                result = bf.readLine();
-                System.out.println("result : " + result);
-            } catch (Exception e) {
-                System.out.println("오류올오ㅠㄹㅇㄹ유로유로유로유로유로유류ㅗ");
-            }
-        }).start();
-
-        try {
-            Thread.sleep(1500);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        */
     }
 
 
