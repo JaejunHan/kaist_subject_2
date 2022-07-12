@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
     TextView login_password;
     TextView sign_up;
     Button submit;
-    private String localhost = "https://8cd5-192-249-18-214.jp.ngrok.io";
+    private String localhost = "https://7db1-192-249-18-214.jp.ngrok.io";
 
 
     @Override
@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         sign_up.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Signup.class);
+                Intent intent = new Intent(getApplicationContext(), EditMyInfo.class);
                 startActivity(intent);
 
             }
@@ -93,52 +93,6 @@ public class MainActivity extends AppCompatActivity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-
-        /*
-        String html = "https://d4e6-192-249-19-234.jp.ngrok.io/users";
-        StringBuilder urlBuilder = new StringBuilder(html); // URL
-        System.out.println("urlBuilder : " + urlBuilder);
-        URL url = null;
-        try {
-            url = new URL(urlBuilder.toString());
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        }
-        HttpURLConnection conn = null;
-        try {
-            conn = (HttpURLConnection) url.openConnection();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        try {
-            conn.setRequestMethod("GET");
-        } catch (ProtocolException e) {
-            e.printStackTrace();
-        }
-        conn.setRequestProperty("Content-type", "application/json");
-
-        HttpURLConnection finalConn = conn;
-        new Thread(() -> {
-            try {
-                BufferedReader bf;
-                if (finalConn.getResponseCode() >= 200 && finalConn.getResponseCode() <= 300) {
-                    bf = new BufferedReader(new InputStreamReader(finalConn.getInputStream()));
-                } else {
-                    bf = new BufferedReader(new InputStreamReader(finalConn.getErrorStream()));
-                }
-                result = bf.readLine();
-                System.out.println("result : " + result);
-            } catch (Exception e) {
-                System.out.println("오류올오ㅠㄹㅇㄹ유로유로유로유로유로유류ㅗ");
-            }
-        }).start();
-
-        try {
-            Thread.sleep(1500);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        */
     }
 
 
