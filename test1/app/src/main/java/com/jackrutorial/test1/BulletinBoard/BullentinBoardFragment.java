@@ -24,7 +24,7 @@ public class BullentinBoardFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        Bundle bundle = new Bundle();
+        Bundle bundle = getArguments();
         nickname = bundle.getString("nickname");
         System.out.println(nickname);
         System.out.println("sdfkndkfndkfndknfkdnfkdnfknkxmcklm");

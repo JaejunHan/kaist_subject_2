@@ -152,7 +152,8 @@
             android:text="성별"/>
 
         <LinearLayout
-            android:layout_width="374dp"
+            android:layout_width="match_parent"
+            android:layout_marginRight="10dp"
             android:layout_height="46dp"
             android:gravity="center"
             android:orientation="horizontal"
@@ -216,7 +217,7 @@
 
         <LinearLayout
             android:layout_width="374dp"
-            android:layout_height="46dp"
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_gravity="center"
             android:layout_marginTop="60dp"

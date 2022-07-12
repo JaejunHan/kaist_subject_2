@@ -9,6 +9,7 @@ import android.text.TextWatcher;
 import android.util.Base64;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -54,10 +55,21 @@ public class ChatActivity extends AppCompatActivity implements TextWatcher {
     private String other_nickname = "";
     private MessageAdapter messageAdapter;
 
+    ImageButton imageButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
+
+        imageButton = findViewById(R.id.goback);
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+
         name = getIntent().getStringExtra("my_nickname");
         other_nickname = getIntent().getStringExtra("other_nickname");
 

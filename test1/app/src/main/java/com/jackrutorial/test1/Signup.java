@@ -162,7 +162,7 @@ public class Signup  extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String nickname = nickname_input.getText().toString();
-                if (check_alpha_or_digit(nickname)) { //주어진 조건을 만족하면
+                if (check_alpha_or_digit(nickname) || check_hangul(nickname)) { //주어진 조건을 만족하면
                     //id가 db에서 중복이 되었는지 확인
                     request_nickname_valid(nickname);
                 } else {
@@ -228,6 +228,11 @@ public class Signup  extends AppCompatActivity {
         }
         return true;
     }
+
+    public boolean check_hangul(String s){
+        return s.matches(".*[ㄱ-ㅎㅏ-ㅣ가-힣]+.*");
+    }
+
 
     private String checkPassword(String pwd, String id){
 

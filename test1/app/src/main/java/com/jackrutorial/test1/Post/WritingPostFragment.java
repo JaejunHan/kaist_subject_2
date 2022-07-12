@@ -143,7 +143,7 @@ WritingPostFragment extends Fragment {
                 Date date = new Date();
                 String dateStr = dateFormat.format(date);
 
-                postRequest("test_nickname", title, subtitle, content, "0", "50", dateStr);
+                postRequest(nickname, title, subtitle, content, "0", "50", dateStr);
 
 
                 /////////
