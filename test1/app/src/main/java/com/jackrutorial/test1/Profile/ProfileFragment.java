@@ -60,7 +60,7 @@ public class ProfileFragment extends Fragment {
                              ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        view = inflater.inflate(R.layout.fragment_profile, container, false);
+        view = inflater.inflate(R.layout.fragment_other_profile, container, false);
         profile_other = (ImageView) view.findViewById(R.id.profile_other);
         profile_career1 = (TextView) view.findViewById(R.id.profile_career1);
         profile_career2 = (TextView) view.findViewById(R.id.profile_career2);

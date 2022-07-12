@@ -23,7 +23,7 @@
             android:layout_marginTop="20dp"
             android:orientation="vertical">
             <ImageView
-                android:id="@+id/profile_other"
+                android:id="@+id/my_profile"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:background="#a4f2c2"/>
@@ -37,71 +37,6 @@
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="108dp"
-            android:background="#ffffff"
-            android:layout_marginBottom="10dp"
-            android:orientation="vertical">
-            <TextView
-                android:id="@+id/profile_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="22dp"
-                android:layout_marginTop="10dp"
-                android:textSize="25dp"
-                android:textStyle="bold"
-                android:text="코딩고수"
-                android:textColor="@color/black"/>
-            <TextView
-                android:id="@+id/profile_email"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="22dp"
-                android:layout_marginTop="10dp"
-                android:textSize="15dp"
-                android:textStyle="normal"
-                android:text="코딩고수의 한마디"
-                android:textColor="@color/black"/>
-
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="111dp"
-            android:background="#ffffff"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="15sp"
-                android:layout_marginTop="11dp"
-                android:layout_marginLeft="22dp"
-                android:text="고수경력"
-                android:textStyle="bold"
-                android:textColor="@color/black"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="3dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="22dp"
-                    android:textColor="@color/black"
-                    android:textStyle="normal"
-                    android:textSize="13sp"
-                    android:text="고수경력 : "/>
-
-                <TextView
-                    android:id="@+id/profile_career1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="고수경력1"
-                    android:textColor="@color/black"
-                    android:textSize="13sp"
-                    android:textStyle="normal" />
-            </LinearLayout>
-            <LinearLayout
-            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/green_background_square"
             android:gravity="bottom"
@@ -114,20 +49,9 @@
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:layout_marginLeft="22dp"
-                android:textColor="@color/black"
-                android:textStyle="normal"
-                android:textSize="13sp"
-                android:text="고수경력 : "/>
-
-                <TextView
-                    android:id="@+id/profile_career2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="고수경력2"
-                    android:textColor="@color/black"
-                    android:textSize="13sp"
-                    android:textStyle="normal" />
-        </LinearLayout>
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#000000"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -314,8 +238,8 @@
                 android:background="@drawable/white_background_square_bottom"
                 android:orientation="vertical">
                 <TextView
-                    android:id="@+id/profile_comment"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/gosuTalkWrite"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="22dp"
                     android:layout_marginTop="10dp"
@@ -344,37 +268,23 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="15sp"
-                android:layout_marginTop="11dp"
-                android:layout_marginLeft="22dp"
-                android:text="스텍"
+                android:text="경력"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 android:layout_marginLeft="22dp"
-                android:text="카이스트"
-                android:textStyle="normal"
-                android:textColor="@color/black"/>
-            <!--
-            <TextView
-                android:id="@+id/profile_group2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="13sp"
-                android:layout_marginTop="3dp"
-                android:layout_marginLeft="22dp"
-                android:text="카이스트"
-                android:textStyle="normal"
-                android:textColor="@color/black"/>
-            <TextView
-                android:id="@+id/profile_group3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="13sp"
-                android:layout_marginTop="3dp"
-                android:layout_marginLeft="22dp"
-                android:text="카이스트"
-                android:textStyle="normal"
-                android:textColor="@color/black"/>
-            -->
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#000000"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/white_background_square_bottom"
+                android:orientation="vertical">
+                <ListView
+                    android:id="@+id/career"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
 
         </LinearLayout>
 
