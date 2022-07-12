@@ -113,9 +113,6 @@ public class EditMyInfo extends AppCompatActivity {
         //
 
 
-        // todo
-        // nickname을 받아와서 request 해줌.
-        // db서버와 연결해서 프로필 사진을 불러옴.
         request(nickname);
         
 
