@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -56,6 +57,7 @@ public class DetailPostFragment extends Fragment {
     Button comm_reg_button;
 
     ImageButton edit_btn;
+    ImageButton goback;
 
     CommentAdapter commentAdapter;
     Comment new_comment;
@@ -78,6 +80,15 @@ public class DetailPostFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_detail_post, container, false);
         context = container.getContext();
 
+        goback = view.findViewById(R.id.goBackAtDetailPost);
+        goback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                fragmentManager.beginTransaction().remove(DetailPostFragment.this).commit();
+                fragmentManager.popBackStack();
+            }
+        });
 
         // Post Fragment에서 게시글 정보 받아오기
         Bundle bundle = getArguments(); // 다른 곳에서 넘겨준 bundle 받아옴~~~
