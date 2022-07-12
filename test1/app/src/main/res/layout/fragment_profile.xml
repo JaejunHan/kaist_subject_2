@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context="Profile.ProfileFragment">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#f5f5f5"
@@ -20,6 +20,7 @@
                 android:layout_height="40dp"
                 android:background="#ffffff"/>
             <ImageView
+                android:id="@+id/profile_other"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:background="#a4f2c2"/>
@@ -45,7 +46,7 @@
                 android:text="코딩고수"
                 android:textColor="@color/black"/>
             <TextView
-                android:id="@+id/profile_comment"
+                android:id="@+id/profile_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="22dp"
@@ -83,14 +84,15 @@
                     android:textStyle="normal"
                     android:textSize="13sp"
                     android:text="고수경력 : "/>
+
                 <TextView
                     android:id="@+id/profile_career1"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="고수경력1"
                     android:textColor="@color/black"
-                    android:textStyle="normal"
                     android:textSize="13sp"
-                    android:text="고수경력1"/>
+                    android:textStyle="normal" />
             </LinearLayout>
             <LinearLayout
             android:layout_width="match_parent"
@@ -104,14 +106,15 @@
                 android:textStyle="normal"
                 android:textSize="13sp"
                 android:text="고수경력 : "/>
-            <TextView
-                android:id="@+id/profile_career2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:textStyle="normal"
-                android:textSize="13sp"
-                android:text="고수경력2"/>
+
+                <TextView
+                    android:id="@+id/profile_career2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="고수경력2"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:textStyle="normal" />
         </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -156,7 +159,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp">
                 <TextView
-                    android:id="@id/profile_comment"
+                    android:id="@+id/profile_comment"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="22dp"
@@ -179,7 +182,7 @@
                 android:textSize="15sp"
                 android:layout_marginTop="11dp"
                 android:layout_marginLeft="22dp"
-                android:text="단체"
+                android:text="스텍"
                 android:textStyle="bold"
                 android:textColor="@color/black"/>
             <TextView
@@ -192,6 +195,7 @@
                 android:text="카이스트"
                 android:textStyle="normal"
                 android:textColor="@color/black"/>
+            <!--
             <TextView
                 android:id="@+id/profile_group2"
                 android:layout_width="wrap_content"
@@ -212,7 +216,7 @@
                 android:text="카이스트"
                 android:textStyle="normal"
                 android:textColor="@color/black"/>
-
+            -->
 
         </LinearLayout>
     </LinearLayout>
