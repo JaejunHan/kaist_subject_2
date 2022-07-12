@@ -127,13 +127,13 @@ public class DetailPostFragment extends Fragment {
         content_tv.setText(posting_content);
         date_tv.setText(posting_date);
 
-        loadComment();
+        loadComment(posting_title, posting_subtitle);
 
         comm_reg_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 createComment(curr_userName,posting_title, posting_subtitle, comment_et.getText().toString(),"0","20220711", "20220711" );
-                loadComment();
+                loadComment(posting_title, posting_subtitle);
             }
         });
 
@@ -176,7 +176,7 @@ public class DetailPostFragment extends Fragment {
 
     // ------------------------ DB 연동 함수 -----------------------
 
-    public void loadComment(){
+    public void loadComment(String title, String sub_title){
         System.out.println("loacComment 로 이동 성공");
 
         // url 지정
@@ -184,6 +184,12 @@ public class DetailPostFragment extends Fragment {
 
         // 사용할 json obj 선언
         JSONObject load_comment_json = new JSONObject();
+        try {
+            load_comment_json.put("title", title);
+            load_comment_json.put("sub_title", sub_title);
+        }catch(Exception e){
+            System.out.println(e);
+        }
 
         // Volley 로 전송할 req를 담는 requestQueue 선언
         final RequestQueue requestQueue = Volley.newRequestQueue(getContext().getApplicationContext());
