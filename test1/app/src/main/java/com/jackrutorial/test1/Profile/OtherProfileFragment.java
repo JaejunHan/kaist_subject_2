@@ -75,6 +75,8 @@ public class OtherProfileFragment extends Fragment {
         profile_group1 = (TextView) view.findViewById(R.id.profile_group1);
         profile_dm_btn = (ImageButton) view.findViewById(R.id.profile_dm_btn) ;
 
+        profile_name.setText(other_nickname);
+
         // dm btn
         profile_dm_btn.setOnClickListener(new View.OnClickListener() {
             @Override

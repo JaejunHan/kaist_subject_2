@@ -1,0 +1,1774 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'i',
+1 verbose cli   '--save-dev',
+1 verbose cli   '@types/multer' ]
+2 info using npm@3.5.2
+3 info using node@v8.10.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData @types/multer
+8 silly fetchNamedPackageData @types/multer
+9 silly mapToRegistry name @types/multer
+10 silly mapToRegistry scope (from package name) @types
+11 verbose mapToRegistry no registry URL found in name for scope @types
+12 silly mapToRegistry using default registry
+13 silly mapToRegistry registry https://registry.npmjs.org/
+14 silly mapToRegistry uri https://registry.npmjs.org/@types%2fmulter
+15 verbose request uri https://registry.npmjs.org/@types%2fmulter
+16 verbose request no auth needed
+17 info attempt registry request try #1 at 12:54:45 PM
+18 verbose request id e67ced13b1456515
+19 verbose etag W/"c4d1f8a15fea0c7edb5449d8dfff51a7"
+20 verbose lastModified Mon, 13 Jun 2022 01:13:40 GMT
+21 http request GET https://registry.npmjs.org/@types%2fmulter
+22 http 304 https://registry.npmjs.org/@types%2fmulter
+23 verbose headers { date: 'Sat, 09 Jul 2022 12:54:46 GMT',
+23 verbose headers   connection: 'keep-alive',
+23 verbose headers   'cf-ray': '728135c9be429311-ICN',
+23 verbose headers   'cache-control': 'public, max-age=300',
+23 verbose headers   etag: '"c4d1f8a15fea0c7edb5449d8dfff51a7"',
+23 verbose headers   'last-modified': 'Mon, 13 Jun 2022 01:13:40 GMT',
+23 verbose headers   vary: 'Accept-Encoding',
+23 verbose headers   'cf-cache-status': 'REVALIDATED',
+23 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+23 verbose headers   'x-amz-replication-status': 'COMPLETED',
+23 verbose headers   server: 'cloudflare' }
+24 silly get cb [ 304,
+24 silly get   { date: 'Sat, 09 Jul 2022 12:54:46 GMT',
+24 silly get     connection: 'keep-alive',
+24 silly get     'cf-ray': '728135c9be429311-ICN',
+24 silly get     'cache-control': 'public, max-age=300',
+24 silly get     etag: '"c4d1f8a15fea0c7edb5449d8dfff51a7"',
+24 silly get     'last-modified': 'Mon, 13 Jun 2022 01:13:40 GMT',
+24 silly get     vary: 'Accept-Encoding',
+24 silly get     'cf-cache-status': 'REVALIDATED',
+24 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+24 silly get     'x-amz-replication-status': 'COMPLETED',
+24 silly get     server: 'cloudflare' } ]
+25 verbose etag https://registry.npmjs.org/@types%2fmulter from cache
+26 verbose get saving @types/multer to /root/.npm/registry.npmjs.org/_40types_252fmulter/.cache.json
+27 silly install normalizeTree
+28 silly loadCurrentTree Finishing
+29 silly loadIdealTree Starting
+30 silly install loadIdealTree
+31 silly cloneCurrentTree Starting
+32 silly install cloneCurrentTreeToIdealTree
+33 silly cloneCurrentTree Finishing
+34 silly loadShrinkwrap Starting
+35 silly install loadShrinkwrap
+36 silly loadShrinkwrap Finishing
+37 silly loadAllDepsIntoIdealTree Starting
+38 silly install loadAllDepsIntoIdealTree
+39 silly resolveWithNewModule @types/multer@1.4.7 checking installable status
+40 silly cache add args [ '@types/multer', null ]
+41 verbose cache add spec @types/multer
+42 silly cache add parsed spec Result {
+42 silly cache add   raw: '@types/multer',
+42 silly cache add   scope: '@types',
+42 silly cache add   name: '@types/multer',
+42 silly cache add   rawSpec: '',
+42 silly cache add   spec: 'latest',
+42 silly cache add   type: 'tag' }
+43 silly addNamed @types/multer@latest
+44 verbose addNamed "latest" is being treated as a dist-tag for @types/multer
+45 info addNameTag [ '@types/multer', 'latest' ]
+46 silly mapToRegistry name @types/multer
+47 silly mapToRegistry scope (from package name) @types
+48 verbose mapToRegistry no registry URL found in name for scope @types
+49 silly mapToRegistry using default registry
+50 silly mapToRegistry registry https://registry.npmjs.org/
+51 silly mapToRegistry uri https://registry.npmjs.org/@types%2fmulter
+52 verbose addNameTag registry:https://registry.npmjs.org/@types%2fmulter not in flight; fetching
+53 verbose get https://registry.npmjs.org/@types%2fmulter not expired, no request
+54 silly addNameTag next cb for @types/multer with tag latest
+55 silly addNamed @types/multer@1.4.7
+56 verbose addNamed "1.4.7" is a plain semver version for @types/multer
+57 silly cache afterAdd @types/multer@1.4.7
+58 verbose afterAdd /root/.npm/@types/multer/1.4.7/package/package.json not in flight; writing
+59 verbose afterAdd /root/.npm/@types/multer/1.4.7/package/package.json written
+60 silly fetchNamedPackageData @types/express
+61 silly mapToRegistry name @types/express
+62 silly mapToRegistry scope (from package name) @types
+63 verbose mapToRegistry no registry URL found in name for scope @types
+64 silly mapToRegistry using default registry
+65 silly mapToRegistry registry https://registry.npmjs.org/
+66 silly mapToRegistry uri https://registry.npmjs.org/@types%2fexpress
+67 verbose request uri https://registry.npmjs.org/@types%2fexpress
+68 verbose request no auth needed
+69 info attempt registry request try #1 at 12:54:47 PM
+70 verbose etag W/"a073c1a9df3ded2ef2eecc39b31cee8a"
+71 verbose lastModified Mon, 13 Jun 2022 01:09:22 GMT
+72 http request GET https://registry.npmjs.org/@types%2fexpress
+73 http 304 https://registry.npmjs.org/@types%2fexpress
+74 verbose headers { date: 'Sat, 09 Jul 2022 12:54:47 GMT',
+74 verbose headers   connection: 'keep-alive',
+74 verbose headers   'cf-ray': '728135cfdaef9311-ICN',
+74 verbose headers   'cache-control': 'public, max-age=300',
+74 verbose headers   etag: '"a073c1a9df3ded2ef2eecc39b31cee8a"',
+74 verbose headers   'last-modified': 'Mon, 13 Jun 2022 01:09:22 GMT',
+74 verbose headers   vary: 'Accept-Encoding',
+74 verbose headers   'cf-cache-status': 'REVALIDATED',
+74 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+74 verbose headers   'x-amz-replication-status': 'COMPLETED',
+74 verbose headers   server: 'cloudflare' }
+75 silly get cb [ 304,
+75 silly get   { date: 'Sat, 09 Jul 2022 12:54:47 GMT',
+75 silly get     connection: 'keep-alive',
+75 silly get     'cf-ray': '728135cfdaef9311-ICN',
+75 silly get     'cache-control': 'public, max-age=300',
+75 silly get     etag: '"a073c1a9df3ded2ef2eecc39b31cee8a"',
+75 silly get     'last-modified': 'Mon, 13 Jun 2022 01:09:22 GMT',
+75 silly get     vary: 'Accept-Encoding',
+75 silly get     'cf-cache-status': 'REVALIDATED',
+75 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+75 silly get     'x-amz-replication-status': 'COMPLETED',
+75 silly get     server: 'cloudflare' } ]
+76 verbose etag https://registry.npmjs.org/@types%2fexpress from cache
+77 verbose get saving @types/express to /root/.npm/registry.npmjs.org/_40types_252fexpress/.cache.json
+78 silly resolveWithNewModule @types/express@4.17.13 checking installable status
+79 silly cache add args [ '@types/express@*', null ]
+80 verbose cache add spec @types/express@*
+81 silly cache add parsed spec Result {
+81 silly cache add   raw: '@types/express@*',
+81 silly cache add   scope: '@types',
+81 silly cache add   name: '@types/express',
+81 silly cache add   rawSpec: '*',
+81 silly cache add   spec: '*',
+81 silly cache add   type: 'range' }
+82 silly addNamed @types/express@*
+83 verbose addNamed "*" is a valid semver range for @types/express
+84 silly addNameRange { name: '@types/express', range: '*', hasData: false }
+85 silly mapToRegistry name @types/express
+86 silly mapToRegistry scope (from package name) @types
+87 verbose mapToRegistry no registry URL found in name for scope @types
+88 silly mapToRegistry using default registry
+89 silly mapToRegistry registry https://registry.npmjs.org/
+90 silly mapToRegistry uri https://registry.npmjs.org/@types%2fexpress
+91 verbose addNameRange registry:https://registry.npmjs.org/@types%2fexpress not in flight; fetching
+92 verbose get https://registry.npmjs.org/@types%2fexpress not expired, no request
+93 silly addNameRange number 2 { name: '@types/express', range: '*', hasData: true }
+94 silly addNameRange versions [ '@types/express',
+94 silly addNameRange   [ '4.0.16-alpha',
+94 silly addNameRange     '4.0.17-alpha',
+94 silly addNameRange     '4.0.22-alpha',
+94 silly addNameRange     '4.0.23-alpha',
+94 silly addNameRange     '4.0.24-alpha',
+94 silly addNameRange     '4.0.25-alpha',
+94 silly addNameRange     '4.0.26-alpha',
+94 silly addNameRange     '4.0.27-alpha',
+94 silly addNameRange     '4.0.28-alpha',
+94 silly addNameRange     '4.0.29',
+94 silly addNameRange     '4.0.30',
+94 silly addNameRange     '4.0.31',
+94 silly addNameRange     '4.0.32',
+94 silly addNameRange     '4.0.33',
+94 silly addNameRange     '4.0.34',
+94 silly addNameRange     '4.0.35',
+94 silly addNameRange     '4.0.36',
+94 silly addNameRange     '4.0.37',
+94 silly addNameRange     '4.0.38',
+94 silly addNameRange     '4.0.39',
+94 silly addNameRange     '4.11.0',
+94 silly addNameRange     '4.11.1',
+94 silly addNameRange     '4.16.0',
+94 silly addNameRange     '4.16.1',
+94 silly addNameRange     '4.17.0',
+94 silly addNameRange     '4.17.1',
+94 silly addNameRange     '4.17.2',
+94 silly addNameRange     '4.17.3',
+94 silly addNameRange     '4.17.4',
+94 silly addNameRange     '4.17.5',
+94 silly addNameRange     '4.17.6',
+94 silly addNameRange     '4.17.7',
+94 silly addNameRange     '4.17.8',
+94 silly addNameRange     '4.17.9',
+94 silly addNameRange     '4.17.10',
+94 silly addNameRange     '4.17.11',
+94 silly addNameRange     '4.17.12',
+94 silly addNameRange     '4.17.13' ] ]
+95 silly addNamed @types/express@4.17.13
+96 verbose addNamed "4.17.13" is a plain semver version for @types/express
+97 silly cache afterAdd @types/express@4.17.13
+98 verbose afterAdd /root/.npm/@types/express/4.17.13/package/package.json not in flight; writing
+99 verbose afterAdd /root/.npm/@types/express/4.17.13/package/package.json written
+100 silly fetchNamedPackageData @types/body-parser
+101 silly mapToRegistry name @types/body-parser
+102 silly mapToRegistry scope (from package name) @types
+103 verbose mapToRegistry no registry URL found in name for scope @types
+104 silly mapToRegistry using default registry
+105 silly mapToRegistry registry https://registry.npmjs.org/
+106 silly mapToRegistry uri https://registry.npmjs.org/@types%2fbody-parser
+107 silly fetchNamedPackageData @types/express-serve-static-core
+108 silly mapToRegistry name @types/express-serve-static-core
+109 silly mapToRegistry scope (from package name) @types
+110 verbose mapToRegistry no registry URL found in name for scope @types
+111 silly mapToRegistry using default registry
+112 silly mapToRegistry registry https://registry.npmjs.org/
+113 silly mapToRegistry uri https://registry.npmjs.org/@types%2fexpress-serve-static-core
+114 silly fetchNamedPackageData @types/qs
+115 silly mapToRegistry name @types/qs
+116 silly mapToRegistry scope (from package name) @types
+117 verbose mapToRegistry no registry URL found in name for scope @types
+118 silly mapToRegistry using default registry
+119 silly mapToRegistry registry https://registry.npmjs.org/
+120 silly mapToRegistry uri https://registry.npmjs.org/@types%2fqs
+121 silly fetchNamedPackageData @types/serve-static
+122 silly mapToRegistry name @types/serve-static
+123 silly mapToRegistry scope (from package name) @types
+124 verbose mapToRegistry no registry URL found in name for scope @types
+125 silly mapToRegistry using default registry
+126 silly mapToRegistry registry https://registry.npmjs.org/
+127 silly mapToRegistry uri https://registry.npmjs.org/@types%2fserve-static
+128 verbose request uri https://registry.npmjs.org/@types%2fbody-parser
+129 verbose request no auth needed
+130 info attempt registry request try #1 at 12:54:47 PM
+131 verbose etag W/"c557ee3a05768db340f31c55d6f7e320"
+132 verbose lastModified Mon, 13 Jun 2022 01:07:27 GMT
+133 http request GET https://registry.npmjs.org/@types%2fbody-parser
+134 verbose request uri https://registry.npmjs.org/@types%2fexpress-serve-static-core
+135 verbose request no auth needed
+136 info attempt registry request try #1 at 12:54:47 PM
+137 verbose etag W/"e8151e682600aaa196a1bc2ad0a4c782"
+138 verbose lastModified Tue, 14 Jun 2022 17:31:49 GMT
+139 http request GET https://registry.npmjs.org/@types%2fexpress-serve-static-core
+140 verbose request uri https://registry.npmjs.org/@types%2fqs
+141 verbose request no auth needed
+142 info attempt registry request try #1 at 12:54:47 PM
+143 verbose etag W/"be2fbe748d7cc3a98b009318ae0c7cee"
+144 verbose lastModified Mon, 13 Jun 2022 01:15:05 GMT
+145 http request GET https://registry.npmjs.org/@types%2fqs
+146 verbose request uri https://registry.npmjs.org/@types%2fserve-static
+147 verbose request no auth needed
+148 info attempt registry request try #1 at 12:54:47 PM
+149 verbose etag W/"1143bf998ff5fccaadbdff19a67e79d2"
+150 verbose lastModified Mon, 13 Jun 2022 01:16:31 GMT
+151 http request GET https://registry.npmjs.org/@types%2fserve-static
+152 http 304 https://registry.npmjs.org/@types%2fbody-parser
+153 verbose headers { date: 'Sat, 09 Jul 2022 12:54:48 GMT',
+153 verbose headers   connection: 'keep-alive',
+153 verbose headers   'cf-ray': '728135d5aee19311-ICN',
+153 verbose headers   'cache-control': 'public, max-age=300',
+153 verbose headers   etag: '"c557ee3a05768db340f31c55d6f7e320"',
+153 verbose headers   'last-modified': 'Mon, 13 Jun 2022 01:07:27 GMT',
+153 verbose headers   vary: 'Accept-Encoding',
+153 verbose headers   'cf-cache-status': 'REVALIDATED',
+153 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+153 verbose headers   'x-amz-replication-status': 'COMPLETED',
+153 verbose headers   server: 'cloudflare' }
+154 silly get cb [ 304,
+154 silly get   { date: 'Sat, 09 Jul 2022 12:54:48 GMT',
+154 silly get     connection: 'keep-alive',
+154 silly get     'cf-ray': '728135d5aee19311-ICN',
+154 silly get     'cache-control': 'public, max-age=300',
+154 silly get     etag: '"c557ee3a05768db340f31c55d6f7e320"',
+154 silly get     'last-modified': 'Mon, 13 Jun 2022 01:07:27 GMT',
+154 silly get     vary: 'Accept-Encoding',
+154 silly get     'cf-cache-status': 'REVALIDATED',
+154 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+154 silly get     'x-amz-replication-status': 'COMPLETED',
+154 silly get     server: 'cloudflare' } ]
+155 verbose etag https://registry.npmjs.org/@types%2fbody-parser from cache
+156 verbose get saving @types/body-parser to /root/.npm/registry.npmjs.org/_40types_252fbody-parser/.cache.json
+157 silly resolveWithNewModule @types/body-parser@1.19.2 checking installable status
+158 silly cache add args [ '@types/body-parser@*', null ]
+159 verbose cache add spec @types/body-parser@*
+160 silly cache add parsed spec Result {
+160 silly cache add   raw: '@types/body-parser@*',
+160 silly cache add   scope: '@types',
+160 silly cache add   name: '@types/body-parser',
+160 silly cache add   rawSpec: '*',
+160 silly cache add   spec: '*',
+160 silly cache add   type: 'range' }
+161 silly addNamed @types/body-parser@*
+162 verbose addNamed "*" is a valid semver range for @types/body-parser
+163 silly addNameRange { name: '@types/body-parser', range: '*', hasData: false }
+164 silly mapToRegistry name @types/body-parser
+165 silly mapToRegistry scope (from package name) @types
+166 verbose mapToRegistry no registry URL found in name for scope @types
+167 silly mapToRegistry using default registry
+168 silly mapToRegistry registry https://registry.npmjs.org/
+169 silly mapToRegistry uri https://registry.npmjs.org/@types%2fbody-parser
+170 verbose addNameRange registry:https://registry.npmjs.org/@types%2fbody-parser not in flight; fetching
+171 verbose get https://registry.npmjs.org/@types%2fbody-parser not expired, no request
+172 silly addNameRange number 2 { name: '@types/body-parser', range: '*', hasData: true }
+173 silly addNameRange versions [ '@types/body-parser',
+173 silly addNameRange   [ '0.0.16-alpha',
+173 silly addNameRange     '0.0.17-alpha',
+173 silly addNameRange     '0.0.22-alpha',
+173 silly addNameRange     '0.0.23-alpha',
+173 silly addNameRange     '0.0.24-alpha',
+173 silly addNameRange     '0.0.25-alpha',
+173 silly addNameRange     '0.0.26-alpha',
+173 silly addNameRange     '0.0.27-alpha',
+173 silly addNameRange     '0.0.28-alpha',
+173 silly addNameRange     '0.0.29',
+173 silly addNameRange     '0.0.30',
+173 silly addNameRange     '0.0.31',
+173 silly addNameRange     '0.0.32',
+173 silly addNameRange     '0.0.33',
+173 silly addNameRange     '0.0.34',
+173 silly addNameRange     '1.16.0',
+173 silly addNameRange     '1.16.1',
+173 silly addNameRange     '1.16.2',
+173 silly addNameRange     '1.16.3',
+173 silly addNameRange     '1.16.4',
+173 silly addNameRange     '1.16.5',
+173 silly addNameRange     '1.16.6',
+173 silly addNameRange     '1.16.7',
+173 silly addNameRange     '1.16.8',
+173 silly addNameRange     '1.17.0',
+173 silly addNameRange     '1.17.1',
+173 silly addNameRange     '1.19.0',
+173 silly addNameRange     '1.19.1',
+173 silly addNameRange     '1.19.2' ] ]
+174 silly addNamed @types/body-parser@1.19.2
+175 verbose addNamed "1.19.2" is a plain semver version for @types/body-parser
+176 silly cache afterAdd @types/body-parser@1.19.2
+177 verbose afterAdd /root/.npm/@types/body-parser/1.19.2/package/package.json not in flight; writing
+178 verbose afterAdd /root/.npm/@types/body-parser/1.19.2/package/package.json written
+179 http 304 https://registry.npmjs.org/@types%2fqs
+180 verbose headers { date: 'Sat, 09 Jul 2022 12:54:48 GMT',
+180 verbose headers   connection: 'keep-alive',
+180 verbose headers   'cf-ray': '728135d5eefe9307-ICN',
+180 verbose headers   'cache-control': 'public, max-age=300',
+180 verbose headers   etag: '"be2fbe748d7cc3a98b009318ae0c7cee"',
+180 verbose headers   'last-modified': 'Mon, 13 Jun 2022 01:15:05 GMT',
+180 verbose headers   vary: 'Accept-Encoding',
+180 verbose headers   'cf-cache-status': 'REVALIDATED',
+180 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+180 verbose headers   'x-amz-replication-status': 'COMPLETED',
+180 verbose headers   server: 'cloudflare' }
+181 silly get cb [ 304,
+181 silly get   { date: 'Sat, 09 Jul 2022 12:54:48 GMT',
+181 silly get     connection: 'keep-alive',
+181 silly get     'cf-ray': '728135d5eefe9307-ICN',
+181 silly get     'cache-control': 'public, max-age=300',
+181 silly get     etag: '"be2fbe748d7cc3a98b009318ae0c7cee"',
+181 silly get     'last-modified': 'Mon, 13 Jun 2022 01:15:05 GMT',
+181 silly get     vary: 'Accept-Encoding',
+181 silly get     'cf-cache-status': 'REVALIDATED',
+181 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+181 silly get     'x-amz-replication-status': 'COMPLETED',
+181 silly get     server: 'cloudflare' } ]
+182 verbose etag https://registry.npmjs.org/@types%2fqs from cache
+183 verbose get saving @types/qs to /root/.npm/registry.npmjs.org/_40types_252fqs/.cache.json
+184 silly resolveWithNewModule @types/qs@6.9.7 checking installable status
+185 silly cache add args [ '@types/qs@*', null ]
+186 verbose cache add spec @types/qs@*
+187 silly cache add parsed spec Result {
+187 silly cache add   raw: '@types/qs@*',
+187 silly cache add   scope: '@types',
+187 silly cache add   name: '@types/qs',
+187 silly cache add   rawSpec: '*',
+187 silly cache add   spec: '*',
+187 silly cache add   type: 'range' }
+188 silly addNamed @types/qs@*
+189 verbose addNamed "*" is a valid semver range for @types/qs
+190 silly addNameRange { name: '@types/qs', range: '*', hasData: false }
+191 silly mapToRegistry name @types/qs
+192 silly mapToRegistry scope (from package name) @types
+193 verbose mapToRegistry no registry URL found in name for scope @types
+194 silly mapToRegistry using default registry
+195 silly mapToRegistry registry https://registry.npmjs.org/
+196 silly mapToRegistry uri https://registry.npmjs.org/@types%2fqs
+197 verbose addNameRange registry:https://registry.npmjs.org/@types%2fqs not in flight; fetching
+198 verbose get https://registry.npmjs.org/@types%2fqs not expired, no request
+199 silly addNameRange number 2 { name: '@types/qs', range: '*', hasData: true }
+200 silly addNameRange versions [ '@types/qs',
+200 silly addNameRange   [ '0.0.13-alpha',
+200 silly addNameRange     '0.0.14-alpha',
+200 silly addNameRange     '0.0.19-alpha',
+200 silly addNameRange     '0.0.20-alpha',
+200 silly addNameRange     '0.0.21-alpha',
+200 silly addNameRange     '0.0.22-alpha',
+200 silly addNameRange     '0.0.23-alpha',
+200 silly addNameRange     '0.0.24-alpha',
+200 silly addNameRange     '0.0.25-alpha',
+200 silly addNameRange     '0.0.26',
+200 silly addNameRange     '6.2.27',
+200 silly addNameRange     '6.2.28',
+200 silly addNameRange     '6.2.29',
+200 silly addNameRange     '6.2.30',
+200 silly addNameRange     '6.2.31',
+200 silly addNameRange     '6.4.0',
+200 silly addNameRange     '6.5.0',
+200 silly addNameRange     '6.5.1',
+200 silly addNameRange     '6.5.2',
+200 silly addNameRange     '6.5.3',
+200 silly addNameRange     '6.9.0',
+200 silly addNameRange     '6.9.1',
+200 silly addNameRange     '6.9.2',
+200 silly addNameRange     '6.9.3',
+200 silly addNameRange     '6.9.4',
+200 silly addNameRange     '6.9.5',
+200 silly addNameRange     '6.9.6',
+200 silly addNameRange     '6.9.7' ] ]
+201 silly addNamed @types/qs@6.9.7
+202 verbose addNamed "6.9.7" is a plain semver version for @types/qs
+203 silly cache afterAdd @types/qs@6.9.7
+204 verbose afterAdd /root/.npm/@types/qs/6.9.7/package/package.json not in flight; writing
+205 verbose afterAdd /root/.npm/@types/qs/6.9.7/package/package.json written
+206 http 304 https://registry.npmjs.org/@types%2fexpress-serve-static-core
+207 verbose headers { date: 'Sat, 09 Jul 2022 12:54:48 GMT',
+207 verbose headers   connection: 'keep-alive',
+207 verbose headers   'cf-ray': '728135d5ee029337-ICN',
+207 verbose headers   'cache-control': 'public, max-age=300',
+207 verbose headers   etag: '"e8151e682600aaa196a1bc2ad0a4c782"',
+207 verbose headers   'last-modified': 'Tue, 14 Jun 2022 17:31:49 GMT',
+207 verbose headers   vary: 'Accept-Encoding',
+207 verbose headers   'cf-cache-status': 'REVALIDATED',
+207 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+207 verbose headers   'x-amz-replication-status': 'COMPLETED',
+207 verbose headers   server: 'cloudflare' }
+208 silly get cb [ 304,
+208 silly get   { date: 'Sat, 09 Jul 2022 12:54:48 GMT',
+208 silly get     connection: 'keep-alive',
+208 silly get     'cf-ray': '728135d5ee029337-ICN',
+208 silly get     'cache-control': 'public, max-age=300',
+208 silly get     etag: '"e8151e682600aaa196a1bc2ad0a4c782"',
+208 silly get     'last-modified': 'Tue, 14 Jun 2022 17:31:49 GMT',
+208 silly get     vary: 'Accept-Encoding',
+208 silly get     'cf-cache-status': 'REVALIDATED',
+208 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+208 silly get     'x-amz-replication-status': 'COMPLETED',
+208 silly get     server: 'cloudflare' } ]
+209 verbose etag https://registry.npmjs.org/@types%2fexpress-serve-static-core from cache
+210 verbose get saving @types/express-serve-static-core to /root/.npm/registry.npmjs.org/_40types_252fexpress-serve-static-core/.cache.json
+211 silly resolveWithNewModule @types/express-serve-static-core@4.17.29 checking installable status
+212 silly cache add args [ '@types/express-serve-static-core@^4.17.18', null ]
+213 verbose cache add spec @types/express-serve-static-core@^4.17.18
+214 silly cache add parsed spec Result {
+214 silly cache add   raw: '@types/express-serve-static-core@^4.17.18',
+214 silly cache add   scope: '@types',
+214 silly cache add   name: '@types/express-serve-static-core',
+214 silly cache add   rawSpec: '^4.17.18',
+214 silly cache add   spec: '>=4.17.18 <5.0.0',
+214 silly cache add   type: 'range' }
+215 silly addNamed @types/express-serve-static-core@>=4.17.18 <5.0.0
+216 verbose addNamed ">=4.17.18 <5.0.0" is a valid semver range for @types/express-serve-static-core
+217 silly addNameRange { name: '@types/express-serve-static-core',
+217 silly addNameRange   range: '>=4.17.18 <5.0.0',
+217 silly addNameRange   hasData: false }
+218 silly mapToRegistry name @types/express-serve-static-core
+219 silly mapToRegistry scope (from package name) @types
+220 verbose mapToRegistry no registry URL found in name for scope @types
+221 silly mapToRegistry using default registry
+222 silly mapToRegistry registry https://registry.npmjs.org/
+223 silly mapToRegistry uri https://registry.npmjs.org/@types%2fexpress-serve-static-core
+224 verbose addNameRange registry:https://registry.npmjs.org/@types%2fexpress-serve-static-core not in flight; fetching
+225 verbose get https://registry.npmjs.org/@types%2fexpress-serve-static-core not expired, no request
+226 silly addNameRange number 2 { name: '@types/express-serve-static-core',
+226 silly addNameRange   range: '>=4.17.18 <5.0.0',
+226 silly addNameRange   hasData: true }
+227 silly addNameRange versions [ '@types/express-serve-static-core',
+227 silly addNameRange   [ '4.0.15-alpha',
+227 silly addNameRange     '4.0.16-alpha',
+227 silly addNameRange     '4.0.21-alpha',
+227 silly addNameRange     '4.0.22-alpha',
+227 silly addNameRange     '4.0.23-alpha',
+227 silly addNameRange     '4.0.24-alpha',
+227 silly addNameRange     '4.0.25-alpha',
+227 silly addNameRange     '4.0.26-alpha',
+227 silly addNameRange     '4.0.27-alpha',
+227 silly addNameRange     '4.0.28-alpha',
+227 silly addNameRange     '4.0.29',
+227 silly addNameRange     '4.0.30',
+227 silly addNameRange     '4.0.31',
+227 silly addNameRange     '4.0.32',
+227 silly addNameRange     '4.0.33',
+227 silly addNameRange     '4.0.34',
+227 silly addNameRange     '4.0.35',
+227 silly addNameRange     '4.0.36',
+227 silly addNameRange     '4.0.37',
+227 silly addNameRange     '4.0.38',
+227 silly addNameRange     '4.0.39',
+227 silly addNameRange     '4.0.40',
+227 silly addNameRange     '4.0.41',
+227 silly addNameRange     '4.0.42',
+227 silly addNameRange     '4.0.43',
+227 silly addNameRange     '4.0.44',
+227 silly addNameRange     '4.0.45',
+227 silly addNameRange     '4.0.46',
+227 silly addNameRange     '4.0.47',
+227 silly addNameRange     '4.0.48',
+227 silly addNameRange     '4.0.49',
+227 silly addNameRange     '4.0.50',
+227 silly addNameRange     '4.0.51',
+227 silly addNameRange     '4.0.52',
+227 silly addNameRange     '4.0.53',
+227 silly addNameRange     '4.0.54',
+227 silly addNameRange     '4.0.55',
+227 silly addNameRange     '4.0.56',
+227 silly addNameRange     '4.0.57',
+227 silly addNameRange     '4.11.0',
+227 silly addNameRange     '4.11.1',
+227 silly addNameRange     '4.11.2',
+227 silly addNameRange     '4.16.0',
+227 silly addNameRange     '4.16.1',
+227 silly addNameRange     '4.16.2',
+227 silly addNameRange     '4.16.3',
+227 silly addNameRange     '4.16.4',
+227 silly addNameRange     '4.16.5',
+227 silly addNameRange     '4.16.6',
+227 silly addNameRange     '4.16.7',
+227 silly addNameRange     '4.16.8',
+227 silly addNameRange     '4.16.9',
+227 silly addNameRange     '4.16.10',
+227 silly addNameRange     '4.16.11',
+227 silly addNameRange     '4.17.0',
+227 silly addNameRange     '4.17.1',
+227 silly addNameRange     '4.17.2',
+227 silly addNameRange     '4.17.3',
+227 silly addNameRange     '4.17.4',
+227 silly addNameRange     '4.17.5',
+227 silly addNameRange     '4.17.6',
+227 silly addNameRange     '4.17.7',
+227 silly addNameRange     '4.17.8',
+227 silly addNameRange     '4.17.9',
+227 silly addNameRange     '4.17.10',
+227 silly addNameRange     '4.17.11',
+227 silly addNameRange     '4.17.12',
+227 silly addNameRange     '4.17.13',
+227 silly addNameRange     '4.17.14',
+227 silly addNameRange     '4.17.15',
+227 silly addNameRange     '4.17.16',
+227 silly addNameRange     '4.17.17',
+227 silly addNameRange     '4.17.18',
+227 silly addNameRange     '4.17.19',
+227 silly addNameRange     '4.17.20',
+227 silly addNameRange     '4.17.21',
+227 silly addNameRange     '4.17.22',
+227 silly addNameRange     '4.17.23',
+227 silly addNameRange     '4.17.24',
+227 silly addNameRange     '4.17.25',
+227 silly addNameRange     '4.17.26',
+227 silly addNameRange     '4.17.27',
+227 silly addNameRange     '4.17.28',
+227 silly addNameRange     '4.17.29' ] ]
+228 silly addNamed @types/express-serve-static-core@4.17.29
+229 verbose addNamed "4.17.29" is a plain semver version for @types/express-serve-static-core
+230 silly cache afterAdd @types/express-serve-static-core@4.17.29
+231 verbose afterAdd /root/.npm/@types/express-serve-static-core/4.17.29/package/package.json not in flight; writing
+232 verbose afterAdd /root/.npm/@types/express-serve-static-core/4.17.29/package/package.json written
+233 http 304 https://registry.npmjs.org/@types%2fserve-static
+234 verbose headers { date: 'Sat, 09 Jul 2022 12:54:49 GMT',
+234 verbose headers   connection: 'keep-alive',
+234 verbose headers   'cf-ray': '728135d5e9669305-ICN',
+234 verbose headers   'cache-control': 'public, max-age=300',
+234 verbose headers   etag: '"1143bf998ff5fccaadbdff19a67e79d2"',
+234 verbose headers   'last-modified': 'Mon, 13 Jun 2022 01:16:31 GMT',
+234 verbose headers   vary: 'Accept-Encoding',
+234 verbose headers   'cf-cache-status': 'REVALIDATED',
+234 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+234 verbose headers   'x-amz-replication-status': 'PENDING',
+234 verbose headers   server: 'cloudflare' }
+235 silly get cb [ 304,
+235 silly get   { date: 'Sat, 09 Jul 2022 12:54:49 GMT',
+235 silly get     connection: 'keep-alive',
+235 silly get     'cf-ray': '728135d5e9669305-ICN',
+235 silly get     'cache-control': 'public, max-age=300',
+235 silly get     etag: '"1143bf998ff5fccaadbdff19a67e79d2"',
+235 silly get     'last-modified': 'Mon, 13 Jun 2022 01:16:31 GMT',
+235 silly get     vary: 'Accept-Encoding',
+235 silly get     'cf-cache-status': 'REVALIDATED',
+235 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+235 silly get     'x-amz-replication-status': 'PENDING',
+235 silly get     server: 'cloudflare' } ]
+236 verbose etag https://registry.npmjs.org/@types%2fserve-static from cache
+237 verbose get saving @types/serve-static to /root/.npm/registry.npmjs.org/_40types_252fserve-static/.cache.json
+238 silly resolveWithNewModule @types/serve-static@1.13.10 checking installable status
+239 silly cache add args [ '@types/serve-static@*', null ]
+240 verbose cache add spec @types/serve-static@*
+241 silly cache add parsed spec Result {
+241 silly cache add   raw: '@types/serve-static@*',
+241 silly cache add   scope: '@types',
+241 silly cache add   name: '@types/serve-static',
+241 silly cache add   rawSpec: '*',
+241 silly cache add   spec: '*',
+241 silly cache add   type: 'range' }
+242 silly addNamed @types/serve-static@*
+243 verbose addNamed "*" is a valid semver range for @types/serve-static
+244 silly addNameRange { name: '@types/serve-static', range: '*', hasData: false }
+245 silly mapToRegistry name @types/serve-static
+246 silly mapToRegistry scope (from package name) @types
+247 verbose mapToRegistry no registry URL found in name for scope @types
+248 silly mapToRegistry using default registry
+249 silly mapToRegistry registry https://registry.npmjs.org/
+250 silly mapToRegistry uri https://registry.npmjs.org/@types%2fserve-static
+251 verbose addNameRange registry:https://registry.npmjs.org/@types%2fserve-static not in flight; fetching
+252 verbose get https://registry.npmjs.org/@types%2fserve-static not expired, no request
+253 silly addNameRange number 2 { name: '@types/serve-static', range: '*', hasData: true }
+254 silly addNameRange versions [ '@types/serve-static',
+254 silly addNameRange   [ '1.7.14-alpha',
+254 silly addNameRange     '1.7.15-alpha',
+254 silly addNameRange     '1.7.20-alpha',
+254 silly addNameRange     '1.7.21-alpha',
+254 silly addNameRange     '1.7.22-alpha',
+254 silly addNameRange     '1.7.23-alpha',
+254 silly addNameRange     '1.7.24-alpha',
+254 silly addNameRange     '1.7.25-alpha',
+254 silly addNameRange     '1.7.26-alpha',
+254 silly addNameRange     '1.7.27',
+254 silly addNameRange     '1.7.28',
+254 silly addNameRange     '1.7.29',
+254 silly addNameRange     '1.7.30',
+254 silly addNameRange     '1.7.31',
+254 silly addNameRange     '1.7.32',
+254 silly addNameRange     '1.13.0',
+254 silly addNameRange     '1.13.1',
+254 silly addNameRange     '1.13.2',
+254 silly addNameRange     '1.13.3',
+254 silly addNameRange     '1.13.4',
+254 silly addNameRange     '1.13.5',
+254 silly addNameRange     '1.13.6',
+254 silly addNameRange     '1.13.7',
+254 silly addNameRange     '1.13.8',
+254 silly addNameRange     '1.13.9',
+254 silly addNameRange     '1.13.10' ] ]
+255 silly addNamed @types/serve-static@1.13.10
+256 verbose addNamed "1.13.10" is a plain semver version for @types/serve-static
+257 silly cache afterAdd @types/serve-static@1.13.10
+258 verbose afterAdd /root/.npm/@types/serve-static/1.13.10/package/package.json not in flight; writing
+259 verbose afterAdd /root/.npm/@types/serve-static/1.13.10/package/package.json written
+260 silly fetchNamedPackageData @types/connect
+261 silly mapToRegistry name @types/connect
+262 silly mapToRegistry scope (from package name) @types
+263 verbose mapToRegistry no registry URL found in name for scope @types
+264 silly mapToRegistry using default registry
+265 silly mapToRegistry registry https://registry.npmjs.org/
+266 silly mapToRegistry uri https://registry.npmjs.org/@types%2fconnect
+267 silly fetchNamedPackageData @types/node
+268 silly mapToRegistry name @types/node
+269 silly mapToRegistry scope (from package name) @types
+270 verbose mapToRegistry no registry URL found in name for scope @types
+271 silly mapToRegistry using default registry
+272 silly mapToRegistry registry https://registry.npmjs.org/
+273 silly mapToRegistry uri https://registry.npmjs.org/@types%2fnode
+274 verbose request uri https://registry.npmjs.org/@types%2fconnect
+275 verbose request no auth needed
+276 info attempt registry request try #1 at 12:54:49 PM
+277 verbose etag W/"46d294aa8eb618d983fff5e0ec44e4a8"
+278 verbose lastModified Mon, 13 Jun 2022 01:08:06 GMT
+279 http request GET https://registry.npmjs.org/@types%2fconnect
+280 verbose request uri https://registry.npmjs.org/@types%2fnode
+281 verbose request no auth needed
+282 info attempt registry request try #1 at 12:54:49 PM
+283 verbose etag W/"04ceb15c90197cc9f10b9f39c4c91091"
+284 verbose lastModified Wed, 06 Jul 2022 04:03:23 GMT
+285 http request GET https://registry.npmjs.org/@types%2fnode
+286 http 304 https://registry.npmjs.org/@types%2fnode
+287 verbose headers { date: 'Sat, 09 Jul 2022 12:54:49 GMT',
+287 verbose headers   connection: 'keep-alive',
+287 verbose headers   'cf-ray': '728135dfbeb59307-ICN',
+287 verbose headers   age: '41',
+287 verbose headers   'cache-control': 'public, max-age=300',
+287 verbose headers   etag: '"04ceb15c90197cc9f10b9f39c4c91091"',
+287 verbose headers   'last-modified': 'Wed, 06 Jul 2022 04:03:23 GMT',
+287 verbose headers   vary: 'Accept-Encoding',
+287 verbose headers   'cf-cache-status': 'HIT',
+287 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+287 verbose headers   'x-amz-replication-status': 'COMPLETED',
+287 verbose headers   server: 'cloudflare' }
+288 silly get cb [ 304,
+288 silly get   { date: 'Sat, 09 Jul 2022 12:54:49 GMT',
+288 silly get     connection: 'keep-alive',
+288 silly get     'cf-ray': '728135dfbeb59307-ICN',
+288 silly get     age: '41',
+288 silly get     'cache-control': 'public, max-age=300',
+288 silly get     etag: '"04ceb15c90197cc9f10b9f39c4c91091"',
+288 silly get     'last-modified': 'Wed, 06 Jul 2022 04:03:23 GMT',
+288 silly get     vary: 'Accept-Encoding',
+288 silly get     'cf-cache-status': 'HIT',
+288 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+288 silly get     'x-amz-replication-status': 'COMPLETED',
+288 silly get     server: 'cloudflare' } ]
+289 verbose etag https://registry.npmjs.org/@types%2fnode from cache
+290 verbose get saving @types/node to /root/.npm/registry.npmjs.org/_40types_252fnode/.cache.json
+291 silly resolveWithNewModule @types/node@18.0.3 checking installable status
+292 silly cache add args [ '@types/node@*', null ]
+293 verbose cache add spec @types/node@*
+294 silly cache add parsed spec Result {
+294 silly cache add   raw: '@types/node@*',
+294 silly cache add   scope: '@types',
+294 silly cache add   name: '@types/node',
+294 silly cache add   rawSpec: '*',
+294 silly cache add   spec: '*',
+294 silly cache add   type: 'range' }
+295 silly addNamed @types/node@*
+296 verbose addNamed "*" is a valid semver range for @types/node
+297 silly addNameRange { name: '@types/node', range: '*', hasData: false }
+298 silly mapToRegistry name @types/node
+299 silly mapToRegistry scope (from package name) @types
+300 verbose mapToRegistry no registry URL found in name for scope @types
+301 silly mapToRegistry using default registry
+302 silly mapToRegistry registry https://registry.npmjs.org/
+303 silly mapToRegistry uri https://registry.npmjs.org/@types%2fnode
+304 verbose addNameRange registry:https://registry.npmjs.org/@types%2fnode not in flight; fetching
+305 verbose get https://registry.npmjs.org/@types%2fnode not expired, no request
+306 silly addNameRange number 2 { name: '@types/node', range: '*', hasData: true }
+307 silly addNameRange versions [ '@types/node',
+307 silly addNameRange   [ '4.0.15-alpha',
+307 silly addNameRange     '4.0.16-alpha',
+307 silly addNameRange     '4.0.21-alpha',
+307 silly addNameRange     '4.0.22-alpha',
+307 silly addNameRange     '4.0.23-alpha',
+307 silly addNameRange     '4.0.24-alpha',
+307 silly addNameRange     '4.0.25-alpha',
+307 silly addNameRange     '4.0.26-alpha',
+307 silly addNameRange     '4.0.27-alpha',
+307 silly addNameRange     '4.0.28-alpha',
+307 silly addNameRange     '4.0.29',
+307 silly addNameRange     '4.0.30',
+307 silly addNameRange     '6.0.31',
+307 silly addNameRange     '6.0.32',
+307 silly addNameRange     '6.0.33',
+307 silly addNameRange     '6.0.34',
+307 silly addNameRange     '6.0.35',
+307 silly addNameRange     '6.0.36',
+307 silly addNameRange     '6.0.37',
+307 silly addNameRange     '6.0.38',
+307 silly addNameRange     '6.0.39',
+307 silly addNameRange     '6.0.40',
+307 silly addNameRange     '6.0.41',
+307 silly addNameRange     '6.0.42',
+307 silly addNameRange     '6.0.43',
+307 silly addNameRange     '6.0.44',
+307 silly addNameRange     '6.0.45',
+307 silly addNameRange     '6.0.46',
+307 silly addNameRange     '6.0.47',
+307 silly addNameRange     '6.0.48',
+307 silly addNameRange     '6.0.49',
+307 silly addNameRange     '6.0.50',
+307 silly addNameRange     '6.0.51',
+307 silly addNameRange     '0.0.0',
+307 silly addNameRange     '0.0.1',
+307 silly addNameRange     '0.0.2',
+307 silly addNameRange     '0.0.3',
+307 silly addNameRange     '6.0.52',
+307 silly addNameRange     '6.0.53',
+307 silly addNameRange     '6.0.54',
+307 silly addNameRange     '6.0.55',
+307 silly addNameRange     '6.0.56',
+307 silly addNameRange     '6.0.57',
+307 silly addNameRange     '6.0.58',
+307 silly addNameRange     '6.0.59',
+307 silly addNameRange     '4.2.0',
+307 silly addNameRange     '0.12.0',
+307 silly addNameRange     '7.0.0',
+307 silly addNameRange     '6.0.60',
+307 silly addNameRange     '7.0.1',
+307 silly addNameRange     '6.0.61',
+307 silly addNameRange     '7.0.2',
+307 silly addNameRange     '7.0.3',
+307 silly addNameRange     '7.0.4',
+307 silly addNameRange     '4.2.1',
+307 silly addNameRange     '6.0.62',
+307 silly addNameRange     '7.0.5',
+307 silly addNameRange     '6.0.63',
+307 silly addNameRange     '4.2.2',
+307 silly addNameRange     '0.12.1',
+307 silly addNameRange     '4.2.3',
+307 silly addNameRange     '6.0.64',
+307 silly addNameRange     '7.0.6',
+307 silly addNameRange     '6.0.65',
+307 silly addNameRange     '7.0.7',
+307 silly addNameRange     '7.0.8',
+307 silly addNameRange     '4.2.4',
+307 silly addNameRange     '0.12.2',
+307 silly addNameRange     '6.0.66',
+307 silly addNameRange     '7.0.9',
+307 silly addNameRange     '7.0.10',
+307 silly addNameRange     '7.0.11',
+307 silly addNameRange     '6.0.67',
+307 silly addNameRange     '6.0.68',
+307 silly addNameRange     '7.0.12',
+307 silly addNameRange     '4.2.5',
+307 silly addNameRange     '0.12.3',
+307 silly addNameRange     '6.0.69',
+307 silly addNameRange     '0.12.4',
+307 silly addNameRange     '4.2.6',
+307 silly addNameRange     '6.0.70',
+307 silly addNameRange     '7.0.13',
+307 silly addNameRange     '7.0.14',
+307 silly addNameRange     '6.0.71',
+307 silly addNameRange     '7.0.15',
+307 silly addNameRange     '4.2.7',
+307 silly addNameRange     '6.0.72',
+307 silly addNameRange     '7.0.16',
+307 silly addNameRange     '7.0.17',
+307 silly addNameRange     '7.0.18',
+307 silly addNameRange     '4.2.8',
+307 silly addNameRange     '6.0.73',
+307 silly addNameRange     '7.0.19',
+307 silly addNameRange     '7.0.20',
+307 silly addNameRange     '7.0.21',
+307 silly addNameRange     '7.0.22',
+307 silly addNameRange     '6.0.74',
+307 silly addNameRange     '7.0.23',
+307 silly addNameRange     '7.0.24',
+307 silly addNameRange     '6.0.75',
+307 silly addNameRange     ... 1269 more items ] ]
+308 silly addNamed @types/node@18.0.3
+309 verbose addNamed "18.0.3" is a plain semver version for @types/node
+310 silly cache afterAdd @types/node@18.0.3
+311 verbose afterAdd /root/.npm/@types/node/18.0.3/package/package.json not in flight; writing
+312 verbose afterAdd /root/.npm/@types/node/18.0.3/package/package.json written
+313 http 304 https://registry.npmjs.org/@types%2fconnect
+314 verbose headers { date: 'Sat, 09 Jul 2022 12:54:50 GMT',
+314 verbose headers   connection: 'keep-alive',
+314 verbose headers   'cf-ray': '728135de8d449311-ICN',
+314 verbose headers   'cache-control': 'public, max-age=300',
+314 verbose headers   etag: '"46d294aa8eb618d983fff5e0ec44e4a8"',
+314 verbose headers   'last-modified': 'Mon, 13 Jun 2022 01:08:06 GMT',
+314 verbose headers   vary: 'Accept-Encoding',
+314 verbose headers   'cf-cache-status': 'REVALIDATED',
+314 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+314 verbose headers   'x-amz-replication-status': 'COMPLETED',
+314 verbose headers   server: 'cloudflare' }
+315 silly get cb [ 304,
+315 silly get   { date: 'Sat, 09 Jul 2022 12:54:50 GMT',
+315 silly get     connection: 'keep-alive',
+315 silly get     'cf-ray': '728135de8d449311-ICN',
+315 silly get     'cache-control': 'public, max-age=300',
+315 silly get     etag: '"46d294aa8eb618d983fff5e0ec44e4a8"',
+315 silly get     'last-modified': 'Mon, 13 Jun 2022 01:08:06 GMT',
+315 silly get     vary: 'Accept-Encoding',
+315 silly get     'cf-cache-status': 'REVALIDATED',
+315 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+315 silly get     'x-amz-replication-status': 'COMPLETED',
+315 silly get     server: 'cloudflare' } ]
+316 verbose etag https://registry.npmjs.org/@types%2fconnect from cache
+317 verbose get saving @types/connect to /root/.npm/registry.npmjs.org/_40types_252fconnect/.cache.json
+318 silly resolveWithNewModule @types/connect@3.4.35 checking installable status
+319 silly cache add args [ '@types/connect@*', null ]
+320 verbose cache add spec @types/connect@*
+321 silly cache add parsed spec Result {
+321 silly cache add   raw: '@types/connect@*',
+321 silly cache add   scope: '@types',
+321 silly cache add   name: '@types/connect',
+321 silly cache add   rawSpec: '*',
+321 silly cache add   spec: '*',
+321 silly cache add   type: 'range' }
+322 silly addNamed @types/connect@*
+323 verbose addNamed "*" is a valid semver range for @types/connect
+324 silly addNameRange { name: '@types/connect', range: '*', hasData: false }
+325 silly mapToRegistry name @types/connect
+326 silly mapToRegistry scope (from package name) @types
+327 verbose mapToRegistry no registry URL found in name for scope @types
+328 silly mapToRegistry using default registry
+329 silly mapToRegistry registry https://registry.npmjs.org/
+330 silly mapToRegistry uri https://registry.npmjs.org/@types%2fconnect
+331 verbose addNameRange registry:https://registry.npmjs.org/@types%2fconnect not in flight; fetching
+332 verbose get https://registry.npmjs.org/@types%2fconnect not expired, no request
+333 silly addNameRange number 2 { name: '@types/connect', range: '*', hasData: true }
+334 silly addNameRange versions [ '@types/connect',
+334 silly addNameRange   [ '3.4.16-alpha',
+334 silly addNameRange     '3.4.17-alpha',
+334 silly addNameRange     '3.4.22-alpha',
+334 silly addNameRange     '3.4.23-alpha',
+334 silly addNameRange     '3.4.24-alpha',
+334 silly addNameRange     '3.4.25-alpha',
+334 silly addNameRange     '3.4.26-alpha',
+334 silly addNameRange     '3.4.27-alpha',
+334 silly addNameRange     '3.4.28-alpha',
+334 silly addNameRange     '3.4.29',
+334 silly addNameRange     '3.4.30',
+334 silly addNameRange     '3.4.31',
+334 silly addNameRange     '3.4.32',
+334 silly addNameRange     '3.4.33',
+334 silly addNameRange     '3.4.34',
+334 silly addNameRange     '3.4.35' ] ]
+335 silly addNamed @types/connect@3.4.35
+336 verbose addNamed "3.4.35" is a plain semver version for @types/connect
+337 silly cache afterAdd @types/connect@3.4.35
+338 verbose afterAdd /root/.npm/@types/connect/3.4.35/package/package.json not in flight; writing
+339 verbose afterAdd /root/.npm/@types/connect/3.4.35/package/package.json written
+340 silly fetchNamedPackageData @types/range-parser
+341 silly mapToRegistry name @types/range-parser
+342 silly mapToRegistry scope (from package name) @types
+343 verbose mapToRegistry no registry URL found in name for scope @types
+344 silly mapToRegistry using default registry
+345 silly mapToRegistry registry https://registry.npmjs.org/
+346 silly mapToRegistry uri https://registry.npmjs.org/@types%2frange-parser
+347 verbose request uri https://registry.npmjs.org/@types%2frange-parser
+348 verbose request no auth needed
+349 info attempt registry request try #1 at 12:54:50 PM
+350 verbose etag W/"d2ddcbb28377b4daef13ffe445c6e711"
+351 verbose lastModified Mon, 13 Jun 2022 01:15:09 GMT
+352 http request GET https://registry.npmjs.org/@types%2frange-parser
+353 http 304 https://registry.npmjs.org/@types%2frange-parser
+354 verbose headers { date: 'Sat, 09 Jul 2022 12:54:51 GMT',
+354 verbose headers   connection: 'keep-alive',
+354 verbose headers   'cf-ray': '728135e42c999337-ICN',
+354 verbose headers   'cache-control': 'public, max-age=300',
+354 verbose headers   etag: '"d2ddcbb28377b4daef13ffe445c6e711"',
+354 verbose headers   'last-modified': 'Mon, 13 Jun 2022 01:15:09 GMT',
+354 verbose headers   vary: 'Accept-Encoding',
+354 verbose headers   'cf-cache-status': 'REVALIDATED',
+354 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+354 verbose headers   'x-amz-replication-status': 'COMPLETED',
+354 verbose headers   server: 'cloudflare' }
+355 silly get cb [ 304,
+355 silly get   { date: 'Sat, 09 Jul 2022 12:54:51 GMT',
+355 silly get     connection: 'keep-alive',
+355 silly get     'cf-ray': '728135e42c999337-ICN',
+355 silly get     'cache-control': 'public, max-age=300',
+355 silly get     etag: '"d2ddcbb28377b4daef13ffe445c6e711"',
+355 silly get     'last-modified': 'Mon, 13 Jun 2022 01:15:09 GMT',
+355 silly get     vary: 'Accept-Encoding',
+355 silly get     'cf-cache-status': 'REVALIDATED',
+355 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+355 silly get     'x-amz-replication-status': 'COMPLETED',
+355 silly get     server: 'cloudflare' } ]
+356 verbose etag https://registry.npmjs.org/@types%2frange-parser from cache
+357 verbose get saving @types/range-parser to /root/.npm/registry.npmjs.org/_40types_252frange-parser/.cache.json
+358 silly resolveWithNewModule @types/range-parser@1.2.4 checking installable status
+359 silly cache add args [ '@types/range-parser@*', null ]
+360 verbose cache add spec @types/range-parser@*
+361 silly cache add parsed spec Result {
+361 silly cache add   raw: '@types/range-parser@*',
+361 silly cache add   scope: '@types',
+361 silly cache add   name: '@types/range-parser',
+361 silly cache add   rawSpec: '*',
+361 silly cache add   spec: '*',
+361 silly cache add   type: 'range' }
+362 silly addNamed @types/range-parser@*
+363 verbose addNamed "*" is a valid semver range for @types/range-parser
+364 silly addNameRange { name: '@types/range-parser', range: '*', hasData: false }
+365 silly mapToRegistry name @types/range-parser
+366 silly mapToRegistry scope (from package name) @types
+367 verbose mapToRegistry no registry URL found in name for scope @types
+368 silly mapToRegistry using default registry
+369 silly mapToRegistry registry https://registry.npmjs.org/
+370 silly mapToRegistry uri https://registry.npmjs.org/@types%2frange-parser
+371 verbose addNameRange registry:https://registry.npmjs.org/@types%2frange-parser not in flight; fetching
+372 verbose get https://registry.npmjs.org/@types%2frange-parser not expired, no request
+373 silly addNameRange number 2 { name: '@types/range-parser', range: '*', hasData: true }
+374 silly addNameRange versions [ '@types/range-parser',
+374 silly addNameRange   [ '1.2.0', '1.2.1', '1.2.2', '1.2.3', '1.2.4' ] ]
+375 silly addNamed @types/range-parser@1.2.4
+376 verbose addNamed "1.2.4" is a plain semver version for @types/range-parser
+377 silly cache afterAdd @types/range-parser@1.2.4
+378 verbose afterAdd /root/.npm/@types/range-parser/1.2.4/package/package.json not in flight; writing
+379 verbose afterAdd /root/.npm/@types/range-parser/1.2.4/package/package.json written
+380 silly fetchNamedPackageData @types/mime
+381 silly mapToRegistry name @types/mime
+382 silly mapToRegistry scope (from package name) @types
+383 verbose mapToRegistry no registry URL found in name for scope @types
+384 silly mapToRegistry using default registry
+385 silly mapToRegistry registry https://registry.npmjs.org/
+386 silly mapToRegistry uri https://registry.npmjs.org/@types%2fmime
+387 verbose request uri https://registry.npmjs.org/@types%2fmime
+388 verbose request no auth needed
+389 info attempt registry request try #1 at 12:54:51 PM
+390 verbose etag W/"15f827b0ab6f18a09ecd37aedf961910"
+391 verbose lastModified Mon, 13 Jun 2022 01:13:26 GMT
+392 http request GET https://registry.npmjs.org/@types%2fmime
+393 http 304 https://registry.npmjs.org/@types%2fmime
+394 verbose headers { date: 'Sat, 09 Jul 2022 12:54:52 GMT',
+394 verbose headers   connection: 'keep-alive',
+394 verbose headers   'cf-ray': '728135e99aa39305-ICN',
+394 verbose headers   'cache-control': 'public, max-age=300',
+394 verbose headers   etag: '"15f827b0ab6f18a09ecd37aedf961910"',
+394 verbose headers   'last-modified': 'Mon, 13 Jun 2022 01:13:26 GMT',
+394 verbose headers   vary: 'Accept-Encoding',
+394 verbose headers   'cf-cache-status': 'REVALIDATED',
+394 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+394 verbose headers   'x-amz-replication-status': 'PENDING',
+394 verbose headers   server: 'cloudflare' }
+395 silly get cb [ 304,
+395 silly get   { date: 'Sat, 09 Jul 2022 12:54:52 GMT',
+395 silly get     connection: 'keep-alive',
+395 silly get     'cf-ray': '728135e99aa39305-ICN',
+395 silly get     'cache-control': 'public, max-age=300',
+395 silly get     etag: '"15f827b0ab6f18a09ecd37aedf961910"',
+395 silly get     'last-modified': 'Mon, 13 Jun 2022 01:13:26 GMT',
+395 silly get     vary: 'Accept-Encoding',
+395 silly get     'cf-cache-status': 'REVALIDATED',
+395 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+395 silly get     'x-amz-replication-status': 'PENDING',
+395 silly get     server: 'cloudflare' } ]
+396 verbose etag https://registry.npmjs.org/@types%2fmime from cache
+397 verbose get saving @types/mime to /root/.npm/registry.npmjs.org/_40types_252fmime/.cache.json
+398 silly resolveWithNewModule @types/mime@1.3.2 checking installable status
+399 silly cache add args [ '@types/mime@^1', null ]
+400 verbose cache add spec @types/mime@^1
+401 silly cache add parsed spec Result {
+401 silly cache add   raw: '@types/mime@^1',
+401 silly cache add   scope: '@types',
+401 silly cache add   name: '@types/mime',
+401 silly cache add   rawSpec: '^1',
+401 silly cache add   spec: '>=1.0.0 <2.0.0',
+401 silly cache add   type: 'range' }
+402 silly addNamed @types/mime@>=1.0.0 <2.0.0
+403 verbose addNamed ">=1.0.0 <2.0.0" is a valid semver range for @types/mime
+404 silly addNameRange { name: '@types/mime', range: '>=1.0.0 <2.0.0', hasData: false }
+405 silly mapToRegistry name @types/mime
+406 silly mapToRegistry scope (from package name) @types
+407 verbose mapToRegistry no registry URL found in name for scope @types
+408 silly mapToRegistry using default registry
+409 silly mapToRegistry registry https://registry.npmjs.org/
+410 silly mapToRegistry uri https://registry.npmjs.org/@types%2fmime
+411 verbose addNameRange registry:https://registry.npmjs.org/@types%2fmime not in flight; fetching
+412 verbose get https://registry.npmjs.org/@types%2fmime not expired, no request
+413 silly addNameRange number 2 { name: '@types/mime', range: '>=1.0.0 <2.0.0', hasData: true }
+414 silly addNameRange versions [ '@types/mime',
+414 silly addNameRange   [ '0.0.15-alpha',
+414 silly addNameRange     '0.0.16-alpha',
+414 silly addNameRange     '0.0.21-alpha',
+414 silly addNameRange     '0.0.22-alpha',
+414 silly addNameRange     '0.0.23-alpha',
+414 silly addNameRange     '0.0.24-alpha',
+414 silly addNameRange     '0.0.25-alpha',
+414 silly addNameRange     '0.0.26-alpha',
+414 silly addNameRange     '0.0.27-alpha',
+414 silly addNameRange     '0.0.28',
+414 silly addNameRange     '0.0.29',
+414 silly addNameRange     '1.3.0',
+414 silly addNameRange     '1.3.1',
+414 silly addNameRange     '2.0.0',
+414 silly addNameRange     '2.0.1',
+414 silly addNameRange     '2.0.2',
+414 silly addNameRange     '2.0.3',
+414 silly addNameRange     '1.3.2' ] ]
+415 silly addNamed @types/mime@1.3.2
+416 verbose addNamed "1.3.2" is a plain semver version for @types/mime
+417 silly cache afterAdd @types/mime@1.3.2
+418 verbose afterAdd /root/.npm/@types/mime/1.3.2/package/package.json not in flight; writing
+419 verbose afterAdd /root/.npm/@types/mime/1.3.2/package/package.json written
+420 silly loadAllDepsIntoIdealTree Finishing
+421 silly idealTree:prePrune mysql_nodejs@1.0.0
+421 silly idealTree:prePrune ├── @types/body-parser@1.19.2
+421 silly idealTree:prePrune ├── @types/connect@3.4.35
+421 silly idealTree:prePrune ├── @types/express-serve-static-core@4.17.29
+421 silly idealTree:prePrune ├── @types/express@4.17.13
+421 silly idealTree:prePrune ├── @types/mime@1.3.2
+421 silly idealTree:prePrune ├── @types/multer@1.4.7
+421 silly idealTree:prePrune ├── @types/node@18.0.3
+421 silly idealTree:prePrune ├── @types/qs@6.9.7
+421 silly idealTree:prePrune ├── @types/range-parser@1.2.4
+421 silly idealTree:prePrune ├── @types/serve-static@1.13.10
+421 silly idealTree:prePrune ├── accepts@1.3.8
+421 silly idealTree:prePrune ├── append-field@1.0.0
+421 silly idealTree:prePrune ├── array-flatten@1.1.1
+421 silly idealTree:prePrune ├── bignumber.js@9.0.0
+421 silly idealTree:prePrune ├── body-parser@1.20.0
+421 silly idealTree:prePrune ├── buffer-from@1.1.2
+421 silly idealTree:prePrune ├── busboy@1.6.0
+421 silly idealTree:prePrune ├── bytes@3.1.2
+421 silly idealTree:prePrune ├── call-bind@1.0.2
+421 silly idealTree:prePrune ├── concat-stream@1.6.2
+421 silly idealTree:prePrune ├── content-disposition@0.5.4
+421 silly idealTree:prePrune ├── content-type@1.0.4
+421 silly idealTree:prePrune ├── cookie-signature@1.0.6
+421 silly idealTree:prePrune ├── cookie@0.5.0
+421 silly idealTree:prePrune ├── core-util-is@1.0.3
+421 silly idealTree:prePrune ├── debug@2.6.9
+421 silly idealTree:prePrune ├── depd@2.0.0
+421 silly idealTree:prePrune ├── destroy@1.2.0
+421 silly idealTree:prePrune ├── ee-first@1.1.1
+421 silly idealTree:prePrune ├── encodeurl@1.0.2
+421 silly idealTree:prePrune ├── escape-html@1.0.3
+421 silly idealTree:prePrune ├── etag@1.8.1
+421 silly idealTree:prePrune ├── express@4.18.1
+421 silly idealTree:prePrune ├── finalhandler@1.2.0
+421 silly idealTree:prePrune ├── forwarded@0.2.0
+421 silly idealTree:prePrune ├── fresh@0.5.2
+421 silly idealTree:prePrune ├── function-bind@1.1.1
+421 silly idealTree:prePrune ├── get-intrinsic@1.1.2
+421 silly idealTree:prePrune ├── has-symbols@1.0.3
+421 silly idealTree:prePrune ├── has@1.0.3
+421 silly idealTree:prePrune ├── http-errors@2.0.0
+421 silly idealTree:prePrune ├── iconv-lite@0.4.24
+421 silly idealTree:prePrune ├── inherits@2.0.4
+421 silly idealTree:prePrune ├── ipaddr.js@1.9.1
+421 silly idealTree:prePrune ├── isarray@1.0.0
+421 silly idealTree:prePrune ├── media-typer@0.3.0
+421 silly idealTree:prePrune ├── merge-descriptors@1.0.1
+421 silly idealTree:prePrune ├── methods@1.1.2
+421 silly idealTree:prePrune ├── mime-db@1.52.0
+421 silly idealTree:prePrune ├── mime-types@2.1.35
+421 silly idealTree:prePrune ├── mime@1.6.0
+421 silly idealTree:prePrune ├── minimist@1.2.6
+421 silly idealTree:prePrune ├── mkdirp@0.5.6
+421 silly idealTree:prePrune ├── ms@2.0.0
+421 silly idealTree:prePrune ├── multer@1.4.5-lts.1
+421 silly idealTree:prePrune ├─┬ mysql@2.18.1
+421 silly idealTree:prePrune │ └── safe-buffer@5.1.2
+421 silly idealTree:prePrune ├── negotiator@0.6.3
+421 silly idealTree:prePrune ├── object-assign@4.1.1
+421 silly idealTree:prePrune ├── object-inspect@1.12.2
+421 silly idealTree:prePrune ├── on-finished@2.4.1
+421 silly idealTree:prePrune ├── parseurl@1.3.3
+421 silly idealTree:prePrune ├── path-to-regexp@0.1.7
+421 silly idealTree:prePrune ├── process-nextick-args@2.0.1
+421 silly idealTree:prePrune ├── proxy-addr@2.0.7
+421 silly idealTree:prePrune ├── qs@6.10.3
+421 silly idealTree:prePrune ├── range-parser@1.2.1
+421 silly idealTree:prePrune ├── raw-body@2.5.1
+421 silly idealTree:prePrune ├─┬ readable-stream@2.3.7
+421 silly idealTree:prePrune │ └── safe-buffer@5.1.2
+421 silly idealTree:prePrune ├── safe-buffer@5.2.1
+421 silly idealTree:prePrune ├── safer-buffer@2.1.2
+421 silly idealTree:prePrune ├─┬ send@0.18.0
+421 silly idealTree:prePrune │ └── ms@2.1.3
+421 silly idealTree:prePrune ├── serve-static@1.15.0
+421 silly idealTree:prePrune ├── setprototypeof@1.2.0
+421 silly idealTree:prePrune ├── side-channel@1.0.4
+421 silly idealTree:prePrune ├── sqlstring@2.3.1
+421 silly idealTree:prePrune ├── statuses@2.0.1
+421 silly idealTree:prePrune ├── streamsearch@1.1.0
+421 silly idealTree:prePrune ├─┬ string_decoder@1.1.1
+421 silly idealTree:prePrune │ └── safe-buffer@5.1.2
+421 silly idealTree:prePrune ├── toidentifier@1.0.1
+421 silly idealTree:prePrune ├── type-is@1.6.18
+421 silly idealTree:prePrune ├── typedarray@0.0.6
+421 silly idealTree:prePrune ├── unpipe@1.0.0
+421 silly idealTree:prePrune ├── util-deprecate@1.0.2
+421 silly idealTree:prePrune ├── utils-merge@1.0.1
+421 silly idealTree:prePrune ├── vary@1.1.2
+421 silly idealTree:prePrune └── xtend@4.0.2
+422 silly loadIdealTree Finishing
+423 silly currentTree mysql_nodejs@1.0.0
+423 silly currentTree ├── accepts@1.3.8
+423 silly currentTree ├── append-field@1.0.0
+423 silly currentTree ├── array-flatten@1.1.1
+423 silly currentTree ├── bignumber.js@9.0.0
+423 silly currentTree ├── body-parser@1.20.0
+423 silly currentTree ├── buffer-from@1.1.2
+423 silly currentTree ├── busboy@1.6.0
+423 silly currentTree ├── bytes@3.1.2
+423 silly currentTree ├── call-bind@1.0.2
+423 silly currentTree ├── concat-stream@1.6.2
+423 silly currentTree ├── content-disposition@0.5.4
+423 silly currentTree ├── content-type@1.0.4
+423 silly currentTree ├── cookie-signature@1.0.6
+423 silly currentTree ├── cookie@0.5.0
+423 silly currentTree ├── core-util-is@1.0.3
+423 silly currentTree ├── debug@2.6.9
+423 silly currentTree ├── depd@2.0.0
+423 silly currentTree ├── destroy@1.2.0
+423 silly currentTree ├── ee-first@1.1.1
+423 silly currentTree ├── encodeurl@1.0.2
+423 silly currentTree ├── escape-html@1.0.3
+423 silly currentTree ├── etag@1.8.1
+423 silly currentTree ├── express@4.18.1
+423 silly currentTree ├── finalhandler@1.2.0
+423 silly currentTree ├── forwarded@0.2.0
+423 silly currentTree ├── fresh@0.5.2
+423 silly currentTree ├── function-bind@1.1.1
+423 silly currentTree ├── get-intrinsic@1.1.2
+423 silly currentTree ├── has-symbols@1.0.3
+423 silly currentTree ├── has@1.0.3
+423 silly currentTree ├── http-errors@2.0.0
+423 silly currentTree ├── iconv-lite@0.4.24
+423 silly currentTree ├── inherits@2.0.4
+423 silly currentTree ├── ipaddr.js@1.9.1
+423 silly currentTree ├── isarray@1.0.0
+423 silly currentTree ├── media-typer@0.3.0
+423 silly currentTree ├── merge-descriptors@1.0.1
+423 silly currentTree ├── methods@1.1.2
+423 silly currentTree ├── mime-db@1.52.0
+423 silly currentTree ├── mime-types@2.1.35
+423 silly currentTree ├── mime@1.6.0
+423 silly currentTree ├── minimist@1.2.6
+423 silly currentTree ├── mkdirp@0.5.6
+423 silly currentTree ├── ms@2.0.0
+423 silly currentTree ├── multer@1.4.5-lts.1
+423 silly currentTree ├─┬ mysql@2.18.1
+423 silly currentTree │ └── safe-buffer@5.1.2
+423 silly currentTree ├── negotiator@0.6.3
+423 silly currentTree ├── object-assign@4.1.1
+423 silly currentTree ├── object-inspect@1.12.2
+423 silly currentTree ├── on-finished@2.4.1
+423 silly currentTree ├── parseurl@1.3.3
+423 silly currentTree ├── path-to-regexp@0.1.7
+423 silly currentTree ├── process-nextick-args@2.0.1
+423 silly currentTree ├── proxy-addr@2.0.7
+423 silly currentTree ├── qs@6.10.3
+423 silly currentTree ├── range-parser@1.2.1
+423 silly currentTree ├── raw-body@2.5.1
+423 silly currentTree ├─┬ readable-stream@2.3.7
+423 silly currentTree │ └── safe-buffer@5.1.2
+423 silly currentTree ├── safe-buffer@5.2.1
+423 silly currentTree ├── safer-buffer@2.1.2
+423 silly currentTree ├─┬ send@0.18.0
+423 silly currentTree │ └── ms@2.1.3
+423 silly currentTree ├── serve-static@1.15.0
+423 silly currentTree ├── setprototypeof@1.2.0
+423 silly currentTree ├── side-channel@1.0.4
+423 silly currentTree ├── sqlstring@2.3.1
+423 silly currentTree ├── statuses@2.0.1
+423 silly currentTree ├── streamsearch@1.1.0
+423 silly currentTree ├─┬ string_decoder@1.1.1
+423 silly currentTree │ └── safe-buffer@5.1.2
+423 silly currentTree ├── toidentifier@1.0.1
+423 silly currentTree ├── type-is@1.6.18
+423 silly currentTree ├── typedarray@0.0.6
+423 silly currentTree ├── unpipe@1.0.0
+423 silly currentTree ├── util-deprecate@1.0.2
+423 silly currentTree ├── utils-merge@1.0.1
+423 silly currentTree ├── vary@1.1.2
+423 silly currentTree └── xtend@4.0.2
+424 silly idealTree mysql_nodejs@1.0.0
+424 silly idealTree ├── @types/body-parser@1.19.2
+424 silly idealTree ├── @types/connect@3.4.35
+424 silly idealTree ├── @types/express-serve-static-core@4.17.29
+424 silly idealTree ├── @types/express@4.17.13
+424 silly idealTree ├── @types/mime@1.3.2
+424 silly idealTree ├── @types/multer@1.4.7
+424 silly idealTree ├── @types/node@18.0.3
+424 silly idealTree ├── @types/qs@6.9.7
+424 silly idealTree ├── @types/range-parser@1.2.4
+424 silly idealTree ├── @types/serve-static@1.13.10
+424 silly idealTree ├── accepts@1.3.8
+424 silly idealTree ├── append-field@1.0.0
+424 silly idealTree ├── array-flatten@1.1.1
+424 silly idealTree ├── bignumber.js@9.0.0
+424 silly idealTree ├── body-parser@1.20.0
+424 silly idealTree ├── buffer-from@1.1.2
+424 silly idealTree ├── busboy@1.6.0
+424 silly idealTree ├── bytes@3.1.2
+424 silly idealTree ├── call-bind@1.0.2
+424 silly idealTree ├── concat-stream@1.6.2
+424 silly idealTree ├── content-disposition@0.5.4
+424 silly idealTree ├── content-type@1.0.4
+424 silly idealTree ├── cookie-signature@1.0.6
+424 silly idealTree ├── cookie@0.5.0
+424 silly idealTree ├── core-util-is@1.0.3
+424 silly idealTree ├── debug@2.6.9
+424 silly idealTree ├── depd@2.0.0
+424 silly idealTree ├── destroy@1.2.0
+424 silly idealTree ├── ee-first@1.1.1
+424 silly idealTree ├── encodeurl@1.0.2
+424 silly idealTree ├── escape-html@1.0.3
+424 silly idealTree ├── etag@1.8.1
+424 silly idealTree ├── express@4.18.1
+424 silly idealTree ├── finalhandler@1.2.0
+424 silly idealTree ├── forwarded@0.2.0
+424 silly idealTree ├── fresh@0.5.2
+424 silly idealTree ├── function-bind@1.1.1
+424 silly idealTree ├── get-intrinsic@1.1.2
+424 silly idealTree ├── has-symbols@1.0.3
+424 silly idealTree ├── has@1.0.3
+424 silly idealTree ├── http-errors@2.0.0
+424 silly idealTree ├── iconv-lite@0.4.24
+424 silly idealTree ├── inherits@2.0.4
+424 silly idealTree ├── ipaddr.js@1.9.1
+424 silly idealTree ├── isarray@1.0.0
+424 silly idealTree ├── media-typer@0.3.0
+424 silly idealTree ├── merge-descriptors@1.0.1
+424 silly idealTree ├── methods@1.1.2
+424 silly idealTree ├── mime-db@1.52.0
+424 silly idealTree ├── mime-types@2.1.35
+424 silly idealTree ├── mime@1.6.0
+424 silly idealTree ├── minimist@1.2.6
+424 silly idealTree ├── mkdirp@0.5.6
+424 silly idealTree ├── ms@2.0.0
+424 silly idealTree ├── multer@1.4.5-lts.1
+424 silly idealTree ├─┬ mysql@2.18.1
+424 silly idealTree │ └── safe-buffer@5.1.2
+424 silly idealTree ├── negotiator@0.6.3
+424 silly idealTree ├── object-assign@4.1.1
+424 silly idealTree ├── object-inspect@1.12.2
+424 silly idealTree ├── on-finished@2.4.1
+424 silly idealTree ├── parseurl@1.3.3
+424 silly idealTree ├── path-to-regexp@0.1.7
+424 silly idealTree ├── process-nextick-args@2.0.1
+424 silly idealTree ├── proxy-addr@2.0.7
+424 silly idealTree ├── qs@6.10.3
+424 silly idealTree ├── range-parser@1.2.1
+424 silly idealTree ├── raw-body@2.5.1
+424 silly idealTree ├─┬ readable-stream@2.3.7
+424 silly idealTree │ └── safe-buffer@5.1.2
+424 silly idealTree ├── safe-buffer@5.2.1
+424 silly idealTree ├── safer-buffer@2.1.2
+424 silly idealTree ├─┬ send@0.18.0
+424 silly idealTree │ └── ms@2.1.3
+424 silly idealTree ├── serve-static@1.15.0
+424 silly idealTree ├── setprototypeof@1.2.0
+424 silly idealTree ├── side-channel@1.0.4
+424 silly idealTree ├── sqlstring@2.3.1
+424 silly idealTree ├── statuses@2.0.1
+424 silly idealTree ├── streamsearch@1.1.0
+424 silly idealTree ├─┬ string_decoder@1.1.1
+424 silly idealTree │ └── safe-buffer@5.1.2
+424 silly idealTree ├── toidentifier@1.0.1
+424 silly idealTree ├── type-is@1.6.18
+424 silly idealTree ├── typedarray@0.0.6
+424 silly idealTree ├── unpipe@1.0.0
+424 silly idealTree ├── util-deprecate@1.0.2
+424 silly idealTree ├── utils-merge@1.0.1
+424 silly idealTree ├── vary@1.1.2
+424 silly idealTree └── xtend@4.0.2
+425 silly generateActionsToTake Starting
+426 silly install generateActionsToTake
+427 silly generateActionsToTake Finishing
+428 silly diffTrees action count 11
+429 silly diffTrees add @types/mime@1.3.2
+430 silly diffTrees add @types/node@18.0.3
+431 silly diffTrees add @types/connect@3.4.35
+432 silly diffTrees add @types/body-parser@1.19.2
+433 silly diffTrees add @types/qs@6.9.7
+434 silly diffTrees add @types/range-parser@1.2.4
+435 silly diffTrees add @types/express-serve-static-core@4.17.29
+436 silly diffTrees add @types/serve-static@1.13.10
+437 silly diffTrees add @types/express@4.17.13
+438 silly diffTrees add @types/multer@1.4.7
+439 silly diffTrees update body-parser@1.20.0
+440 silly decomposeActions action count 88
+441 silly decomposeActions fetch @types/mime@1.3.2
+442 silly decomposeActions extract @types/mime@1.3.2
+443 silly decomposeActions test @types/mime@1.3.2
+444 silly decomposeActions preinstall @types/mime@1.3.2
+445 silly decomposeActions build @types/mime@1.3.2
+446 silly decomposeActions install @types/mime@1.3.2
+447 silly decomposeActions postinstall @types/mime@1.3.2
+448 silly decomposeActions finalize @types/mime@1.3.2
+449 silly decomposeActions fetch @types/node@18.0.3
+450 silly decomposeActions extract @types/node@18.0.3
+451 silly decomposeActions test @types/node@18.0.3
+452 silly decomposeActions preinstall @types/node@18.0.3
+453 silly decomposeActions build @types/node@18.0.3
+454 silly decomposeActions install @types/node@18.0.3
+455 silly decomposeActions postinstall @types/node@18.0.3
+456 silly decomposeActions finalize @types/node@18.0.3
+457 silly decomposeActions fetch @types/connect@3.4.35
+458 silly decomposeActions extract @types/connect@3.4.35
+459 silly decomposeActions test @types/connect@3.4.35
+460 silly decomposeActions preinstall @types/connect@3.4.35
+461 silly decomposeActions build @types/connect@3.4.35
+462 silly decomposeActions install @types/connect@3.4.35
+463 silly decomposeActions postinstall @types/connect@3.4.35
+464 silly decomposeActions finalize @types/connect@3.4.35
+465 silly decomposeActions fetch @types/body-parser@1.19.2
+466 silly decomposeActions extract @types/body-parser@1.19.2
+467 silly decomposeActions test @types/body-parser@1.19.2
+468 silly decomposeActions preinstall @types/body-parser@1.19.2
+469 silly decomposeActions build @types/body-parser@1.19.2
+470 silly decomposeActions install @types/body-parser@1.19.2
+471 silly decomposeActions postinstall @types/body-parser@1.19.2
+472 silly decomposeActions finalize @types/body-parser@1.19.2
+473 silly decomposeActions fetch @types/qs@6.9.7
+474 silly decomposeActions extract @types/qs@6.9.7
+475 silly decomposeActions test @types/qs@6.9.7
+476 silly decomposeActions preinstall @types/qs@6.9.7
+477 silly decomposeActions build @types/qs@6.9.7
+478 silly decomposeActions install @types/qs@6.9.7
+479 silly decomposeActions postinstall @types/qs@6.9.7
+480 silly decomposeActions finalize @types/qs@6.9.7
+481 silly decomposeActions fetch @types/range-parser@1.2.4
+482 silly decomposeActions extract @types/range-parser@1.2.4
+483 silly decomposeActions test @types/range-parser@1.2.4
+484 silly decomposeActions preinstall @types/range-parser@1.2.4
+485 silly decomposeActions build @types/range-parser@1.2.4
+486 silly decomposeActions install @types/range-parser@1.2.4
+487 silly decomposeActions postinstall @types/range-parser@1.2.4
+488 silly decomposeActions finalize @types/range-parser@1.2.4
+489 silly decomposeActions fetch @types/express-serve-static-core@4.17.29
+490 silly decomposeActions extract @types/express-serve-static-core@4.17.29
+491 silly decomposeActions test @types/express-serve-static-core@4.17.29
+492 silly decomposeActions preinstall @types/express-serve-static-core@4.17.29
+493 silly decomposeActions build @types/express-serve-static-core@4.17.29
+494 silly decomposeActions install @types/express-serve-static-core@4.17.29
+495 silly decomposeActions postinstall @types/express-serve-static-core@4.17.29
+496 silly decomposeActions finalize @types/express-serve-static-core@4.17.29
+497 silly decomposeActions fetch @types/serve-static@1.13.10
+498 silly decomposeActions extract @types/serve-static@1.13.10
+499 silly decomposeActions test @types/serve-static@1.13.10
+500 silly decomposeActions preinstall @types/serve-static@1.13.10
+501 silly decomposeActions build @types/serve-static@1.13.10
+502 silly decomposeActions install @types/serve-static@1.13.10
+503 silly decomposeActions postinstall @types/serve-static@1.13.10
+504 silly decomposeActions finalize @types/serve-static@1.13.10
+505 silly decomposeActions fetch @types/express@4.17.13
+506 silly decomposeActions extract @types/express@4.17.13
+507 silly decomposeActions test @types/express@4.17.13
+508 silly decomposeActions preinstall @types/express@4.17.13
+509 silly decomposeActions build @types/express@4.17.13
+510 silly decomposeActions install @types/express@4.17.13
+511 silly decomposeActions postinstall @types/express@4.17.13
+512 silly decomposeActions finalize @types/express@4.17.13
+513 silly decomposeActions fetch @types/multer@1.4.7
+514 silly decomposeActions extract @types/multer@1.4.7
+515 silly decomposeActions test @types/multer@1.4.7
+516 silly decomposeActions preinstall @types/multer@1.4.7
+517 silly decomposeActions build @types/multer@1.4.7
+518 silly decomposeActions install @types/multer@1.4.7
+519 silly decomposeActions postinstall @types/multer@1.4.7
+520 silly decomposeActions finalize @types/multer@1.4.7
+521 silly decomposeActions fetch body-parser@1.20.0
+522 silly decomposeActions extract body-parser@1.20.0
+523 silly decomposeActions test body-parser@1.20.0
+524 silly decomposeActions preinstall body-parser@1.20.0
+525 silly decomposeActions build body-parser@1.20.0
+526 silly decomposeActions install body-parser@1.20.0
+527 silly decomposeActions postinstall body-parser@1.20.0
+528 silly decomposeActions finalize body-parser@1.20.0
+529 silly executeActions Starting
+530 silly install executeActions
+531 silly doSerial global-install 0
+532 silly doParallel fetch 11
+533 verbose lock using /root/.npm/_locks/staging-ef1f609911d1237c.lock for /root/mysql_nodejs/node_modules/.staging
+534 silly doParallel extract 11
+535 silly extract @types/mime@1.3.2
+536 silly extract @types/node@18.0.3
+537 silly extract @types/connect@3.4.35
+538 silly extract @types/body-parser@1.19.2
+539 silly extract @types/qs@6.9.7
+540 silly extract @types/range-parser@1.2.4
+541 silly extract @types/express-serve-static-core@4.17.29
+542 silly extract @types/serve-static@1.13.10
+543 silly extract @types/express@4.17.13
+544 silly extract @types/multer@1.4.7
+545 silly extract body-parser@1.20.0
+546 verbose unbuild node_modules/.staging/@types/mime-d752d6f3
+547 verbose unbuild node_modules/.staging/@types/node-eb21dad8
+548 verbose unbuild node_modules/.staging/@types/connect-01254741
+549 verbose unbuild node_modules/.staging/@types/body-parser-979d41fc
+550 verbose unbuild node_modules/.staging/@types/qs-c84cfb31
+551 verbose unbuild node_modules/.staging/@types/range-parser-5585201c
+552 verbose unbuild node_modules/.staging/@types/express-serve-static-core-26a0a06e
+553 verbose unbuild node_modules/.staging/@types/serve-static-e4458112
+554 verbose unbuild node_modules/.staging/@types/express-70c418bc
+555 verbose unbuild node_modules/.staging/@types/multer-274a2e7f
+556 verbose unbuild node_modules/.staging/body-parser-6dec2f5b
+557 silly gentlyRm /root/mysql_nodejs/node_modules/.staging/@types/mime-d752d6f3 is being purged from base /root/mysql_nodejs
+558 verbose gentlyRm don't care about contents; nuking /root/mysql_nodejs/node_modules/.staging/@types/mime-d752d6f3
+559 silly gentlyRm /root/mysql_nodejs/node_modules/.staging/@types/node-eb21dad8 is being purged from base /root/mysql_nodejs
+560 verbose gentlyRm don't care about contents; nuking /root/mysql_nodejs/node_modules/.staging/@types/node-eb21dad8
+561 silly gentlyRm /root/mysql_nodejs/node_modules/.staging/@types/connect-01254741 is being purged from base /root/mysql_nodejs
+562 verbose gentlyRm don't care about contents; nuking /root/mysql_nodejs/node_modules/.staging/@types/connect-01254741
+563 silly gentlyRm /root/mysql_nodejs/node_modules/.staging/@types/body-parser-979d41fc is being purged from base /root/mysql_nodejs
+564 verbose gentlyRm don't care about contents; nuking /root/mysql_nodejs/node_modules/.staging/@types/body-parser-979d41fc
+565 silly gentlyRm /root/mysql_nodejs/node_modules/.staging/@types/qs-c84cfb31 is being purged from base /root/mysql_nodejs
+566 verbose gentlyRm don't care about contents; nuking /root/mysql_nodejs/node_modules/.staging/@types/qs-c84cfb31
+567 silly gentlyRm /root/mysql_nodejs/node_modules/.staging/@types/range-parser-5585201c is being purged from base /root/mysql_nodejs
+568 verbose gentlyRm don't care about contents; nuking /root/mysql_nodejs/node_modules/.staging/@types/range-parser-5585201c
+569 silly gentlyRm /root/mysql_nodejs/node_modules/.staging/@types/express-serve-static-core-26a0a06e is being purged from base /root/mysql_nodejs
+570 verbose gentlyRm don't care about contents; nuking /root/mysql_nodejs/node_modules/.staging/@types/express-serve-static-core-26a0a06e
+571 silly gentlyRm /root/mysql_nodejs/node_modules/.staging/@types/serve-static-e4458112 is being purged from base /root/mysql_nodejs
+572 verbose gentlyRm don't care about contents; nuking /root/mysql_nodejs/node_modules/.staging/@types/serve-static-e4458112
+573 silly gentlyRm /root/mysql_nodejs/node_modules/.staging/@types/express-70c418bc is being purged from base /root/mysql_nodejs
+574 verbose gentlyRm don't care about contents; nuking /root/mysql_nodejs/node_modules/.staging/@types/express-70c418bc
+575 silly gentlyRm /root/mysql_nodejs/node_modules/.staging/@types/multer-274a2e7f is being purged from base /root/mysql_nodejs
+576 verbose gentlyRm don't care about contents; nuking /root/mysql_nodejs/node_modules/.staging/@types/multer-274a2e7f
+577 silly gentlyRm /root/mysql_nodejs/node_modules/.staging/body-parser-6dec2f5b is being purged from base /root/mysql_nodejs
+578 verbose gentlyRm don't care about contents; nuking /root/mysql_nodejs/node_modules/.staging/body-parser-6dec2f5b
+579 verbose tar unpack /root/.npm/@types/mime/1.3.2/package.tgz
+580 verbose tar unpacking to /root/mysql_nodejs/node_modules/.staging/@types/mime-d752d6f3
+581 silly gentlyRm /root/mysql_nodejs/node_modules/.staging/@types/mime-d752d6f3 is being purged
+582 verbose gentlyRm don't care about contents; nuking /root/mysql_nodejs/node_modules/.staging/@types/mime-d752d6f3
+583 verbose tar unpack /root/.npm/@types/node/18.0.3/package.tgz
+584 verbose tar unpacking to /root/mysql_nodejs/node_modules/.staging/@types/node-eb21dad8
+585 silly gentlyRm /root/mysql_nodejs/node_modules/.staging/@types/node-eb21dad8 is being purged
+586 verbose gentlyRm don't care about contents; nuking /root/mysql_nodejs/node_modules/.staging/@types/node-eb21dad8
+587 verbose tar unpack /root/.npm/@types/connect/3.4.35/package.tgz
+588 verbose tar unpacking to /root/mysql_nodejs/node_modules/.staging/@types/connect-01254741
+589 silly gentlyRm /root/mysql_nodejs/node_modules/.staging/@types/connect-01254741 is being purged
+590 verbose gentlyRm don't care about contents; nuking /root/mysql_nodejs/node_modules/.staging/@types/connect-01254741
+591 verbose tar unpack /root/.npm/@types/body-parser/1.19.2/package.tgz
+592 verbose tar unpacking to /root/mysql_nodejs/node_modules/.staging/@types/body-parser-979d41fc
+593 silly gentlyRm /root/mysql_nodejs/node_modules/.staging/@types/body-parser-979d41fc is being purged
+594 verbose gentlyRm don't care about contents; nuking /root/mysql_nodejs/node_modules/.staging/@types/body-parser-979d41fc
+595 verbose tar unpack /root/.npm/@types/qs/6.9.7/package.tgz
+596 verbose tar unpacking to /root/mysql_nodejs/node_modules/.staging/@types/qs-c84cfb31
+597 silly gentlyRm /root/mysql_nodejs/node_modules/.staging/@types/qs-c84cfb31 is being purged
+598 verbose gentlyRm don't care about contents; nuking /root/mysql_nodejs/node_modules/.staging/@types/qs-c84cfb31
+599 verbose tar unpack /root/.npm/@types/range-parser/1.2.4/package.tgz
+600 verbose tar unpacking to /root/mysql_nodejs/node_modules/.staging/@types/range-parser-5585201c
+601 silly gentlyRm /root/mysql_nodejs/node_modules/.staging/@types/range-parser-5585201c is being purged
+602 verbose gentlyRm don't care about contents; nuking /root/mysql_nodejs/node_modules/.staging/@types/range-parser-5585201c
+603 verbose tar unpack /root/.npm/@types/express-serve-static-core/4.17.29/package.tgz
+604 verbose tar unpacking to /root/mysql_nodejs/node_modules/.staging/@types/express-serve-static-core-26a0a06e
+605 silly gentlyRm /root/mysql_nodejs/node_modules/.staging/@types/express-serve-static-core-26a0a06e is being purged
+606 verbose gentlyRm don't care about contents; nuking /root/mysql_nodejs/node_modules/.staging/@types/express-serve-static-core-26a0a06e
+607 verbose tar unpack /root/.npm/@types/serve-static/1.13.10/package.tgz
+608 verbose tar unpacking to /root/mysql_nodejs/node_modules/.staging/@types/serve-static-e4458112
+609 silly gentlyRm /root/mysql_nodejs/node_modules/.staging/@types/serve-static-e4458112 is being purged
+610 verbose gentlyRm don't care about contents; nuking /root/mysql_nodejs/node_modules/.staging/@types/serve-static-e4458112
+611 verbose tar unpack /root/.npm/@types/express/4.17.13/package.tgz
+612 verbose tar unpacking to /root/mysql_nodejs/node_modules/.staging/@types/express-70c418bc
+613 silly gentlyRm /root/mysql_nodejs/node_modules/.staging/@types/express-70c418bc is being purged
+614 verbose gentlyRm don't care about contents; nuking /root/mysql_nodejs/node_modules/.staging/@types/express-70c418bc
+615 verbose tar unpack /root/.npm/@types/multer/1.4.7/package.tgz
+616 verbose tar unpacking to /root/mysql_nodejs/node_modules/.staging/@types/multer-274a2e7f
+617 silly gentlyRm /root/mysql_nodejs/node_modules/.staging/@types/multer-274a2e7f is being purged
+618 verbose gentlyRm don't care about contents; nuking /root/mysql_nodejs/node_modules/.staging/@types/multer-274a2e7f
+619 verbose tar unpack /root/.npm/body-parser/1.20.0/package.tgz
+620 verbose tar unpacking to /root/mysql_nodejs/node_modules/.staging/body-parser-6dec2f5b
+621 silly gentlyRm /root/mysql_nodejs/node_modules/.staging/body-parser-6dec2f5b is being purged
+622 verbose gentlyRm don't care about contents; nuking /root/mysql_nodejs/node_modules/.staging/body-parser-6dec2f5b
+623 silly gunzTarPerm modes [ '755', '644' ]
+624 silly gunzTarPerm modes [ '755', '644' ]
+625 silly gunzTarPerm modes [ '755', '644' ]
+626 silly gunzTarPerm modes [ '755', '644' ]
+627 silly gunzTarPerm modes [ '755', '644' ]
+628 silly gunzTarPerm modes [ '755', '644' ]
+629 silly gunzTarPerm modes [ '755', '644' ]
+630 silly gunzTarPerm modes [ '755', '644' ]
+631 silly gunzTarPerm modes [ '755', '644' ]
+632 silly gunzTarPerm modes [ '755', '644' ]
+633 silly gunzTarPerm modes [ '755', '644' ]
+634 silly gunzTarPerm extractEntry LICENSE
+635 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+636 silly gunzTarPerm extractEntry
+637 silly gunzTarPerm modified mode [ '', 511, 493 ]
+638 silly gunzTarPerm extractEntry LICENSE
+639 silly gunzTarPerm modified mode [ 'LICENSE', 511, 493 ]
+640 silly gunzTarPerm extractEntry LICENSE
+641 silly gunzTarPerm modified mode [ 'LICENSE', 511, 493 ]
+642 silly gunzTarPerm extractEntry LICENSE
+643 silly gunzTarPerm modified mode [ 'LICENSE', 511, 493 ]
+644 silly gunzTarPerm extractEntry LICENSE
+645 silly gunzTarPerm modified mode [ 'LICENSE', 511, 493 ]
+646 silly gunzTarPerm extractEntry
+647 silly gunzTarPerm modified mode [ '', 511, 493 ]
+648 silly gunzTarPerm extractEntry LICENSE
+649 silly gunzTarPerm modified mode [ 'LICENSE', 511, 493 ]
+650 silly gunzTarPerm extractEntry LICENSE
+651 silly gunzTarPerm modified mode [ 'LICENSE', 511, 493 ]
+652 silly gunzTarPerm extractEntry LICENSE
+653 silly gunzTarPerm modified mode [ 'LICENSE', 511, 493 ]
+654 silly gunzTarPerm extractEntry LICENSE
+655 silly gunzTarPerm extractEntry Mime.d.ts
+656 silly gunzTarPerm modified mode [ 'Mime.d.ts', 438, 420 ]
+657 silly gunzTarPerm extractEntry README.md
+658 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+659 silly gunzTarPerm extractEntry README.md
+660 silly gunzTarPerm modified mode [ 'README.md', 511, 493 ]
+661 silly gunzTarPerm extractEntry index.d.ts
+662 silly gunzTarPerm modified mode [ 'index.d.ts', 511, 493 ]
+663 silly gunzTarPerm extractEntry README.md
+664 silly gunzTarPerm modified mode [ 'README.md', 511, 493 ]
+665 silly gunzTarPerm extractEntry index.d.ts
+666 silly gunzTarPerm modified mode [ 'index.d.ts', 511, 493 ]
+667 silly gunzTarPerm extractEntry README.md
+668 silly gunzTarPerm modified mode [ 'README.md', 511, 493 ]
+669 silly gunzTarPerm extractEntry index.d.ts
+670 silly gunzTarPerm modified mode [ 'index.d.ts', 511, 493 ]
+671 silly gunzTarPerm extractEntry README.md
+672 silly gunzTarPerm modified mode [ 'README.md', 511, 493 ]
+673 silly gunzTarPerm extractEntry index.d.ts
+674 silly gunzTarPerm modified mode [ 'index.d.ts', 511, 493 ]
+675 silly gunzTarPerm extractEntry README.md
+676 silly gunzTarPerm modified mode [ 'README.md', 511, 493 ]
+677 silly gunzTarPerm extractEntry index.d.ts
+678 silly gunzTarPerm modified mode [ 'index.d.ts', 511, 493 ]
+679 silly gunzTarPerm extractEntry README.md
+680 silly gunzTarPerm modified mode [ 'README.md', 511, 493 ]
+681 silly gunzTarPerm extractEntry index.d.ts
+682 silly gunzTarPerm modified mode [ 'index.d.ts', 511, 493 ]
+683 silly gunzTarPerm extractEntry README.md
+684 silly gunzTarPerm modified mode [ 'README.md', 511, 493 ]
+685 silly gunzTarPerm extractEntry index.d.ts
+686 silly gunzTarPerm modified mode [ 'index.d.ts', 511, 493 ]
+687 silly gunzTarPerm extractEntry index.js
+688 silly gunzTarPerm extractEntry lib/types/json.js
+689 silly gunzTarPerm extractEntry
+690 silly gunzTarPerm modified mode [ '', 511, 493 ]
+691 silly gunzTarPerm extractEntry
+692 silly gunzTarPerm modified mode [ '', 511, 493 ]
+693 silly gunzTarPerm extractEntry
+694 silly gunzTarPerm modified mode [ '', 511, 493 ]
+695 silly gunzTarPerm extractEntry
+696 silly gunzTarPerm modified mode [ '', 511, 493 ]
+697 silly gunzTarPerm extractEntry
+698 silly gunzTarPerm modified mode [ '', 511, 493 ]
+699 silly gunzTarPerm extractEntry
+700 silly gunzTarPerm modified mode [ '', 511, 493 ]
+701 silly gunzTarPerm extractEntry
+702 silly gunzTarPerm modified mode [ '', 511, 493 ]
+703 silly gunzTarPerm extractEntry
+704 silly gunzTarPerm modified mode [ '', 511, 493 ]
+705 silly gunzTarPerm extractEntry index.d.ts
+706 silly gunzTarPerm modified mode [ 'index.d.ts', 438, 420 ]
+707 silly gunzTarPerm extractEntry lite.d.ts
+708 silly gunzTarPerm modified mode [ 'lite.d.ts', 438, 420 ]
+709 silly gunzTarPerm extractEntry
+710 silly gunzTarPerm modified mode [ '', 511, 493 ]
+711 silly gunzTarPerm extractEntry package.json
+712 silly gunzTarPerm modified mode [ 'package.json', 511, 493 ]
+713 silly gunzTarPerm extractEntry package.json
+714 silly gunzTarPerm modified mode [ 'package.json', 511, 493 ]
+715 silly gunzTarPerm extractEntry package.json
+716 silly gunzTarPerm modified mode [ 'package.json', 511, 493 ]
+717 silly gunzTarPerm extractEntry package.json
+718 silly gunzTarPerm modified mode [ 'package.json', 511, 493 ]
+719 silly gunzTarPerm extractEntry package.json
+720 silly gunzTarPerm modified mode [ 'package.json', 511, 493 ]
+721 silly gunzTarPerm extractEntry package.json
+722 silly gunzTarPerm modified mode [ 'package.json', 511, 493 ]
+723 silly gunzTarPerm extractEntry lib/types/raw.js
+724 silly gunzTarPerm extractEntry lib/read.js
+725 silly gunzTarPerm extractEntry package.json
+726 silly gunzTarPerm modified mode [ 'package.json', 511, 493 ]
+727 silly gunzTarPerm extractEntry ts4.0/
+728 silly gunzTarPerm modified mode [ 'ts4.0/', 511, 493 ]
+729 silly gunzTarPerm extractEntry package.json
+730 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+731 silly gunzTarPerm extractEntry
+732 silly gunzTarPerm modified mode [ '', 511, 493 ]
+733 silly gunzTarPerm extractEntry
+734 silly gunzTarPerm modified mode [ '', 511, 493 ]
+735 silly gunzTarPerm extractEntry
+736 silly gunzTarPerm modified mode [ '', 511, 493 ]
+737 silly gunzTarPerm extractEntry
+738 silly gunzTarPerm modified mode [ '', 511, 493 ]
+739 silly gunzTarPerm extractEntry ts4.0/index.d.ts
+740 silly gunzTarPerm modified mode [ 'ts4.0/index.d.ts', 511, 493 ]
+741 silly gunzTarPerm extractEntry lib/types/text.js
+742 silly gunzTarPerm extractEntry
+743 silly gunzTarPerm modified mode [ '', 511, 493 ]
+744 silly gunzTarPerm extractEntry
+745 silly gunzTarPerm modified mode [ '', 511, 493 ]
+746 silly gunzTarPerm extractEntry
+747 silly gunzTarPerm modified mode [ '', 511, 493 ]
+748 silly gunzTarPerm extractEntry lib/types/urlencoded.js
+749 silly gunzTarPerm extractEntry package.json
+750 silly gunzTarPerm extractEntry
+751 silly gunzTarPerm modified mode [ '', 511, 493 ]
+752 silly gunzTarPerm extractEntry
+753 silly gunzTarPerm modified mode [ '', 511, 493 ]
+754 silly gunzTarPerm extractEntry
+755 silly gunzTarPerm modified mode [ '', 511, 493 ]
+756 silly gunzTarPerm extractEntry
+757 silly gunzTarPerm modified mode [ '', 511, 493 ]
+758 silly gunzTarPerm extractEntry HISTORY.md
+759 silly gunzTarPerm extractEntry README.md
+760 silly gentlyRm /root/mysql_nodejs/node_modules/.staging/@types/range-parser-5585201c/node_modules is being purged
+761 verbose gentlyRm don't care about contents; nuking /root/mysql_nodejs/node_modules/.staging/@types/range-parser-5585201c/node_modules
+762 silly gentlyRm /root/mysql_nodejs/node_modules/.staging/@types/qs-c84cfb31/node_modules is being purged
+763 verbose gentlyRm don't care about contents; nuking /root/mysql_nodejs/node_modules/.staging/@types/qs-c84cfb31/node_modules
+764 silly gentlyRm /root/mysql_nodejs/node_modules/.staging/@types/connect-01254741/node_modules is being purged
+765 verbose gentlyRm don't care about contents; nuking /root/mysql_nodejs/node_modules/.staging/@types/connect-01254741/node_modules
+766 silly gentlyRm /root/mysql_nodejs/node_modules/.staging/@types/serve-static-e4458112/node_modules is being purged
+767 verbose gentlyRm don't care about contents; nuking /root/mysql_nodejs/node_modules/.staging/@types/serve-static-e4458112/node_modules
+768 silly gentlyRm /root/mysql_nodejs/node_modules/.staging/@types/multer-274a2e7f/node_modules is being purged
+769 verbose gentlyRm don't care about contents; nuking /root/mysql_nodejs/node_modules/.staging/@types/multer-274a2e7f/node_modules
+770 silly gentlyRm /root/mysql_nodejs/node_modules/.staging/@types/body-parser-979d41fc/node_modules is being purged
+771 verbose gentlyRm don't care about contents; nuking /root/mysql_nodejs/node_modules/.staging/@types/body-parser-979d41fc/node_modules
+772 silly gunzTarPerm extractEntry
+773 silly gunzTarPerm modified mode [ '', 511, 493 ]
+774 silly gunzTarPerm extractEntry
+775 silly gunzTarPerm modified mode [ '', 511, 493 ]
+776 silly gunzTarPerm extractEntry
+777 silly gunzTarPerm modified mode [ '', 511, 493 ]
+778 silly gunzTarPerm extractEntry SECURITY.md
+779 silly gunzTarPerm extractEntry
+780 silly gunzTarPerm modified mode [ '', 511, 493 ]
+781 silly gunzTarPerm extractEntry
+782 silly gunzTarPerm modified mode [ '', 511, 493 ]
+783 silly gunzTarPerm extractEntry
+784 silly gunzTarPerm modified mode [ '', 511, 493 ]
+785 silly gunzTarPerm extractEntry
+786 silly gunzTarPerm modified mode [ '', 511, 493 ]
+787 silly gentlyRm /root/mysql_nodejs/node_modules/.staging/@types/express-70c418bc/node_modules is being purged
+788 verbose gentlyRm don't care about contents; nuking /root/mysql_nodejs/node_modules/.staging/@types/express-70c418bc/node_modules
+789 silly gentlyRm /root/mysql_nodejs/node_modules/.staging/@types/mime-d752d6f3/node_modules is being purged
+790 verbose gentlyRm don't care about contents; nuking /root/mysql_nodejs/node_modules/.staging/@types/mime-d752d6f3/node_modules
+791 silly gunzTarPerm extractEntry
+792 silly gunzTarPerm modified mode [ '', 511, 493 ]
+793 silly gunzTarPerm extractEntry
+794 silly gunzTarPerm modified mode [ '', 511, 493 ]
+795 silly gunzTarPerm extractEntry
+796 silly gunzTarPerm modified mode [ '', 511, 493 ]
+797 silly gunzTarPerm extractEntry
+798 silly gunzTarPerm modified mode [ '', 511, 493 ]
+799 silly gunzTarPerm extractEntry
+800 silly gunzTarPerm modified mode [ '', 511, 493 ]
+801 silly gunzTarPerm extractEntry
+802 silly gunzTarPerm modified mode [ '', 511, 493 ]
+803 silly gunzTarPerm extractEntry
+804 silly gunzTarPerm modified mode [ '', 511, 493 ]
+805 silly gunzTarPerm extractEntry
+806 silly gunzTarPerm modified mode [ '', 511, 493 ]
+807 silly gunzTarPerm extractEntry
+808 silly gunzTarPerm modified mode [ '', 511, 493 ]
+809 silly gunzTarPerm extractEntry
+810 silly gunzTarPerm modified mode [ '', 511, 493 ]
+811 silly gunzTarPerm extractEntry
+812 silly gunzTarPerm modified mode [ '', 511, 493 ]
+813 silly gunzTarPerm extractEntry
+814 silly gunzTarPerm modified mode [ '', 511, 493 ]
+815 silly gunzTarPerm extractEntry
+816 silly gunzTarPerm modified mode [ '', 511, 493 ]
+817 silly gunzTarPerm extractEntry
+818 silly gunzTarPerm modified mode [ '', 511, 493 ]
+819 silly gunzTarPerm extractEntry
+820 silly gunzTarPerm modified mode [ '', 511, 493 ]
+821 silly gentlyRm /root/mysql_nodejs/node_modules/.staging/body-parser-6dec2f5b/node_modules is being purged
+822 verbose gentlyRm don't care about contents; nuking /root/mysql_nodejs/node_modules/.staging/body-parser-6dec2f5b/node_modules
+823 silly gunzTarPerm extractEntry
+824 silly gunzTarPerm modified mode [ '', 511, 493 ]
+825 silly gunzTarPerm extractEntry
+826 silly gunzTarPerm modified mode [ '', 511, 493 ]
+827 silly gunzTarPerm extractEntry
+828 silly gunzTarPerm modified mode [ '', 511, 493 ]
+829 silly gunzTarPerm extractEntry
+830 silly gunzTarPerm modified mode [ '', 511, 493 ]
+831 silly gunzTarPerm extractEntry
+832 silly gunzTarPerm modified mode [ '', 511, 493 ]
+833 silly gunzTarPerm extractEntry
+834 silly gunzTarPerm modified mode [ '', 511, 493 ]
+835 silly gunzTarPerm extractEntry
+836 silly gunzTarPerm modified mode [ '', 511, 493 ]
+837 silly gunzTarPerm extractEntry
+838 silly gunzTarPerm modified mode [ '', 511, 493 ]
+839 silly gunzTarPerm extractEntry
+840 silly gunzTarPerm modified mode [ '', 511, 493 ]
+841 silly gunzTarPerm extractEntry
+842 silly gunzTarPerm modified mode [ '', 511, 493 ]
+843 silly gunzTarPerm extractEntry
+844 silly gunzTarPerm modified mode [ '', 511, 493 ]
+845 silly gunzTarPerm extractEntry
+846 silly gunzTarPerm modified mode [ '', 511, 493 ]
+847 silly gunzTarPerm extractEntry
+848 silly gunzTarPerm modified mode [ '', 511, 493 ]
+849 silly gunzTarPerm extractEntry
+850 silly gunzTarPerm modified mode [ '', 511, 493 ]
+851 silly gunzTarPerm extractEntry
+852 silly gunzTarPerm modified mode [ '', 511, 493 ]
+853 silly gunzTarPerm extractEntry
+854 silly gunzTarPerm modified mode [ '', 511, 493 ]
+855 silly gunzTarPerm extractEntry
+856 silly gunzTarPerm modified mode [ '', 511, 493 ]
+857 silly gunzTarPerm extractEntry
+858 silly gunzTarPerm modified mode [ '', 511, 493 ]
+859 silly gunzTarPerm extractEntry
+860 silly gunzTarPerm modified mode [ '', 511, 493 ]
+861 silly gunzTarPerm extractEntry
+862 silly gunzTarPerm modified mode [ '', 511, 493 ]
+863 silly gunzTarPerm extractEntry
+864 silly gunzTarPerm modified mode [ '', 511, 493 ]
+865 silly gunzTarPerm extractEntry
+866 silly gunzTarPerm modified mode [ '', 511, 493 ]
+867 silly gunzTarPerm extractEntry
+868 silly gunzTarPerm modified mode [ '', 511, 493 ]
+869 silly gunzTarPerm extractEntry
+870 silly gunzTarPerm modified mode [ '', 511, 493 ]
+871 verbose unlock done using /root/.npm/_locks/staging-ef1f609911d1237c.lock for /root/mysql_nodejs/node_modules/.staging
+872 silly rollbackFailedOptional Starting
+873 silly rollbackFailedOptional Finishing
+874 silly runTopLevelLifecycles Starting
+875 silly runTopLevelLifecycles Finishing
+876 silly install printInstalled
+877 warn mysql_nodejs@1.0.0 No description
+878 warn mysql_nodejs@1.0.0 No repository field.
+879 verbose stack Error: ENOTDIR: not a directory, open '/root/mysql_nodejs/node_modules/.staging/@types/express-serve-static-core-26a0a06e/package.json'
+880 verbose cwd /root/mysql_nodejs
+881 error Linux 4.15.0-188-generic
+882 error argv "/usr/bin/node" "/usr/bin/npm" "i" "--save-dev" "@types/multer"
+883 error node v8.10.0
+884 error npm  v3.5.2
+885 error path /root/mysql_nodejs/node_modules/.staging/@types/express-serve-static-core-26a0a06e/package.json
+886 error code ENOTDIR
+887 error errno -20
+888 error syscall open
+889 error ENOTDIR: not a directory, open '/root/mysql_nodejs/node_modules/.staging/@types/express-serve-static-core-26a0a06e/package.json'
+890 error If you need help, you may report this error at:
+890 error     <https://github.com/npm/npm/issues>
+891 verbose exit [ -20, true ]
