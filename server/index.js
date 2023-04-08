@@ -59,9 +59,7 @@ wsServer.on('request', (req) => {
     console.log(req.resourceURL.query);
     console.log(req.resourceURL.query.user);
     console.log(req.resourceURL.query.room);
-    console.log("웹서버접속웹서버접속웹서버접속웹서버접속웹서버접속");
     console.log(req.resourceURL);
-    console.log("웹서버접속웹서버접속웹서버접속웹서버접속웹서버접속");
     const user = req.resourceURL.query.user;  //사용자 ID
     const room = req.resourceURL.query.room;  //방번호
     const other_user = req.resourceURL.query.other_user;  //방번호
@@ -74,7 +72,6 @@ wsServer.on('request', (req) => {
     connection.query(sql4, values4, (error, rows) => {
       if (error) {
         console.log(error);
-        console.log("MAKING aasdasd안돼안돼안돼안돼안돼안돼안돼안돼안돼안돼안돼안돼안돼안돼안돼안돼안돼안돼안돼안돼ㅍ");
         return;              }
       //에러가 안난 경우
       console.log(rows.length);
@@ -85,34 +82,18 @@ wsServer.on('request', (req) => {
         console.log(other_user)
         var values3 = [room, "", now_time2, user, other_user];
         connection.query(sql3, values3, (error, rows) => {
-          console.log("123123123132")
           if (error) {
             console.log(error);
-            console.log("MAKING ROOMS안돼안돼안돼안돼안돼안돼안돼안돼안돼안돼안돼안돼안돼안돼안돼안돼안돼안돼안돼안돼ㅍ");
             return;              }
           //에러가 안난 경우
-          console.log("MAKING ROOMS성공성공성공성공성공성공성공성공성공성공성공성공성공")
         });
       }
-      console.log("MAKING asdasd성공성공성공성공성공성공성공성공성공성공성공성공성공")
     });
     
             
     connection_socket.on('message', function(message) {  //채팅메시지가 도달하면
         //for (let i=0;i<rooms.size;i++){
         for(let target of rooms.values()) {  //방 목록 객체를 반복문을 활용해 발송
-          console.log("타겟은 여기에요");
-          console.log(target[1]);
-          console.log("타겟은 여기에요111");
-          console.log(room);
-          console.log(target.room);
-          console.log(user);
-          console.log(target.user);
-          console.log("타겟은 여기에요1123232323");
-          console.log(month);
-          console.log(month.length);
-          console.log(typeof month);
-          console.log("잘봐주세요!!!!!");
           var now_time = year+month+date+hours+minutes+seconds;
           if(room == target.room && user != target.user){  //같은방에 있는 사람이면 전송
             //var sql = "insert into messages ";
@@ -136,7 +117,6 @@ wsServer.on('request', (req) => {
             connection.query(sql, values, (error, rows) => {
               if (error) {
                 console.log(error);
-                console.log("안돼안돼안돼안돼안돼안돼안돼안돼안돼안돼안돼안돼안돼안돼안돼안돼안돼안돼안돼안돼ㅍ");
                 return;
               }
               //에러가 안난 경우
@@ -150,26 +130,14 @@ wsServer.on('request', (req) => {
               connection.query(sql2, values2, (error, rows) => {
                 if (error) {
                   console.log(error);
-                  console.log("안돼안돼안돼안돼안돼안돼안돼안돼안돼안돼안돼안돼안돼안돼안돼안돼안돼안돼안돼안돼ㅍ");
                   return;
                 }
                 //에러가 안난 경우
-                console.log("성공성공성공성공성공성공성공성공성공성공성공성공성공")
               });
-              console.log("성공성공성공성공성공성공성공성공성공성공성공성공성공")
             });
             var res = JSON.stringify({param:message_to_send, who:user });  //json형태로 메시지 전달, param은 보낼 메시지 who는 보내는 사람이다.
-            console.log(res);
-            console.log("ㅅㅏㄹㄹㅕㅈㅜㅓ1");
-            console.log(res.param);
-            console.log("ㅅㅏㄹㄹㅕㅈㅜㅓ5");
-            //console.log(res.param.message);
             target.con.sendUTF(message.utf8Data);
             // target[1].con.sendUTF(res);
-            console.log("ㅅㅏㄹㄹㅕㅈㅜㅓ2");
-            //console.log(target[1].con);
-            
-            console.log("ㅅㅏㄹㄹㅕㅈㅜㅓ3");
           }
         }
     });
@@ -223,14 +191,12 @@ app.set('port', process.env.PORT || 3000);
 app.get('/', function (req, res){
   //res.writeHead(200, {'Content-Type': 'text/html' });
   //res.end(form);
-  console.log("시작지점");
   res.send("sdfdsfsdf")
 });
 
 app.get('/up', function (req, res){
   res.writeHead(200, {'Content-Type': 'text/html' });
   res.end(form);
-  console.log("여기에요");
 });
 
 
@@ -257,30 +223,18 @@ app.post(
   multer({
     storage: storage
   }).single('upload'), function(req, res) {
-    console.log(req.file);
-    console.log(req.query.user_nickname);
-    console.log("ㅇㄹㅗㅓㄴㅗㄹㅓㅏㄴㅇㅠㄹㅏㄴㅠㄹㅓㅏㄴㅇ");
     var sql = "update profile set profile_img = ? where nickname = ?";
     var img_url = "https://7db1-192-249-18-214.jp.ngrok.io/uploads/"+req.file.filename;
-    console.log(img_url);
-    console.log(typeof img_url);
-    console.log(typeof req.file.filename);
-    console.log("ㅇ랑루ㅡㅏㅇ르ㅏ으라으라으ㅏㄹ");
     var values = [img_url, req.query.user_nickname];
     connection.query(sql, values, (error, rows) => {
       if (error) throw error;
-      console.log("프로필 변경 성공!");
     });
     res.redirect("/uploads/" + req.file.filename);
-    console.log(req.file.filename);
     return res.status(200).end();
   });
 
 app.get('/uploads/:upload', function (req, res){
-    console.log(req.params);
     file = req.params.upload;
-    console.log(req.params.upload);
-    console.log("여기에요123");
     var img = fs.readFileSync(__dirname + "/uploads/" + file);
     res.writeHead(200, {'Content-Type': 'image/png' });
     res.end(img, 'binary');
@@ -305,10 +259,8 @@ app.post('/users', (req, res) => {
     if (rows.length == 0){
       console.log('Json object : ', json_object_send);
       res.send(json_object_send);
-      console.log("여기여기")
       return;
     }
-    console.log("여기여기ㄴㅇㄹㅇㄹ")
     json_object_send.id = rows[0]["id"];
     json_object_send.password = rows[0]["password"];
     json_object_send.nickname = rows[0]["nickname"];
@@ -387,9 +339,6 @@ app.post('/read_post', (req, res) => {
   connection.query(sql, (error, rows) => {
     if (error) {console.log(error);}
     else {
-      console.log("ㅁㅗㄷㅡㄴㄱㅔㅅㅣㅁㅜㄹㅈㅗㅎㅗㅣ");
-      //console.log(rows);
-      console.log(rows.length);
       var aJsonArray = new Array();
       for (let i=0;i<rows.length;i++){
         var json_object_send = {
@@ -410,10 +359,7 @@ app.post('/read_post', (req, res) => {
         aJsonArray.push(json_object_send);
       }
       var sJson = JSON.stringify(aJsonArray);
-      console.log(sJson);
-      console.log("ㄴㅐㄱㅏㅇㅜㅓㄴㅎㅏㄴㅡㄴㄱㅗㅅ?");
       json_container.jsonArray = sJson;
-      console.log(json_container);
       res.send(json_container);
     }
   });
@@ -429,9 +375,6 @@ app.post('/load_comment', (req, res) => {
   connection.query(sql, values, (error, rows) => {
     if (error) {console.log(error);}
     else {
-      console.log("ㅁㅗㄷㅡㄴㄱㅔㅅㅣㅁㅜㄹㅈㅗㅎㅗㅣ");
-      //console.log(rows);
-      console.log(rows.length);
       var aJsonArray = new Array();
       for (let i=0;i<rows.length;i++){
         var json_object_send = {
@@ -446,8 +389,6 @@ app.post('/load_comment', (req, res) => {
         aJsonArray.push(json_object_send);
       }
       var sJson = JSON.stringify(aJsonArray);
-      console.log(sJson);
-      console.log("sdfnmkdfndjkfndjfnajnvklcjnjk?");
       json_container.jsonArray = sJson;
       console.log(json_container);
       res.send(json_container);
@@ -460,7 +401,6 @@ app.post('/load_comment', (req, res) => {
 app.post('/read_chatting_room', (req, res) => {
   var sql = 'select * from chatting_room where one_nickname = ? or two_nickname = ? order by reg_date desc';
   var values = [req.body.my_nickname, req.body.my_nickname];
-  console.log(req.body.my_nickname);
   var json_container = {
     jsonArray : ""
   };
@@ -468,9 +408,6 @@ app.post('/read_chatting_room', (req, res) => {
   connection.query(sql, values, (error, rows) => {
     if (error) {console.log(error);}
     else {
-      console.log("ALL CHATTING ROOM SEARCH");
-      //console.log(rows);
-      console.log(rows.length);
       var aJsonArray = new Array();
       for (let i=0;i<rows.length;i++){
         var json_object_send;
@@ -487,16 +424,12 @@ app.post('/read_chatting_room', (req, res) => {
             nickname : rows[i]["one_nickname"]
           };
         }else{
-          console.log("ㅇㅔㄹㅓㅂㅏㄹㅅㅐㅇ ㅇㅣㅅㅏㅇㅎㅐㅇㅛ!!");
           return ;
         }
         aJsonArray.push(json_object_send);
       }
       var sJson = JSON.stringify(aJsonArray);
-      console.log(sJson);
-      console.log("kmlfgmldfmglfmglmflgmfg?");
       json_container.jsonArray = sJson;
-      console.log(json_container);
       res.send(json_container);
     }
   });
@@ -504,7 +437,6 @@ app.post('/read_chatting_room', (req, res) => {
 
 
 app.post('/load_chat', (req, res) => {
-  console.log("채팅 로드!!!!!!!!!!!!!!!!!!!!!");
   var sql = 'select * from messages where room_name = ? order by reg_date asc';
   var values = [req.body.room];
   var json_container = {
@@ -514,13 +446,8 @@ app.post('/load_chat', (req, res) => {
   connection.query(sql, values, (error, rows) => {
     if (error) {console.log(error);}
     else {
-      console.log("ㅌㅡㄱㅈㅓㅇㅊㅐㅌㅣㅇㅂㅏㅇㅈㅗㅎㅗㅣ");
-      //console.log(rows);
-      console.log(rows.length);
       var aJsonArray = new Array();
       for (let i=0;i<rows.length;i++){
-        console.log(rows[i]["mes"]);
-        console.log("ㅇㅓㄴㅜㄹㅓㅇㅜㄹㅓㅇㅜㄹㅓㅜㅇㅓㄹㅜㅇㅓㅜㄹㅓ");
         var json_object_send;
         json_object_send = {
           from_nickname : rows[i]["from_nickname"],
@@ -530,10 +457,7 @@ app.post('/load_chat', (req, res) => {
         aJsonArray.push(json_object_send);
       }
       var sJson = JSON.stringify(aJsonArray);
-      console.log(sJson);
-      console.log("asdsvxcvsdfwerfhghgh?");
       json_container.jsonArray = sJson;
-      console.log(json_container);
       res.send(json_container);
     }
   });
@@ -547,8 +471,6 @@ app.post('/edit_post', (req, res) => {
   var json_object_send = {
     edit_ok : false
   };
-  console.log(typeof imgCnt);
-  console.log(imgCnt);
   if (imgCnt == 0){
     sql = 'update posting set nickname = ?, title = ?, sub_title = ?, contents = ?, score=?, update_date=? where nickname = ? and title = ? and sub_title=?';
     values = [req.body.nickname, req.body.title, req.body.sub_title, req.body.contents, req.body.score, req.body.update_date, req.body.nickname, req.body.title, req.body.sub_title];
@@ -608,8 +530,6 @@ app.post('/write_post', (req, res) => {
   var json_object_send = {
     insert_ok : false
   };
-  console.log(typeof imgCnt);
-  console.log(imgCnt);
   if (imgCnt == 0){
     sql = 'insert into posting (nickname, title, sub_title, contents, score) values (?, ?, ?, ?, ?)';
     values = [req.body.nickname, req.body.title, req.body.sub_title, req.body.contents, req.body.score];
@@ -630,30 +550,12 @@ app.post('/write_post', (req, res) => {
     sql = 'insert into posting (nickname, title, sub_title, contents, score, image1, image2, image3, image4, image5) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
     values = [req.body.nickname, req.body.title, req.body.sub_title, req.body.contents, req.body.score, req.body.image1, req.body.image2, req.body.image3, req.body.image4, req.body.image5];
   }
-  console.log(sql);
-  console.log(values);
   connection.query(sql, values, (error, rows) => {
     if (error) {
       console.log(error);
-      console.log("ㅇㅔㄹㄹㅓㅂㅏㄹㅅㅐㄹㅇ");
     }
-    console.log(rows.length);
     json_object_send.insert_ok = true;
     res.send(json_object_send);
-    
-   /*
-    console.log(rows);
-    if (rows.length == 0){  //insert 실패
-      console.log("ㅇㅣㄴㅌㅓㅅㅡㅅㅣㄹㅍㅐ");
-      res.send(json_object_send);
-    }
-    else if (rows.length == 1){  // insert 성공
-      console.log(rows);
-      console.log("ㅇㅣㄴㅌㅓㅅㅡㅅㅓㅇㄱㅗㅇ");
-      json_object_send.insert_ok = true;
-      res.send(json_object_send);
-    }
-    */
   });
 });
 
@@ -666,12 +568,9 @@ app.post('/create_comment', (req, res) => {
   var json_object_send = {
     create_ok : false
   };
-  console.log(sql);
-  console.log(values);
   connection.query(sql, values, (error, rows) => {
     if (error) {
       console.log(error);
-      console.log("ㅇㅔㄹㄹㅓㅂㅏㄹㅅㅐㄹㅇ");
     }
     json_object_send.create_ok = true;
     res.send(json_object_send);
@@ -689,14 +588,11 @@ app.post('/search_post', (req, res) => {
   connection.query(sql, values, (error, rows) => {
     if (error) {console.log(error);}
     else {
-      console.log("ㅌㅡㄱㅈㅓㅇㅊㅐㅌㅣㅇㅂㅏㅇㅈㅗㅎㅗㅣ");
       //console.log(rows);
       console.log(rows.length);
       var aJsonArray = new Array();
       for (let i=0;i<rows.length;i++){
         console.log(rows[i]["mes"]);
-        console.log("ㅇㅓㄴㅜㄹㅓㅇㅜㄹㅓㅇㅜㄹㅓㅜㅇㅓㄹㅜㅇㅓㅜㄹㅓ");
-       
         var json_object_send = {
           posting_id : rows[i]["posting_id"],
           nickname : rows[i]["nickname"],
@@ -742,15 +638,10 @@ app.post('/get_profile', (req, res) => {
   };
   var values = [req.body.nickname];
   var sql = "select * from profile where nickname = ?";
-  console.log(sql);
-  console.log(values);
-  console.log("프로필 불러오기!@!@!@!@!@!@!@!@!@!");
   connection.query(sql, values, (error, rows) => {
     if (error) {
       console.log(error);
-      console.log("프로필 불러오기 에러 발생!!프로필 불러오기 에러 발생!!프로필 불러오기 에러 발생!!");
     }
-    console.log("sdfjkdnfjdnfjndfjndjn");
     json_object_send.nickname = rows[0]["nickname"];
     json_object_send.profile_img = rows[0]["profile_img"];
     json_object_send.phone_number = rows[0]["phone_number"];
